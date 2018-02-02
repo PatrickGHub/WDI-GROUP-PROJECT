@@ -1,7 +1,7 @@
 # WDI-GROUP-PROJECT
 
-The Big Chill
+The Big Chill present APPrès Ski! ❄️
 
-Patrick
-Charlotte
-Evelina
+⛷ Patrick
+🎿 Charlotte
+🏂 Evelina
