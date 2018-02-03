@@ -1,6 +1,14 @@
 $header-font:  'Heebo', sans-serif;
 $text-font: 'Roboto', sans-serif;
-$primary-color: red;
-$secondary-color: blue;
-$background-color: yellow;
-$text-color: green;
+
+// text-color to be used in texts (maybe not headers?), also forms when/if background is "snow"
+$text-color: #092E58;
+
+// if we need to use a darker color lets say for headers if the text-coloru is not dark enough to be used on headers this is the color of the mountains
+$secondary-color:  #1D1B1C;
+
+// primary color is to be used in all form backgrounds
+$background-color: snow;
+
+// the detail colour from the snowboarders skies, if needed somewhere for effect colour
+$effect-color: #ECDD37;
