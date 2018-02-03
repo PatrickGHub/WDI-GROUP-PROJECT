@@ -70,7 +70,6 @@ User
         return Holiday.create([{
           name: 'Patrick turns 25 ski trip',
           attendees: 'Charlotte', 'Evelina', 'Hannah Teter', 'Shaun White', 'Vreni Schneider', 'Tracis Rice',
-          dates: '',
           destination: 'Chamonix',
           createdBy: users[6],
           comments: [{
@@ -83,7 +82,6 @@ User
         },{
           name: 'Shaun & girls go ',
           attendees: 'Charlotte', 'Evelina', 'Hannah Teter', 'Shaun White', 'Vreni Schneider', 'Tracis Rice',
-          dates: '',
           destination: 'Chamonix',
           createdBy: users[0],
           comments: [{
@@ -93,7 +91,9 @@ User
            comment: 'I shoud get new skies, to rent or buy? 🧐',
            createdBy: users[4]
          }]
-        }
+
+       }])
+     }
   .catch(err => console.log(err))
   .finally(() => mongoose.connection.close());
 
