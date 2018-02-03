@@ -21,4 +21,4 @@ const holidaySchema = new mongoose.Schema({
 
 holidaySchema.set('toJSON', { virtuals: true });
 
-module.exports = mongoose.model('User', holidaySchema);
+module.exports = mongoose.model('Holiday', holidaySchema);
