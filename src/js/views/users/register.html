@@ -30,27 +30,30 @@
         </div>
 
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="ski">
-          <label class="form-check-label" for="inlineRadio1">Ski</label>
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="skiRadio" value="ski" ng-model="vm.user.sport">
+          <label class="form-check-label" for="skiRadio">Ski</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="snowboard">
-          <label class="form-check-label" for="inlineRadio2">Snowboard</label>
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="snowboardRadio" value="snowboard" ng-model="vm.user.sport">
+          <label class="form-check-label" for="snowboardRadio">Snowboard</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="both">
-          <label class="form-check-label" for="inlineRadio3">Both</label>
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="bothRadio" value="both" ng-model="vm.user.sport">
+          <label class="form-check-label" for="bothRadio">Both</label>
         </div>
 
-        <form class="form-inline">
-          <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Level</label>
-          <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-            <option selected>Choose...</option>
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="advanced">Advanced</option>
-          </select>
-        </form>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="beginnerRadio" value="beginner" ng-model="vm.user.abilityLevel">
+          <label class="form-check-label" for="beginnerRadio">Beginner</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="intermediateRadio" value="intermediate" ng-model="vm.user.abilityLevel">
+          <label class="form-check-label" for="intermediateRadio">Intermediate</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="advancedRadio" value="advanced" ng-model="vm.user.abilityLevel">
+          <label class="form-check-label" for="advancedRadio">Advanced</label>
+        </div>
 
         <h1>ADD FILESTACK HERE FOR IMAGE UPLOAD</h1>
 

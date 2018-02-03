@@ -16,7 +16,7 @@ function login(req, res) {
 
       const token = jwt.sign({ userId: user.id }, secret, { expiresIn: '1hr' });
       console.log(token);
-      return res.json({ token, message: `Welcome back ${user.name}` });
+      return res.json({ token, message: `Welcome back ${user.username}` });
     });
 }
 

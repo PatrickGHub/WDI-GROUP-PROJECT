@@ -42,15 +42,18 @@
           <label class="form-check-label" for="inlineRadio3">Both</label>
         </div>
 
-        <form class="form-inline">
-          <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Level</label>
-          <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-            <option selected>Choose...</option>
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="advanced">Advanced</option>
-          </select>
-        </form>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="beginner" ng-model="vm.user.abilityLevel">
+          <label class="form-check-label" for="inlineRadio1">Beginner</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="intermediate" ng-model="vm.user.abilityLevel">
+          <label class="form-check-label" for="inlineRadio2">Intermediate</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="advanced" ng-model="vm.user.abilityLevel">
+          <label class="form-check-label" for="inlineRadio3">Advanced</label>
+        </div>
 
         <h1>ADD FILESTACK HERE FOR IMAGE UPLOAD</h1>
 
