@@ -7,6 +7,17 @@ function usersCreate(req, res, next) {
     .catch(next);
 }
 
+function usersShow(req, res, next) {
+  User
+    .findById(req.params.id)
+    .exec()
+    .then(user => {
+      if (!user) return res.notFound();
+      return res.status(200).json(user);
+    })
+    .catch(next);
+}
+
 function usersUpdate(req, res, next) {
   User
     .findByIdAndUpdate(req.params.id, req.body, { new: true })
@@ -30,6 +41,7 @@ function usersDelete(req, res, next) {
 
 module.exports = {
   create: usersCreate,
+  show: usersShow,
   update: usersUpdate,
   delete: usersDelete
 };
