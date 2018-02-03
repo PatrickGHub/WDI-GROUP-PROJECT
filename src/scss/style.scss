@@ -2,10 +2,10 @@
 
 // $header-font:  'Times New Roman', serif;
 // $text-font: 'Arial', sans-serif;
-// $primary-color: red;
-// $secondary-color: blue;
-// $background-color: yellow;
-// $text-color: green;
+//$primary-color: #092E58;
+// $secondary-color:  #1D1B1C;
+// $background-color: snow;
+// $effect-color: #ECDD37;
 
 h1 {
   font-family: $header-font;
@@ -14,7 +14,7 @@ h1 {
 
 h2 {
   font-family: $header-font;
-  color: $secondary-color;
+  color: $primary-color;
   text-decoration: underline;
 }
 
@@ -23,11 +23,11 @@ h3, h4, h5, h6, p {
 }
 
 h3, p {
-  color: $text-color;
+  color: $primary-color;
 }
 
 h4 {
-  color: $secondary-color;
+  color: $primary-color;
 }
 
 h5 {
@@ -35,7 +35,7 @@ h5 {
 }
 
 h6 {
-  color: $secondary-color;
+  color: $primary-color;
 }
 
 a, button {
