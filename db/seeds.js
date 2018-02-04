@@ -67,40 +67,39 @@ User
   .then((users) => {
     console.log(`${users.length} users created!`);
 
-        return Holiday.create([{
-          name: 'Patrick turns 25 ski trip',
-          attendees: ['Charlotte', 'Evelina', 'Hannah Teter', 'Shaun White', 'Vreni Schneider', 'Tracis Rice'],
-          destination: 'Chamonix',
-          createdBy: users[6],
-          comments: [{
-           comment: 'This is going to be epic!',
-           createdBy: users[1]
-         },{
-           comment: 'Cannot wait to start planning!',
-           createdBy: users[0]
-         }]
-        },{
-          name: 'Shaun & girls go ',
-          attendees: ['Charlotte', 'Evelina', 'Hannah Teter', 'Shaun White', 'Vreni Schneider', 'Tracis Rice'],
-          destination: 'Chamonix',
-          createdBy: users[0],
-          comments: [{
-           comment: ' Where do we want to eat the first night?!',
-           createdBy: users[5]
-         },{
-           comment: 'I shoud get new skies, to rent or buy? 🧐',
-           createdBy: users[4]
-         }]
-
-       }])
-     }
+    return Holiday.create([{
+      name: 'Patrick turns 25 ski trip',
+      attendees: ['Charlotte', 'Evelina', 'Hannah Teter', 'Shaun White', 'Vreni Schneider', 'Tracis Rice'],
+      destination: 'Chamonix',
+      createdBy: users[6],
+      comments: [{
+        comment: 'This is going to be epic!',
+        createdBy: users[1]
+      },{
+        comment: 'Cannot wait to start planning!',
+        createdBy: users[0]
+      }]
+    },{
+      name: 'Shaun & girls go ',
+      attendees: ['Charlotte', 'Evelina', 'Hannah Teter', 'Shaun White', 'Vreni Schneider', 'Tracis Rice'],
+      destination: 'Chamonix',
+      createdBy: users[0],
+      comments: [{
+        comment: ' Where do we want to eat the first night?!',
+        createdBy: users[5]
+      },{
+        comment: 'I shoud get new skies, to rent or buy? 🧐',
+        createdBy: users[4]
+      }]
+    }]);
+  })
   .catch(err => console.log(err))
-  .finally(() => mongoose.connection.close());
+  .finally(() => mongoose.connection.close())
 
   .then((holidays) => {
-  console.log(`${holidays.length} holidays created!`);
-})
-.finally(() => {
-  return mongoose.connection.close();
-})
-.catch(err => console.log(err));
+    console.log(`${holidays.length} holidays created!`);
+  })
+  .finally(() => {
+    return mongoose.connection.close();
+  })
+  .catch(err => console.log(err));
