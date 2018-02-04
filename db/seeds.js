@@ -15,51 +15,58 @@ Holiday.collection.drop();
 
 User
   .create([{
-    name: 'Shaun White',
+    username: 'Shaun White',
     email: 'shaun@ga.co',
     password: 'shaun',
+    passwordConfirmation: 'shaun',
     sport: 2,
     abilityLevel: 3,
     image: 'https://cdn-s3.si.com/s3fs-public/sikids/pages/images/cms/imce/users/dantec/2014/01/shaun-white-2014-olympics-header.jpg'
   }, {
-    name: 'Vreni Schneider',
+    username: 'Vreni Schneider',
     email: 'vreni@ga.co',
     password: 'vreni',
+    passwordConfirmation: 'vreni',
     sport: 1,
     abilityLevel: 3,
     image: 'http://cdn.welove2ski.com/wp-content/uploads/vreni1-1.jpg'
   }, {
-    name: 'Tracis Rice',
+    username: 'Tracis Rice',
     email: 'tracis@ga.co',
     password: 'tracis',
+    passwordConfirmation: 'tracis',
     sport: 2,
     abilityLevel: 3,
     image: 'https://assets.saatchiart.com/saatchi/84381/art/1617509/819762-7.jpg'
   },{
-    name: 'Hannah Teter',
+    username: 'Hannah Teter',
     email: 'hannah@ga.co',
     password: 'hannah',
+    passwordConfirmation: 'hannah',
     sport: 2,
     abilityLevel: 3,
     image: 'https://www.sierrasun.com/wp-content/uploads/2017/12/hannahteter-tdt-120917-1-4.jpg'
   },{
-    name: 'Charlotte',
+    username: 'Charlotte',
     email: 'charlotte@ga.co',
     password: 'charlotte',
+    passwordConfirmation: 'charlotte',
     sport: 1,
     abilityLevel: 2,
     image: 'http://www.oogazone.com/wp-content/uploads/top-little-girl-skiing-stock-vector-skier-cartoon-ski-image.jpg'
   },{
-    name: 'Evelina',
+    username: 'Evelina',
     email: 'evelina@ga.co',
     password: 'evelina',
+    passwordConfirmation: 'evelina',
     sport: 1,
     abilityLevel: 2,
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXf30fSEExqSEGeCRv9gMYTlR1CLP3pybH0chBM77ACjUqsbRm'
   },{
-    name: 'Patrick',
+    username: 'Patrick',
     email: 'patrick@ga.co',
     password: 'patrick',
+    passwordConfirmation: 'patrick',
     sport: 1,
     abilityLevel: 1,
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvvdYy2pa7Es35cKnm_MhPGLDH1rzlPu0C3Dybe8AeNVYKsdw'
