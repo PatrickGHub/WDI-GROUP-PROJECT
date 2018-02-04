@@ -1,7 +1,7 @@
 /* globals api, expect, describe, it*/
 require('../spec_helper');
 
-const User = require('../../../models/user');
+const User = require('../../models/user'); // changed '../../../models/user' to '../../models/user' - Charlotte
 
 describe('Users Controller Tests', () => {
 

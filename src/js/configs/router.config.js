@@ -26,11 +26,13 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/holiday/new',
       templateUrl: '/js/views/holidays/new.html',
       controller: 'HolidaysCreateCtrl as vm'
-    }).state('holidayEdit', {
+    })
+    .state('holidayEdit', {
       url: '/holiday/:id/edit',
       templateUrl: '/js/views/holidays/edit.html',
       controller: 'HolidaysEditCtrl as vm'
-    }).state('holidayShow', {
+    })
+    .state('holidayShow', {
       url: '/holiday/:id',
       templateUrl: '/js/views/holidays/show.html',
       controller: 'HolidaysShowCtrl as vm'

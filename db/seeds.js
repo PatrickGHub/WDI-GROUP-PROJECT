@@ -4,11 +4,11 @@ const User = require('../models/user');
 const Holiday = require('../models/holiday');
 
 mongoose.Promise = require('bluebird');
-const { db }    = require('../config/environment');
 
+const { db, env } = require('../config/environment'); // added env here and in mongoose.connect  as per notes on slack - Charlotte
 
 mongoose.Promise = bluebird;
-mongoose.connect(db);
+mongoose.connect(db[env]);
 
 User.collection.drop();
 Holiday.collection.drop();
@@ -69,7 +69,7 @@ User
 
         return Holiday.create([{
           name: 'Patrick turns 25 ski trip',
-          attendees: 'Charlotte', 'Evelina', 'Hannah Teter', 'Shaun White', 'Vreni Schneider', 'Tracis Rice',
+          attendees: ['Charlotte', 'Evelina', 'Hannah Teter', 'Shaun White', 'Vreni Schneider', 'Tracis Rice'],
           destination: 'Chamonix',
           createdBy: users[6],
           comments: [{
@@ -81,7 +81,7 @@ User
          }]
         },{
           name: 'Shaun & girls go ',
-          attendees: 'Charlotte', 'Evelina', 'Hannah Teter', 'Shaun White', 'Vreni Schneider', 'Tracis Rice',
+          attendees: ['Charlotte', 'Evelina', 'Hannah Teter', 'Shaun White', 'Vreni Schneider', 'Tracis Rice'],
           destination: 'Chamonix',
           createdBy: users[0],
           comments: [{
