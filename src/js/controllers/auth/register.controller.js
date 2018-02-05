@@ -10,7 +10,8 @@ function RegisterCtrl($auth, $state) {
 
   function submit() {
     $auth.signup(vm.newUser)
-      .then(() => {
+      .then(res => {
+        $auth.setToken(res.data.token);
         $state.go('destinationsIndex');
       });
   }
