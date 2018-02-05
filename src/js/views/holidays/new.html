@@ -1,42 +1,48 @@
 <h2>Create Holiday</h2>
 
-<section class="section">
-  <div class="columns">
-    <div class="column is-half is-offset-one-quarter">
-      <form ng-submit="vm.submit()">
-        <div class="field">
-          <label class="label" for="holidayname">Holiday Name</label>
-          <p class="control">
-            <input class="input" type="text" name="username" ng-model="vm.user.username">
-          </p>
-        </div>
-        <div class="field">
-          <label class="label" for="Destination">Destination</label>
-          <p class="control">
-            <input class="input" type="text" name="email" ng-model="vm.user.email">
-          </p>
-        </div>
-        <div class="field">
-          <label class="label" for="date">Take off date</label>
-          <p class="control">
-            <input class="date" type="date" name="date" ng-model="vm.user.date">
-          </p>
-        </div>
-        <div class="field">
-          <label class="label" for="date">Fly home date</label>
-          <p class="control">
-            <input class="date" type="date" name="date" ng-model="vm.user.date">
-          </p>
-        </div>
+<form ng-submit="vm.submit()">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col-10 col-xl-6">
+        <form method="POST" action="/register">
+          <div class="form-group">
+            <label for="holidayName">Holiday Name</label>
+            <input class="form-control" type="text" name="holidayName" placeholder="Holiday Name" id="holidayName" ng-model="vm.holiday.holidayname" required>
+          </div>
 
-          <h2>Dropdown linked with user Model</h2>
+          <div class="form-group">
+            <label for="destination">Destination</label>
+            <input class="form-control" type="destination" name="destination" placeholder="Destination" id="destination" ng-model="vm.user.destination" required>
+          </div>
 
-        <div class="field">
-          <p class="control">
-            <input type="submit" class="button is-primary is-fullwidth" value="Register">
-          </p>
-        </div>
-      </form>
+          <div class="field">
+            <label for="date">Arrival Date</label>
+            <p class="control">
+              <input class="form-control" type="date" name="date" ng-model="vm.holiday.dateArrive">
+            </p>
+          </div>
+
+          <div class="field">
+            <label for="date">Departure Date</label>
+            <p class="control">
+              <input class="form-control" type="date" name="date" ng-model="vm.holiday.dateDepart">
+            </p>
+          </div>
+
+          <h3>Dropdown linked with user Model</h3>
+          <div class="form-group">
+            <label for="attendees">Attendees</label>
+            <input class="form-control" type="attendees" name="attendees" placeholder="Attendees" id="attendees" ng-model="vm.user.attendees" required>
+          </div>
+
+          <button class="btn btn-primary">Create Holiday</button>
+        </form>
+      </div>
+      <div class="col">
+      </div>
     </div>
   </div>
-</section>
+
+</form>
