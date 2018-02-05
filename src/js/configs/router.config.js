@@ -22,18 +22,23 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: '/js/views/users/register.html',
       controller: 'RegisterCtrl as vm'
     })
+    .state('destinationIndex', {
+      url: '/destinations',
+      templateUrl: '/js/views/destinations/index.html',
+      controller: 'DestinationsIndexCtrl as vm'
+    })
     .state('holidayCreate', {
-      url: '/holiday/new',
+      url: '/holidays/new',
       templateUrl: '/js/views/holidays/new.html',
       controller: 'HolidaysCreateCtrl as vm'
     })
     .state('holidayEdit', {
-      url: '/holiday/:id/edit',
+      url: '/holidays/:id/edit',
       templateUrl: '/js/views/holidays/edit.html',
       controller: 'HolidaysEditCtrl as vm'
     })
     .state('holidayShow', {
-      url: '/holiday/:id',
+      url: '/holidays/:id',
       templateUrl: '/js/views/holidays/show.html',
       controller: 'HolidaysShowCtrl as vm'
     });
