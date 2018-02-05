@@ -8,7 +8,8 @@ const destinationSchema = new mongoose.Schema({
   blue: Number,
   red: Number,
   black: Number,
-  lifts: Number
+  lifts: Number,
+  image: {type: String, required: true}
 });
 
 destinationSchema.set('toJSON', { virtuals: true });

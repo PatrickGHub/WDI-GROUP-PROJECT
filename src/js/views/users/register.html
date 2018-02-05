@@ -1,97 +1,124 @@
 <h2>Register</h2>
 
-<form ng-submit="vm.submit()">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-      </div>
-      <div class="col-10 col-xl-6">
-        <form method="POST" action="/register">
+  <p>{{vm.newUser}}</p>
+
+  <form ng-submit="vm.submit()">
+
+    <div class="container">
+
+      <div class="row">
+
+        <!-- not sure why it goes on 2 lines for medium screens -->
+
+        <div class="col-lg-6 col-xs-12">
           <div class="form-group">
             <label for="lastName">Username</label>
-            <input class="form-control" type="text" name="username" placeholder="Username" id="username" ng-model="vm.user.username" required>
+            <input class="form-control" type="text" name="newUsername" placeholder="Username" id="newUsername" ng-model="vm.newUser.username" required>
           </div>
+        </div>
 
+        <div class="col-lg-6 col-xs-12">
           <div class="form-group">
             <label for="email">Email</label>
-            <input class="form-control" type="email" name="email" placeholder="Email" id="email" ng-model="vm.user.email" required>
+            <input class="form-control" type="email" name="email" placeholder="Email" id="email" ng-model="vm.newUser.email" required>
           </div>
+        </div>
 
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-6 col-xs-12">
           <div class="form-group">
             <label for="password">Password</label>
-            <input class="form-control" type="password" name="password" placeholder="Password" id="password" ng-model="vm.user.password" required>
+            <input class="form-control" type="password" name="password" placeholder="Password" id="password" ng-model="vm.newUser.password" required>
           </div>
+        </div>
 
+        <div class="col-lg-6 col-xs-12">
           <div class="form-group">
             <label for="passwordConfirmation">Password confirmation</label>
-            <input class="form-control" type="password" name="passwordConfirmation" placeholder="Password confirmation" id="passwordConfirmation" ng-model="vm.user.passwordConfirmation" required>
+            <input class="form-control" type="password" name="passwordConfirmation" placeholder="Password confirmation" id="passwordConfirmation" ng-model="vm.newUser.passwordConfirmation" required>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-4 col-xs-12">
+          <div class="form-group">
+            <label>Upload Your Profile Picture</label>
+            <div class="control">
+              <div class="file">
+                <label class="file-label">
+                  <input class="file-input" type="file" ng-model="vm.newUser.image" upload-image>
+                  <span class="file-cta">
+                    <span class="file-icon">
+                      <i class="fa fa-upload"></i>
+                    </span>
+
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="field" ng-if="vm.newUser.image">
+            <label for="label">Profile Picture Preview</label>
+            <div class="control">
+              <figure class="image is-128x128">
+                <img src="{{ vm.newUser.image }}" alt="">
+              </figure>
+            </div>
           </div>
 
-          <fieldset class="form-group">
-            <div class="row">
-              <legend class="col-form-label col-sm-3 pt-0">Sport</legend>
-              <div class="col-sm-9">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="sportRadios" id="ski" value="ski" checked>
-                  <label class="form-check-label" for="ski">Ski</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="sportRadios" id="snowboard" value="snowboard">
-                  <label class="form-check-label" for="snowboard">Snowboard</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="sportRadios" id="both" value="both">
-                  <label class="form-check-label" for="both">Both</label>
-                </div>
+
+        </div>
+
+        <div class="col-lg-4 col-xs-12">
+          <div class="form-group">
+            <legend class="col-form-label col-sm-3 pt-0">Sport</legend>
+            <div class="col-sm-9">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sportRadios" id="ski" value="ski" ng-model="vm.newUser.sport">
+                <label class="form-check-label" for="ski">Ski</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sportRadios" id="snowboard" value="snowboard" ng-model="vm.newUser.sport">
+                <label class="form-check-label" for="snowboard">Snowboard</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="sportRadios" id="both" value="both" ng-model="vm.newUser.sport">
+                <label class="form-check-label" for="both">Both</label>
               </div>
             </div>
-          </fieldset>
+          </div>
+        </div>
 
-          <fieldset class="form-group">
-            <div class="row">
-              <legend class="col-form-label col-sm-3 pt-0">Ability Level</legend>
-              <div class="col-sm-9">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="abilityRadios" id="beginner" value="beginner" checked>
-                  <label class="form-check-label" for="beginner">Beginnner</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="abilityRadios" id="intermediate" value="intermediate">
-                  <label class="form-check-label" for="intermediate">Intermediate</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="abilityRadios" id="advanced" value="advanced">
-                  <label class="form-check-label" for="advanced">Advanced</label>
-                </div>
+
+
+        <div class="col-lg-4 col-xs-12">
+          <div class="form-group">
+            <legend class="col-form-label col-sm-3 pt-0">Ability Level</legend>
+            <div class="col-sm-9">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="abilityRadios" id="beginner" value="1" ng-model="vm.newUser.abilityLevel">
+                <label class="form-check-label" for="beginner">Beginnner</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="abilityRadios" id="intermediate" value="2" ng-model="vm.newUser.abilityLevel">
+                <label class="form-check-label" for="intermediate">Intermediate</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="abilityRadios" id="advanced" value="3" ng-model="vm.newUser.abilityLevel">
+                <label class="form-check-label" for="advanced">Advanced</label>
               </div>
             </div>
-          </fieldset>
+          </div>
+        </div>
+      </div>
 
-          <button class="btn btn-primary">Register</button>
-        </form>
-      </div>
-      <div class="col">
-      </div>
+      <button class="btn btn-primary">Register</button>
+
     </div>
-  </div>
-
-  <div class="field">
-    <label class="label">Profile Picture</label>
-    <div class="control">
-      <div class="file">
-        <label class="file-label">
-          <input class="file-input" type="file" ng-model="vm.user.image" upload-image>
-          <span class="file-cta">
-            <span class="file-icon">
-              <i class="fa fa-upload"></i>
-            </span>
-            <span class="file-label">
-              Choose a file…
-            </span>
-          </span>
-        </label>
-      </div>
-    </div>
-  </div>
-
-</form>
+  </form>
