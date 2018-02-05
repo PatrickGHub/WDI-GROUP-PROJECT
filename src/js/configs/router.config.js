@@ -29,7 +29,7 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('destinationsShow', {
       url: '/destinations/:id',
       templateUrl: '/js/views/destinations/show.html',
-      controller: 'DestinationsShowCtrl as vm'
+      controller: 'DestinationShowCtrl as vm'
     })
     .state('holidayIndex', {
       url: '/holidays',

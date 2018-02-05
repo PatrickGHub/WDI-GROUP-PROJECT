@@ -6,10 +6,20 @@
 </div> -->
 
 <div class="container">
-  <div class="row index-row">
-    <div ng-repeat="destination in vm.all" class="col-sm-6 col-md-4 col-lg-3 image-container">
-      <a href="/destinations/{{destination.id}}"><img class="index-image" ng-src="{{ destination.image }}"></a>
+  <div class="col">
+    <div class="row index-row">
+      <div ng-repeat="destination in vm.all" class="col-sm-6 col-md-4 col-lg-3">
+        <a href="/destinations/{{destination.id}}"><img class="index-image" ng-src="{{ destination.image }}"></a>
+        <a href="/destinations/{{destination.id}}"><p class="place-name">{{ destination.town }}</p></a>
+        <ul>
+          <li>Green: {{ destination.green }}%</li>
+          <li>Blue: {{ destination.blue }}%</li>
+          <li>Red: {{ destination.red }}%</li>
+          <li>Black: {{ destination.black }}%</li>
+        </ul>
+        <p>Green: {{ destination.green }}%</p>
+        
+      </div>
     </div>
-    <p class="place-name">{{ destination.town }}</p>
   </div>
 </div>
