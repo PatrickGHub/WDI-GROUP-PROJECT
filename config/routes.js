@@ -18,8 +18,8 @@ router.route('/users/:id')
 
 router.route('/destinations')
   .get(destinations.index);
-  
-router.route('/destinations/:od')
+
+router.route('/destinations/:id')
   .get(destinations.show);
 
 router.route('/holidays')
