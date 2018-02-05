@@ -1,6 +1,7 @@
 const User = require('../models/user');
 
 function usersCreate(req, res, next) {
+  console.log(req.body);
   User
     .create(req.body)
     .then(user => res.status(201).json(user))
