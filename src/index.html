@@ -11,8 +11,43 @@
   <!-- inject:css -->
   <!-- endinject -->
 </head>
-<body>
+<body ng-controller="MainCtrl as main" ng-class="main.pageName">
+
+  <nav class="nav has-shadow">
+    <div class="nav-left">
+      <a class="nav-item logo" ui-sref="home">
+        Appres Ski
+      </a>
+      <a class="nav-item" ui-sref="destinationsIndex">
+        Destinations
+      </a>
+      <ul>
+        <li nav-item dropdown>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+            Holidays
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Option 1</a>
+            <a class="dropdown-item" href="#">Option 2</a>
+            <a class="dropdown-item" href="#">Option 3</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a class="nav-item" ui-sref="login" ng-if="!main.isAuthenticated()">
+        Login
+      </a>
+      <a class="nav-item" ui-sref="register" ng-if="!main.isAuthenticated()">
+        Register
+      </a>
+      <a class="nav-item" ng-click="main.logout()" ng-if="main.isAuthenticated()">
+        Logout
+      </a>
+    </div>
+  </nav>
+
   <h1>APPrès Ski</h1>
-    <main ui-view></main>
+  <main ui-view></main>
 </body>
 </html>
