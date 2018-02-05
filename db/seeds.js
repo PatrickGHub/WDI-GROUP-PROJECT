@@ -27,7 +27,9 @@ Destination
     lifts: 32,
     greatFor: 'Partying',
     overview: 'The highest party town in the Alps! Down in town there are more bars than you can visit in a night and the après starts early. The Frog and Roast Beef is the highest pub in Europe and draws a UK crowd. The Saloon Bar is the rowdiest and most fun bar on the strip if you can take the crowds. VT is also home to the largest nightclub in the Alps in Malaysia, it may be cavernous but it fills up late and rocks all night. The Folie Douce here is just above the town so everyone gets to do a short ski back down on wobbly legs.',
-    image: 'https://findhomeabroad.com/wp-content/uploads/2017/11/val-thorens-property-1.jpg'
+    image: 'https://findhomeabroad.com/wp-content/uploads/2017/11/val-thorens-property-1.jpg',
+    lat: 45.2979478,
+    lng:6.5799096
   }, {
     town: 'Tignes',
     country: 'France',
@@ -39,7 +41,9 @@ Destination
     lifts: 39,
     greatFor: 'Families',
     overview: 'One of the highest ski resorts in the Alps, with guaranteed skiing virtually year round, Tignes can justifiably boast a fantastic snow record that is the envy of many resorts worldwide. Tignes is a world-famous ski resort which suits all abilities. Whilst the village charm may not be inspiring, the quality of skiing certainly is. Tignes is a fantastic option for any advanced or intermediate skiers who love to whizz around endlessly. The resort has very few queues and the snow is ever-reliable due to the high altitude.',
-    image: 'https://img2.onthesnow.com/image/la/97/tignes_resort_france_97081.jpg'
+    image: 'https://img2.onthesnow.com/image/la/97/tignes_resort_france_97081.jpg',
+    lat: 45.474395,
+    lng: 6.8876349
   }, {
     town: 'Chamonix',
     country: 'France',
@@ -51,7 +55,9 @@ Destination
     lifts: 47,
     greatFor: 'Families',
     overview: 'One of the oldest and most famous French resorts, Chamonix is as popular with summer climbers as it is with winter freeriders. The ski area encompasses four different mountains, meaning it is a little spread out but there is plenty to explore and definitely something for everyone.',
-    image: 'https://media-server.clubmed.com/image/jpeg/1200/675/crop/center/60/https%3A%2F%2Fns.clubmed.com%2Ficp%2F1-MEDIA%2F01.VILLAGES%2F1.3MONTAGNE%2FCHAMONIX-MONT-BLANC%2F18-17-16-15-14-13-12-11-10-9-8-7-6-5-4-3-2-1-PHOTOS%2FCHACX900005.jpg'
+    image: 'https://media-server.clubmed.com/image/jpeg/1200/675/crop/center/60/https%3A%2F%2Fns.clubmed.com%2Ficp%2F1-MEDIA%2F01.VILLAGES%2F1.3MONTAGNE%2FCHAMONIX-MONT-BLANC%2F18-17-16-15-14-13-12-11-10-9-8-7-6-5-4-3-2-1-PHOTOS%2FCHACX900005.jpg',
+    lat: 45.9319777,
+    lng: 6.7888777
   }, {
     town: 'Val d\'Isere',
     country: 'France',
@@ -63,7 +69,9 @@ Destination
     lifts: 42,
     greatFor: 'Partying',
     overview: 'Glamorous and expensive, and worth every penny! The skiing in the Espace Killy (the area linked with Tignes) offers more easily accessible variety than any other in Europe. It has a very long season because it catches the storms as they hit the end of the Tarentaise Valley at the border with Italy. But what really sets it apart is the number of high quality bars on-piste and off. The original Folie Douce has got its Mojo back after a couple of experimental years and now offers a great afternoon’s entertainment.',
-    image: 'https://content.igluski.com/images/_i39726434.jpg?width=621'
+    image: 'https://content.igluski.com/images/_i39726434.jpg?width=621',
+    lat: 45.4232725,
+    lng: 6.9447334
   }, {
     town: 'St Anton',
     country: 'Austria',
@@ -75,7 +83,9 @@ Destination
     lifts: 88,
     greatFor: 'Partying',
     overview: 'Ski hard, party harder! St Anton is still the best of Austria but it is perhaps too popular and the famous piste-side bars are uncomfortably jammed to overflowing with plastered Brits, Dutch and Germans. It has fantastic off-piste routes like the Valluga and brings a lot of the best skiers in the world to party. It also claims to have the oldest ski school in the world and this brings a constant flow of new skiers and boarders to the noisiest après ski bars in Austria.',
-    image: 'https://www.stantonamarlberg.com/uploads/media/660x/04/414-Ort9_FotoSchmidtFriedrich.jpg?v=1-0'
+    image: 'https://www.stantonamarlberg.com/uploads/media/660x/04/414-Ort9_FotoSchmidtFriedrich.jpg?v=1-0',
+    lat: 47.0736387,
+    lng: 10.1538354
   }, {
     town: 'Avoriaz',
     country: 'France',
@@ -85,9 +95,11 @@ Destination
     red: 27,
     black: 12,
     lifts: 34,
-    greatFor: 'Families',
+    image: 'https://cdn.content.tuigroup.com/adamtui/2016_9/28_10/dffb4711-b955-4fc3-951b-a68f00a61191/TS_FRA_AVO_F0004WebOriginalCompressed.jpg',
+    greatFor: 'Non-skiers',
     overview: 'Avoriaz is a superb resort for skiers and snowboarders of all abilities. A very distinctive resort with it\'s modern architecture and dramatic cliff top scenery. Its high altitude and north-facing slopes complement each other, resulting in consistently excellent snow records.',
-    image: 'https://cdn.content.tuigroup.com/adamtui/2016_9/28_10/dffb4711-b955-4fc3-951b-a68f00a61191/TS_FRA_AVO_F0004WebOriginalCompressed.jpg'
+    lat: 46.189997,
+    lng: 6.7732041
   }, {
     town: 'Zermatt',
     country: 'Switzerland',
@@ -99,7 +111,9 @@ Destination
     lifts: 52,
     greatFor: 'Families',
     overview: 'Nestled beneath the magnificent Matterhorn, Zermatt (shown above) plays host to some of the most breathtaking views.  Its traffic free village centre is filled with charming chocolate box chalets and hotels with only the noise of the horse drawn sleighs to distract you. The skiing appeals to all abilities with many of the lower runs descending down very scenic tree lined pistes.',
-    image: 'https://www.zermatt.ch/extension/portal-zermatt/var/storage/images/media/bibliothek/dorf-zermatt/zermatt-dorf-winter/1787315-3-ger-DE/Zermatt-Dorf-Winter_grid_700x365.jpg'
+    image: 'https://www.zermatt.ch/extension/portal-zermatt/var/storage/images/media/bibliothek/dorf-zermatt/zermatt-dorf-winter/1787315-3-ger-DE/Zermatt-Dorf-Winter_grid_700x365.jpg',
+    lat: 45.9904994,
+    lng: 7.6018623
   }, {
     town: 'Verbier',
     country: 'Switzerland',
@@ -111,7 +125,9 @@ Destination
     lifts: 82,
     greatFor: 'Partying',
     overview: 'Posh but fun! Let’s get the hard bit out of the way first, it’s expensive. The Swiss Franc is on a roll right now and until it gets back to reasonable levels against the £ your après sessions are going bite like a Nile crocodile. Do as Seasonaires do and follow the happy hours around the village.',
-    image: 'http://image.interactiveresorts.co.uk/resorts/photos/00018/inter/localite_verbier_combins_09.jpg'
+    image: 'http://image.interactiveresorts.co.uk/resorts/photos/00018/inter/localite_verbier_combins_09.jpg',
+    lat: 46.0994409,
+    lng: 7.2163483
   }, {
     town: 'Livigno',
     country: 'Italy',
@@ -123,7 +139,9 @@ Destination
     lifts: 31,
     greatFor: 'Non-skiers',
     overview: 'Tax free party haven! Livigno is a shopper\'s paradise as well as an après ski mecca. It has around 150 bars, which dwarfs any other ski resort in the world. Italian resorts tend to be a bit more sophisticated and calmer during the après ski hours, but there are some pretty good traditionally loud and riotous gems to be found in the resorts of Cervinia and Selva.',
-    image: 'http://www.livignostmichael.com/img/TOP/livigno4.jpg'
+    image: 'http://www.livignostmichael.com/img/TOP/livigno4.jpg',
+    lat: 46.5322071,
+    lng: 10.0989787
   }, {
     town: 'Åre',
     country: 'Sweden',
@@ -135,7 +153,9 @@ Destination
     lifts: 39,
     greatFor: 'Non-skiers',
     overview: 'Åre is Sweden\'s number one ski resort, situated in the North. Are consists of four separate ski areas and villages, which are partly interlinked and covered by one lift pass. The scenery is breathtaking, low sweeping mountains covered with pine forests, and the skiing is suited to all levels, plus there are a good range of activities for the non-skier on ski holidays in Are.',
-    image: 'https://exp.cdn-hotels.com/hotels/2000000/1090000/1080600/1080526/1080526_82_z.jpg'
+    image: 'https://exp.cdn-hotels.com/hotels/2000000/1090000/1080600/1080526/1080526_82_z.jpg',
+    lat: 63.3971461,
+    lng: 13.0617457
   }])
   .then((destinations) => {
     console.log(`${destinations.length} destinations created!`);

@@ -11,7 +11,9 @@ const destinationSchema = new mongoose.Schema({
   lifts: Number,
   greatFor: String,
   overview: String,
-  image: {type: String, required: true}
+  image: {type: String, required: true},
+  lat: Number,
+  lng: Number
 });
 
 destinationSchema.set('toJSON', { virtuals: true });
