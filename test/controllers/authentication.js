@@ -6,7 +6,7 @@ const User = require('../../models/user');
 describe('Authentication Controller Tests', () => {
 
   afterEach(done => {
-    User.collection.drop();
+    User.collection.remove();
     done();
   });
 
@@ -18,7 +18,7 @@ describe('Authentication Controller Tests', () => {
         .set('Accept', 'application/json')
         .send({
           username: 'Development',
-          email: 'guy@guy.com',
+          email: 'hey@test.com',
           password: 'password',
           passwordConfirmation: 'password',
           sport: 1,
@@ -40,7 +40,7 @@ describe('Authentication Controller Tests', () => {
         .set('Accept', 'application/json')
         .send({
           username: 'Development',
-          email: 'hello@test.com',
+          email: 'hey@test.com',
           password: 'password',
           passwordConfirmation: 'forgot',
           sport: 1,
@@ -67,7 +67,7 @@ describe('POST /api/login', () => {
       .set('Accept', 'application/json')
       .send({
         username: 'Development',
-        email: 'hello@test.com',
+        email: 'hey@test.com',
         password: 'password',
         passwordConfirmation: 'password',
         sport: 1,
@@ -79,12 +79,17 @@ describe('POST /api/login', () => {
       });
   });
 
+  afterEach(done => {
+    User.collection.remove();
+    done();
+  });
+
   it('should login a user with the correct credentials', done => {
     api
       .post('/api/login')
       .set('Accept', 'application/json')
       .send({
-        email: 'hello@test.com',
+        email: 'hey@test.com',
         password: 'password'
       })
       .end((err, res) => {
@@ -96,22 +101,22 @@ describe('POST /api/login', () => {
       });
   });
 
-  // it('should login a user with the correct credentials', done => {
-  //   api
-  //     .post('/api/login')
-  //     .set('Accept', 'application/json')
-  //     .send({
-  //       email: 'test@test.com',
-  //       password: 'password'
-  //     })
-  // .end((err, res) => {
-  //   expect(res.status).to.eq(200);
-  //   expect(res.body).to.be.a('object');
-  //   expect(res.body.message).to.eq(`Welcome back ${res.body.user.username}`);
-  //   expect(res.body.token).to.be.a('string');
-  //   done();
-  // });
-// });
+  it('should not login a user with incorrect credentials', function(done) {
+    api
+      .post('/api/login')
+      .set('Accept', 'application/json')
+      .send({
+        email: 'hey@test.com',
+        password: 'forgot'
+      })
+      .end((err, res) => {
+        expect(res.status).to.eq(401);
+        expect(res.body).to.be.a('object');
+        expect(res.body.message).to.eq('Unauthorized');
+        expect(Object.keys(res.body)).to.not.include('token');
+        done();
+      });
+  });
 
 
 
