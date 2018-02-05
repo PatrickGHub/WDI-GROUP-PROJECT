@@ -8,7 +8,7 @@
 <div class="container">
   <div class="row index-row">
     <div ng-repeat="destination in vm.all" class="col-sm-6 col-md-4 col-lg-3 image-container">
-      <img ng-src="{{ destination.image }}">
+      <a href="/destinations/{{destination.id}}"><img ng-src="{{ destination.image }}"></a>
     </div>
     <p class="place-name">{{ destination.town }}</p>
   </div>

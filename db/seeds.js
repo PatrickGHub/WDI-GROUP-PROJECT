@@ -25,7 +25,11 @@ Destination
     red: 35,
     black: 11,
     lifts: 32,
-    image: 'https://findhomeabroad.com/wp-content/uploads/2017/11/val-thorens-property-1.jpg'
+    image: 'https://findhomeabroad.com/wp-content/uploads/2017/11/val-thorens-property-1.jpg',
+    bestFor: ,
+    description: ,
+    lat: 45.2979478,
+    lng:6.5799096
   }, {
     town: 'Tignes',
     country: 'France',
@@ -35,7 +39,11 @@ Destination
     red: 27,
     black: 21,
     lifts: 39,
-    image: 'https://img2.onthesnow.com/image/la/97/tignes_resort_france_97081.jpg'
+    image: 'https://img2.onthesnow.com/image/la/97/tignes_resort_france_97081.jpg',
+    bestFor: ,
+    description: ,
+    lat: 45.474395,
+    lng: 6.8876349
   }, {
     town: 'Chamonix',
     country: 'France',
@@ -45,7 +53,11 @@ Destination
     red: 39,
     black: 29,
     lifts: 47,
-    image: 'https://media-server.clubmed.com/image/jpeg/1200/675/crop/center/60/https%3A%2F%2Fns.clubmed.com%2Ficp%2F1-MEDIA%2F01.VILLAGES%2F1.3MONTAGNE%2FCHAMONIX-MONT-BLANC%2F18-17-16-15-14-13-12-11-10-9-8-7-6-5-4-3-2-1-PHOTOS%2FCHACX900005.jpg'
+    image: 'https://media-server.clubmed.com/image/jpeg/1200/675/crop/center/60/https%3A%2F%2Fns.clubmed.com%2Ficp%2F1-MEDIA%2F01.VILLAGES%2F1.3MONTAGNE%2FCHAMONIX-MONT-BLANC%2F18-17-16-15-14-13-12-11-10-9-8-7-6-5-4-3-2-1-PHOTOS%2FCHACX900005.jpg',
+    bestFor: ,
+    description: ,
+    lat: 45.9319777,
+    lng: 6.7888777
   }, {
     town: 'Val d\'Isere',
     country: 'France',
@@ -55,7 +67,11 @@ Destination
     red: 39,
     black: 29,
     lifts: 42 ,
-    image: 'https://content.igluski.com/images/_i39726434.jpg?width=621'
+    image: 'https://content.igluski.com/images/_i39726434.jpg?width=621',
+    bestFor: ,
+    description: ,
+    lat: 45.4232725,
+    lng: 6.9447334
   }, {
     town: 'St Anton',
     country: 'Austria',
@@ -65,7 +81,11 @@ Destination
     red: 35,
     black: 13,
     lifts: 88,
-    image: 'https://www.stantonamarlberg.com/uploads/media/660x/04/414-Ort9_FotoSchmidtFriedrich.jpg?v=1-0'
+    image: 'https://www.stantonamarlberg.com/uploads/media/660x/04/414-Ort9_FotoSchmidtFriedrich.jpg?v=1-0',
+    bestFor: ,
+    description: ,
+    lat: 47.0736387,
+    lng: 10.1538354
   }, {
     town: 'Avoriaz',
     country: 'France',
@@ -75,7 +95,11 @@ Destination
     red: 27,
     black: 12,
     lifts: 34,
-    image: 'https://cdn.content.tuigroup.com/adamtui/2016_9/28_10/dffb4711-b955-4fc3-951b-a68f00a61191/TS_FRA_AVO_F0004WebOriginalCompressed.jpg'
+    image: 'https://cdn.content.tuigroup.com/adamtui/2016_9/28_10/dffb4711-b955-4fc3-951b-a68f00a61191/TS_FRA_AVO_F0004WebOriginalCompressed.jpg',
+    bestFor: ,
+    description: ,
+    lat: 46.189997,
+    lng: 6.7732041
   }, {
     town: 'Zermatt',
     country: 'Switzerland',
@@ -85,7 +109,11 @@ Destination
     red: 59,
     black: 14,
     lifts: 52,
-    image: 'https://www.zermatt.ch/extension/portal-zermatt/var/storage/images/media/bibliothek/dorf-zermatt/zermatt-dorf-winter/1787315-3-ger-DE/Zermatt-Dorf-Winter_grid_700x365.jpg'
+    image: 'https://www.zermatt.ch/extension/portal-zermatt/var/storage/images/media/bibliothek/dorf-zermatt/zermatt-dorf-winter/1787315-3-ger-DE/Zermatt-Dorf-Winter_grid_700x365.jpg',
+    bestFor: ,
+    description: ,
+    lat: 45.9904994,
+    lng: 7.6018623
   }, {
     town: 'Verbier',
     country: 'Switzerland',
@@ -95,7 +123,11 @@ Destination
     red: 48,
     black: 21,
     lifts: 82,
-    image: 'http://image.interactiveresorts.co.uk/resorts/photos/00018/inter/localite_verbier_combins_09.jpg'
+    image: 'http://image.interactiveresorts.co.uk/resorts/photos/00018/inter/localite_verbier_combins_09.jpg',
+    bestFor: ,
+    description: ,
+    lat: 46.0994409,
+    lng: 7.2163483
   }, {
     town: 'Livigno',
     country: 'Italy',
@@ -105,7 +137,11 @@ Destination
     red: 48,
     black: 17,
     lifts: 31,
-    image: 'http://www.livignostmichael.com/img/TOP/livigno4.jpg'
+    image: 'http://www.livignostmichael.com/img/TOP/livigno4.jpg',
+    bestFor: ,
+    description: ,
+    lat: 46.5322071,
+    lng: 10.0989787
   }, {
     town: 'Åre',
     country: 'Sweden',
@@ -115,7 +151,11 @@ Destination
     red: 38,
     black: 17,
     lifts: 39,
-    image: 'https://exp.cdn-hotels.com/hotels/2000000/1090000/1080600/1080526/1080526_82_z.jpg'
+    image: 'https://exp.cdn-hotels.com/hotels/2000000/1090000/1080600/1080526/1080526_82_z.jpg',
+    bestFor: ,
+    description: ,
+    lat: 63.3971461,
+    lng: 13.0617457
   }])
   .then((destinations) => {
     console.log(`${destinations.length} destinations created!`);
