@@ -1,5 +1,5 @@
 @import "variables";
-
+@import "navbar";
 // $header-font:  'Times New Roman', serif;
 // $text-font: 'Arial', sans-serif;
 //$primary-color: #092E58;
@@ -46,4 +46,13 @@ a, button {
   background-color: $background-color;
   padding: 5px;
   margin: 3px;
+}
+
+// Landing page styling
+
+div.img-fluid {
+  max-width: 100%;
+  height: auto;
+  margin:0;
+  padding:0;
 }

@@ -7,10 +7,9 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
 
   $stateProvider
-    .state('userEdit', {
-      url: '/users/:id/edit',
-      templateUrl: '/js/views/users/edit.html',
-      controller: 'UsersEditCtrl as vm'
+    .state('landing', {
+      url: '/',
+      templateUrl: '/js/views/landingpage.html',
     })
     .state('login', {
       url: '/login',
@@ -22,20 +21,35 @@ function Router($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: '/js/views/users/register.html',
       controller: 'RegisterCtrl as vm'
     })
+    .state('destinationsIndex', {
+      url: '/destinations',
+      templateUrl: '/js/views/destinations/index.html',
+      controller: 'DestinationsIndexCtrl as vm'
+    })
+    .state('holidayIndex', {
+      url: '/holidays',
+      templateUrl: '/js/views/holidays/index.html',
+      controller: 'HolidaysIndexCtrl as vm'
+    })
     .state('holidayCreate', {
-      url: '/holiday/new',
+      url: '/holidays/new',
       templateUrl: '/js/views/holidays/new.html',
       controller: 'HolidaysCreateCtrl as vm'
     })
     .state('holidayEdit', {
-      url: '/holiday/:id/edit',
+      url: '/holidays/:id/edit',
       templateUrl: '/js/views/holidays/edit.html',
       controller: 'HolidaysEditCtrl as vm'
     })
     .state('holidayShow', {
-      url: '/holiday/:id',
+      url: '/holidays/:id',
       templateUrl: '/js/views/holidays/show.html',
       controller: 'HolidaysShowCtrl as vm'
+    })
+    .state('userEdit', {
+      url: '/users/:id/edit',
+      templateUrl: '/js/views/users/edit.html',
+      controller: 'UsersEditCtrl as vm'
     });
 
   $urlRouterProvider.otherwise('/');
