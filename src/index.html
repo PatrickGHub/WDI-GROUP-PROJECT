@@ -13,17 +13,17 @@
 </head>
 <body ng-controller="MainCtrl as main" ng-class="main.pageName">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg bg-light">
   <a class="navbar-brand" href="/">APPrès Ski</a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="nav navbar-nav mr-auto">
-      <li class="nav-item"><a class="nav-link" ui-sref="destinationsIndex">Destinations</a></li>
-      <li class="nav-item"><a class="nav-link" ui-sref="holidayIndex">My Holidays</a></li>
+      <li class="nav-item"><a class="nav-link" ui-sref="destinationsIndex">DESTINATIONS</a></li>
+      <li class="nav-item"><a class="nav-link" ui-sref="holidayIndex">MY HOLIDAYS</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a class="nav-item" ui-sref="login" ng-if="!main.isAuthenticated()">Login</a></li>
-      <li><a class="nav-item" ui-sref="register" ng-if="!main.isAuthenticated()">Register</a></li>
-      <li><a class="nav-item" ng-click="main.logout()" ng-if="main.isAuthenticated()">Logout</a></li>
+      <li><a class="nav-item" ui-sref="login" ng-if="!main.isAuthenticated()">LOGIN</a></li>
+      <li><a class="nav-item" ui-sref="register" ng-if="!main.isAuthenticated()">REGISTER</a></li>
+      <li><a class="nav-item nav-link" ng-click="main.logout()" ng-if="main.isAuthenticated()">LOGOUT</a></li>
     </ul>
   </div>
 </nav>
