@@ -11,7 +11,7 @@ function LoginCtrl($auth, $state) {
   function submit() {
     $auth.login(vm.credentials)
       .then(() => {
-        $state.go('-INSERT-REDIRECT-PAGE-WHEN-MADE');
+        $state.go('destinationsIndex');
       });
   }
 }
