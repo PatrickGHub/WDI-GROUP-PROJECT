@@ -1,6 +1,16 @@
 <h2>Show Holiday</h2>
+<!-- <img ng-src="{{ vm.holiday.image }}"> -->
+<div class="col-md-6">
+  <a ui-sref="usersShow({id:vm.holiday.createdBy.id})"><h3>{{ vm.holiday.createdBy.username }}</h3></a>
+  <p>{{ vm.holiday.holidayname }}</p>
+  <p>{{ vm.holiday.destination }}</p>
+  <p>Holiday starts {{ vm.holiday.dateArrive }}</p>
+  <p>{{ vm.holiday.attendees }}</p>
 
-<!-- Design Holiday Show -->
+  <button ng-click="vm.delete()" class="button" ng-if="main.isAuthenticated() && main.currentUserId === vm.holiday.createdBy.id">Delete</button>
+</div>
+
+<!-- Comment Section -->
 <div class="comments">
   <h2>Comments</h2>
   <p ng-if="!vm.holiday.comments.length">0 comments</p>
