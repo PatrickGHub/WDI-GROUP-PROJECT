@@ -79,7 +79,7 @@ div.img-fluid {
   margin: 0 auto;
 }
 
-.image-container {
+.index-container {
   display: flex;
   height: 300px;
   width: 300px;
@@ -87,9 +87,11 @@ div.img-fluid {
   position: relative;
   align-items: center;
   justify-content: center;
+  margin-bottom: -30px;
 }
 
 .index-image {
+  height: 100%;
   width: 100%;
   margin: 0 auto;
 }
@@ -99,4 +101,10 @@ div.img-fluid {
   margin-top: 10px;
   text-align: center;
   width: 100%;
+}
+
+.google-map {
+  height: 300px;
+  width: 500px;
+  display: inline-block;
 }

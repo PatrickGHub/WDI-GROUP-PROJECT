@@ -1,4 +1,3 @@
-<h1>Destinations Index</h1>
 <!-- <div class="jumbotron jumbotron-fluid">
 <div class="container">
 <img src="../images/jorg-angeli-406235.jpg" alt="">
@@ -6,11 +5,13 @@
 </div> -->
 
 <div class="container">
-  <div class="col">
-    <div class="row index-row">
+  <div class="col-12">
+    <div class="row">
       <div ng-repeat="destination in vm.all" class="col-sm-6 col-md-4 col-lg-3">
-        <a href="/destinations/{{destination.id}}"><img class="index-image" ng-src="{{ destination.image }}"></a>
-        <a href="/destinations/{{destination.id}}"><p class="place-name">{{ destination.town }}</p></a>
+        <div class="index-container">
+          <a href="/destinations/{{destination.id}}"><img class="index-image" ng-src="{{ destination.image }}"></a>
+        </div>
+        <a href="/destinations/{{destination.id}}"><h3 class="place-name text-center">{{ destination.town }}</h3></a>
 
       </div>
     </div>
