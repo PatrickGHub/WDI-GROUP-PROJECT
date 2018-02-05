@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for WDI-GROUP-PROJECT/models/holiday.js</title>
+    <title>Code coverage report for WDI-GROUP-PROJECT/controllers/destinations.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">All files</a> / <a href="index.html">WDI-GROUP-PROJECT/models</a> holiday.js
+      <a href="../../index.html">All files</a> / <a href="index.html">WDI-GROUP-PROJECT/controllers</a> destinations.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>2/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>2/4</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -56,65 +56,32 @@
 11
 12
 13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+14</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const mongoose = require('mongoose');
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Destination = require('../models/destination');
 &nbsp;
-const commentSchema = new mongoose.Schema({
-  comment: { type: String },
-  createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
-}, {
-  timestamps: true
-});
+function <span class="fstat-no" title="function not covered" >indexRoute(</span>req, res, next) {
+<span class="cstat-no" title="statement not covered" >  Destination</span>
+    .find()
+    .exec()
+    .then(<span class="fstat-no" title="function not covered" >(d</span>estinations) =&gt; <span class="cstat-no" title="statement not covered" >res.json(destinations))</span>
+    .catch(next);
+}
 &nbsp;
-const holidaySchema = new mongoose.Schema({
-  holidayname: { type: String, required: true, unique: true },
-  createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
-  attendees: String, // later needs to be changed into dropdown menu from user schema - Rane was going to show us
-  dateArrive: String,
-  dateDepart: String,
-  destination: String, // later will link to the API in a dropdown menu
-  // favourites: null,
-  comments: [ commentSchema]
-});
-&nbsp;
-&nbsp;
-holidaySchema.set('toJSON', { virtuals: true });
-&nbsp;
-module.exports = mongoose.model('Holiday', holidaySchema);
+module.exports = {
+  index: indexRoute
+};
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
