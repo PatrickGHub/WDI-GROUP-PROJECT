@@ -55,9 +55,46 @@ function holidayDelete(req, res) {
     .catch(() => res.status(500).json({ message: 'Something went wrong'}));
 }
 
+function addComment(req, res, next) {
+
+  req.body.createdBy = req.user;
+
+  Holiday
+    .findById(req.params.id)
+    .exec()
+    .then((holiday) => {
+      if(!holiday) return res.notFound();
+
+      const comment = holiday.comments.create(req.body);
+      holiday.comments.push(comment);
+
+      return holiday.save()
+        .then(() => res.json(comment));
+    })
+    .catch(next);
+}
+
+function deleteComment(req, res, next) {
+  Holiday
+    .findById(req.params.id)
+    .exec()
+    .then((holiday) => {
+      if(!holiday) return res.notFound();
+
+      const comment = holiday.comments.id(req.params.commentId);
+      comment.remove();
+
+      return holiday.save();
+    })
+    .then(() => res.status(204).end())
+    .catch(next);
+}
+
 module.exports = {
   create: holidayCreate,
   show: holidayShow,
   update: holidayUpdate,
-  delete: holidayDelete
+  delete: holidayDelete,
+  addComment: addComment,
+  deleteComment: deleteComment
 };
