@@ -27,6 +27,12 @@ router.route('/holidays/:id')
   .put(secureRoute, holidays.update)
   .delete(secureRoute, holidays.delete);
 
+router.route('/holidays/:id/comments')
+  .post(secureRoute, holidays.addComment);
+
+router.route('/holidays/:id/comments/:commentId')
+  .delete(secureRoute, holidays.deleteComment);
+
 router.route('/register')
   .post(auth.register);
 
