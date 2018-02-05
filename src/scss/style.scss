@@ -1,11 +1,6 @@
 @import "variables";
 @import "navbar";
-// $header-font:  'Times New Roman', serif;
-// $text-font: 'Arial', sans-serif;
-//$primary-color: #092E58;
-// $secondary-color:  #1D1B1C;
-// $background-color: snow;
-// $effect-color: #ECDD37;
+
 
 h1 {
   font-family: $header-font;
@@ -62,7 +57,7 @@ div.img-fluid {
 }
 
 .landing-page-image {
-  background-image: url('../images/jorg-angeli-406235.jpg');
+  background-image: url('../images/snowboarder.jpg');
   background-position: center;
   background-size: cover;
   height: calc(100vh - 56px);
@@ -70,7 +65,7 @@ div.img-fluid {
 }
 
 .landing-page-login {
-  background-color: white;
+  background-color: $background-color;
   padding: 30px;
   margin-top: 30px;
 }
