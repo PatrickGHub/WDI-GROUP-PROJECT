@@ -1,9 +1,9 @@
-/* globals api, expect, describe, it, afterEach, beforeEach*/
+/* globals api, expect, describe, it, afterEach, beforeEach */
 require('../spec_helper');
 
 const User = require('../../models/user'); // changed '../../../models/user' to '../../models/user' - Charlotte
 
-describe('Users Controller Tests', () => {
+describe('Users Controller Test', () => {
 
   afterEach(done => {
     User.collection.remove();
@@ -11,7 +11,6 @@ describe('Users Controller Tests', () => {
   });
 
   describe('GET /api/users/:id', () => {
-
     let user  = null;
     let token = null;
 
@@ -20,12 +19,12 @@ describe('Users Controller Tests', () => {
         .post('/api/register')
         .set('Accept', 'application/json')
         .send({
-          name: 'test',
+          username: 'test',
           email: 'test@test.com',
           password: 'password',
           passwordConfirmation: 'password',
-          sport: [0],
-          abilityLevel: [1],
+          sport: 0,
+          abilityLevel: 1,
           image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXf30fSEExqSEGeCRv9gMYTlR1CLP3pybH0chBM77ACjUqsbRm'
         })
         .end((err, res) => {
@@ -43,6 +42,7 @@ describe('Users Controller Tests', () => {
         .expect(200, done);
     });
 
+    // next test
     it('should return user data in response body', done => {
       api
         .get(`/api/users/${user.id}`)
@@ -55,18 +55,17 @@ describe('Users Controller Tests', () => {
               '__v',
               '_id',
               'id',
-              'name',
+              'username',
               'email',
               'password',
               'passwordConfirmation',
               'sport',
               'abilityLevel',
               'image'
-            ]);
 
+            ]);
           done();
         });
     });
   });
-
 });
