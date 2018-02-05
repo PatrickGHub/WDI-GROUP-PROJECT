@@ -7,7 +7,7 @@
     "postinstall": "bower install && gulp deploy",
     "test": "nyc --reporter=html --reporter=text mocha --exit"
   },
-  "author": "put group memeber names here",
+  "author": "Charlotte Davies, Patrick Kelly and Evelina Kuusinen",
   "license": "ISC",
   "gulp": {
     "srcDir": "src/",
