@@ -1,34 +1,59 @@
-<h2>Show Holiday</h2>
+<h2 class="text-center">Holiday - {{ vm.holiday.holidayname }}</h2>
 <!-- <img ng-src="{{ vm.holiday.image }}"> -->
-<div class="col-md-6">
-  <a ui-sref="usersShow({id:vm.holiday.createdBy.id})"><h3>{{ vm.holiday.createdBy.username }}</h3></a>
-  <p>{{ vm.holiday.holidayname }}</p>
-  <p>{{ vm.holiday.destination }}</p>
-  <p>Holiday starts {{ vm.holiday.dateArrive }}</p>
-  <p>{{ vm.holiday.attendees }}</p>
 
-  <button ng-click="vm.delete()" class="button" ng-if="main.isAuthenticated() && main.currentUserId === vm.holiday.createdBy.id">Delete</button>
+<div class="jumbotron">
+  <div class="dest-show-jumbotron" style="background:url({{vm.destination.image}})">
+    <!-- <img class="" ng-src="{{ vm.destination.image }}"> -->
+  </div>
 </div>
 
-<!-- Comment Section -->
-<div class="comments">
-  <h2>Comments</h2>
-  <p ng-if="!vm.holiday.comments.length">0 comments</p>
-  <ul class="comments__created">
-    <li ng-repeat="comment in vm.holiday.comments track by $index">
-      <a ui-sref="usersShow({ id: comment.createdBy.id })"><strong>{{ comment.createdBy.username }}</strong></a> - {{ comment.text }} <button class="button" ng-click="vm.deleteComment(comment)" ng-if="main.isAuthenticated() && main.currentUserId === comment.createdBy.id">Delete</button>
-    </li>
-  </ul>
-  <form ng-submit="vm.addComment()" ng-if="main.isAuthenticated()">
-    <label>Add comment</label>
-    <textarea ng-model="vm.newComment.text"></textarea>
-    <button class="button button--full">Comment</button>
-  </form>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <a ui-sref="usersShow({id:vm.holiday.createdBy.id})"><h3>{{ vm.holiday.createdBy.username }}</h3></a>
+      <p>{{ vm.holiday.holidayname }}</p>
+      <p class="run-levels">Going to {{ vm.holiday.destination }}</p>
+      <p class="run-levels">Arriving {{ vm.holiday.dateArrive }}</p>
+      <p class="run-levels">Leaving {{ vm.holiday.dateDepart }}</p>
+    </div>
+      <div class="col-md-6">
+        <google-map center="{ lat: 39.8, lng: -5.3}" content-string="{{ vm.destination.town }}"></google-map>
+      </div>
+    <div class="row">
+      <h3>Who is going:</h3>
+      <p>{{ vm.holiday.attendees }}</p>
+    </div>
+      <button ng-click="vm.delete()" class="button" ng-if="main.isAuthenticated() && main.currentUserId === vm.holiday.createdBy.id">Delete</button>
+    </div>
+
+    <div class="row">
+      <div class="comments">
+        <h2>Comments</h2>
+        <p ng-if="!vm.holiday.comments.length">0 comments</p>
+        <ul class="comments__created">
+          <li ng-repeat="comment in vm.holiday.comments track by $index">
+            <a ui-sref="usersShow({ id: comment.createdBy.id })"><strong>{{ comment.createdBy.username }}</strong></a> - {{ comment.text }} <button class="button" ng-click="vm.deleteComment(comment)" ng-if="main.isAuthenticated() && main.currentUserId === comment.createdBy.id">Delete</button>
+          </li>
+        </ul>
+        <form ng-submit="vm.addComment()" ng-if="main.isAuthenticated()">
+          <label>Add comment</label>
+          <textarea ng-model="vm.newComment.text"></textarea>
+          <button class="button button--full">Comment</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- Comment Section -->
 
 </div>
 
 
-<h2>Register</h2>
+
+<!-- <h2>Register</h2>
 
   <p>{{vm.newUser}}</p>
 
@@ -38,7 +63,7 @@
 
       <div class="row">
 
-        <!-- not sure why it goes on 2 lines for medium screens -->
+        not sure why it goes on 2 lines for medium screens
 
         <div class="col-lg-6 col-xs-12">
           <div class="form-group">
@@ -151,4 +176,4 @@
       <button class="btn btn-primary">Register</button>
 
     </div>
-  </form>
+  </form> -->

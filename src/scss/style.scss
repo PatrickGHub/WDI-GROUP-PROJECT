@@ -79,7 +79,7 @@ a, button {
   margin: 0 auto;
 }
 
-.image-container {
+.index-container {
   display: flex;
   height: 300px;
   width: 300px;
@@ -87,9 +87,11 @@ a, button {
   position: relative;
   align-items: center;
   justify-content: center;
+  margin-bottom: -30px;
 }
 
 .index-image {
+  height: 100%;
   width: 100%;
   margin: 0 auto;
 }
@@ -101,6 +103,11 @@ a, button {
   width: 100%;
 }
 
+.google-map {
+  height: 300px;
+  width: 500px;
+  display: inline-block;
+}
 
 // Styling for login and register
 
@@ -128,4 +135,3 @@ div.img-fluid {
 
 .form-box {
   margin-top: 200px;
-}
