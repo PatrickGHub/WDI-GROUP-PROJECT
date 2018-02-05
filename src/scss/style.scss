@@ -74,3 +74,25 @@ div.img-fluid {
 .landing-page-box {
   margin-top: 200px;
 }
+
+.index-row {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.image-container {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.place-name {
+  margin-bottom: 30px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}

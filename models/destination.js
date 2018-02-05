@@ -1,12 +1,17 @@
 const mongoose = require('mongoose');
 
 const destinationSchema = new mongoose.Schema({
-  placename: String,
-  country: String
+  town: {type: String, required: true},
+  country: {type: String, required: true},
+  altitude: Number,
+  green: Number,
+  blue: Number,
+  red: Number,
+  black: Number,
+  lifts: Number,
+  image: {type: String, required: true}
 });
 
 destinationSchema.set('toJSON', { virtuals: true });
 
 module.exports = mongoose.model('Destination', destinationSchema);
-
-//Made destinations model to test route
