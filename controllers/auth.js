@@ -2,22 +2,29 @@ const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 const { secret } = require('../config/environment');
 
-function register(req, res) {
+function register(req, res, next) {
   User
     .create(req.body)
-    .then(() => res.json({ message: 'Registration successful'}));
+    .then(user => {
+      if(!user || !user.validatePassword(req.body.password)) return res.unauthorized();
+
+      const token = jwt.sign({ userId: user.id }, secret, { expiresIn: '1hr' });
+
+      return res.json({ token, message: `Welcome ${user.username}`, user });
+    })
+    .catch(next);
 }
 
-function login(req, res) {
+function login(req, res, next) {
   User
     .findOne({ email: req.body.email })
     .then((user) => {
-      if(!user || !user.validatePassword(req.body.password)) return res.status(401).json({ message: 'Unauthorized' });
+      if(!user || !user.validatePassword(req.body.password)) return res.send(401), (res.body.message).to.eq('Unauthorized');
 
       const token = jwt.sign({ userId: user.id }, secret, { expiresIn: '1hr' });
-      console.log(token);
       return res.json({ token, message: `Welcome back ${user.username}` });
-    });
+    })
+    .catch(next);
 }
 
 module.exports = {
