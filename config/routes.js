@@ -18,6 +18,9 @@ router.route('/users/:id')
 
 router.route('/destinations')
   .get(destinations.index);
+  
+router.route('/destinations/:od')
+  .get(destinations.show);
 
 router.route('/holidays')
   .post(secureRoute, holidays.create);
