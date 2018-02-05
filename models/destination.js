@@ -9,12 +9,11 @@ const destinationSchema = new mongoose.Schema({
   red: Number,
   black: Number,
   lifts: Number,
+  greatFor: String,
+  overview: String,
   image: {type: String, required: true},
-  bestFor: String,
-  description: String,
   lat: Number,
   lng: Number
-
 });
 
 destinationSchema.set('toJSON', { virtuals: true });
