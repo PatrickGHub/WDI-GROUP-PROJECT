@@ -1,1 +1,16 @@
 <h1>Destinations Index</h1>
+<!-- <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <img src="../images/jorg-angeli-406235.jpg" alt="">
+  </div>
+</div> -->
+
+<section class="section">
+  <div class="columns">
+    <div ng-repeat="destination in vm.all" class="column-3">
+      <a ui-sref="destinationsShow({ id: destination.id })">
+        <img ng-src="{{ destination.image }}">
+      </a>
+    </div>
+  </div>
+</section>
