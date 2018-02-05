@@ -1,7 +1,7 @@
 @import "variables";
 @import "navbar";
 @import "destinationshow";
-
+@import "landingpage";
 h1 {
   font-family: $header-font;
   color: $primary-color;
@@ -46,33 +46,33 @@ a, button {
   margin: 3px;
 }
 
-// Landing page styling
-
-div.img-fluid {
-  max-width: 100%;
-  height: auto;
-  margin:0;
-  padding:0;
-}
-
-.landing-page-image {
-  background-image: url('../images/snowboarder.jpg');
-  background-position: center;
-  background-size: cover;
-  height: calc(100vh - 56px);
-  margin-top: -20px;
-}
-
-.landing-page-login {
-  // background-color: $background-color;
-  background-color: rgba(255,255,255,0.95);
-  padding: 30px;
-  margin-top: 30px;
-}
-
-.landing-page-box {
-  margin-top: 200px;
-}
+// Landing page styling is in the _landingpage.scss
+//
+// div.img-fluid {
+//   max-width: 100%;
+//   height: auto;
+//   margin:0;
+//   padding:0;
+// }
+//
+// .landing-page-image {
+//   background-image: url('../images/snowboarder.jpg');
+//   background-position: center;
+//   background-size: cover;
+//   height: calc(100vh - 56px);
+//   margin-top: -20px;
+// }
+//
+// .landing-page-login {
+//   // background-color: $background-color;
+//   background-color: rgba(255,255,255,0.95);
+//   padding: 30px;
+//   margin-top: 30px;
+// }
+//
+// .landing-page-box {
+//   margin-top: 200px;
+// }
 
 .index-row {
   width: 95%;
@@ -99,4 +99,33 @@ div.img-fluid {
   margin-top: 10px;
   text-align: center;
   width: 100%;
+}
+
+
+// Styling for login and register
+
+div.img-fluid {
+  max-width: 100%;
+  height: auto;
+  margin:0;
+  padding:0;
+}
+
+.background-image {
+  background-image: url('../images/snowboarder.jpg');
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - 56px);
+  margin-top: -20px;
+}
+
+.form {
+  // background-color: $background-color;
+  background-color: rgba(255,255,255,0.95);
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.form-box {
+  margin-top: 200px;
 }
