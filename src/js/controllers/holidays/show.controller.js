@@ -1,10 +1,10 @@
 angular
   .module('appres')
-  .controller('HolidayShowCtrl', HolidayShowCtrl);
+  .controller('HolidaysShowCtrl', HolidaysShowCtrl);
 
-HolidayShowCtrl.$inject = ['HolidayFactory', '$state'];
+HolidaysShowCtrl.$inject = ['HolidayFactory', '$state'];
 
-function HolidayShowCtrl(HolidayFactory, $state) {
+function HolidaysShowCtrl(HolidayFactory, $state) {
   const vm = this;
 
   vm.holiday = {};
