@@ -75,10 +75,11 @@ User
     console.log(`${users.length} users created!`);
 
     return Holiday.create([{
-      name: 'Patrick turns 25 ski trip',
+      holidayname: 'Patrick turns 25 ski trip',
+      createdBy: users[6],
       attendees: ['Charlotte', 'Evelina', 'Hannah Teter', 'Shaun White', 'Vreni Schneider', 'Tracis Rice'],
       destination: 'Chamonix',
-      createdBy: users[6],
+
       comments: [{
         comment: 'This is going to be epic!',
         createdBy: users[1]
@@ -87,10 +88,11 @@ User
         createdBy: users[0]
       }]
     },{
-      name: 'Shaun & girls go ',
+      holidayname: 'Shaun & girls go ',
+      createdBy: users[0],
       attendees: ['Charlotte', 'Evelina', 'Hannah Teter', 'Shaun White', 'Vreni Schneider', 'Tracis Rice'],
       destination: 'Chamonix',
-      createdBy: users[0],
+
       comments: [{
         comment: ' Where do we want to eat the first night?!',
         createdBy: users[5]
