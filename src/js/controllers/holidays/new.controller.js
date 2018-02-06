@@ -13,6 +13,6 @@ function HolidaysCreateCtrl(HolidayFactory, $state) {
     HolidayFactory
       .save(vm.newHoliday)
       .$promise
-      .then(() => $state.go('landing'));
+      .then(() => $state.go('holidayIndex'));
   }
 }

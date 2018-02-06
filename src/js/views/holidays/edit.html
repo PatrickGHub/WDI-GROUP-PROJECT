@@ -6,14 +6,14 @@
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="holidayName">Holiday Name</label>
-          <input class="form-control" type="text" name="holidayName" placeholder="Holiday Name" id="holidayName" ng-model="vm.holiday.holidayName" required unique>
+          <input class="form-control" type="text" name="holidayName" placeholder="{{ vm.holiday.holidayName }}" id="holidayName" ng-model="vm.holiday.holidayName" required>
         </div>
       </div>
 
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="destination">Destination</label>
-          <input class="form-control" type="text" name="destination" placeholder="Destination" id="destination" ng-model="vm.holiday.destination" required unique>
+          <input class="form-control" type="text" name="destination" placeholder="{{ vm.holiday.destination }}" id="destination" ng-model="vm.holiday.destination" required>
         </div>
       </div>
     </div>
@@ -22,14 +22,14 @@
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="dateArrive">Arrival Date</label>
-          <input class="form-control" type="date" name="dateArrive" placeholder="Arrival Date" id="dateArrive" ng-model="vm.holiday.dateArrive" required unique>
+          <input class="form-control" type="date" name="dateArrive" placeholder="{{ vm.holiday.dateArrive }}" id="dateArrive" ng-model="vm.holiday.dateArrive" required>
         </div>
       </div>
 
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="dateDepart">Departure Date</label>
-          <input class="form-control" type="date" name="dateDepart" placeholder="Arrival Date" id="dateDepart" ng-model="vm.holiday.dateDepart" required unique>
+          <input class="form-control" type="date" name="dateDepart" placeholder="{{ vm.holiday.dateDepart }}" id="dateDepart" ng-model="vm.holiday.dateDepart" required>
         </div>
       </div>
     </div>
@@ -38,7 +38,7 @@
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="attendees">Attendees</label>
-          <input class="form-control" type="text" name="attendees" placeholder="Attendees" id="attendees" ng-model="vm.holiday.attendees" required unique>
+          <input class="form-control" type="text" name="attendees" placeholder="{{ vm.holiday.attendees }}" id="attendees" ng-model="vm.holiday.attendees" required>
         </div>
       </div>
 
