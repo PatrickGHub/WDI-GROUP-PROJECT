@@ -11,10 +11,11 @@ const Holiday = require('../models/holiday');
 // }
 
 function holidayCreate(req, res) {
+  req.body.createdBy = req.user.id;
   Holiday
     .create(req.body)
     .then(holiday => res.status(201).json(holiday))
-    .catch(() => res.status(500).json({ message: 'Something went wrong'}));
+    .catch((err) => res.status(500).json(err));
 }
 
 function holidayShow(req, res) {
