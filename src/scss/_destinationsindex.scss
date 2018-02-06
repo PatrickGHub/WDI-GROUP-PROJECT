@@ -6,3 +6,44 @@
   font-family: $header-font;
   color: $primary-color;
 }
+
+.card {
+  border: solid thick $primary-color;
+  padding: 3px;
+  margin: 5px;
+  text-align: center;
+
+  img {
+   height: 125px;
+   max-width: 90%;
+   justify-content: center;
+ }
+
+  h5 {
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0px;
+
+  }
+
+  h6 {
+    font-size: 15px;
+    color: $grey;
+
+  }
+}
+
+@media (max-width: 350px) {
+
+.container {
+  width: 950px;
+
+.card {
+
+  img {
+    height: 200px;
+    width: auto;
+  }
+}
+ }
+}
