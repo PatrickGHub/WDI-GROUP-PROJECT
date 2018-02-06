@@ -4,7 +4,7 @@
   </div>
 </div>
 
-<div class="destinationShow">
+<!-- <div class="destinationShow"> -->
 
   <div class="container">
     <div class="row">
@@ -12,13 +12,23 @@
         <img src="{{vm.destination.image}}" alt="{{ vm.destination.town}}">
       </div>
       <div class="col-md-6">
-        <p>{{ vm.destination.overview }}</p>
-        <br>
+        <google-map center="{lat:  vm.destination.lat , lng:  vm.destination.lng }" content-string="{{ vm.destination.town }}"></google-map>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-6">
+        <p>{{ vm.destination.overview }}</p>
+        <br>
+      </div>
+      <div class="col-md-6">
+        <h3>Favourites</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="col-md-6">
         <ul>
           <h3>Runs</h3>
           <p class="run-levels">Beginner - <span class="bold-beginner">{{ vm.destination.green }}%</span></p>
@@ -27,13 +37,25 @@
           <p class="run-levels">Expert - <span class="bold-expert">{{ vm.destination.black }}%</span></p>
         </ul>
       </div>
-
       <div class="col-md-6">
+        <ul>
         <br>
         <p>Great For: {{ vm.destination.greatFor }}</p>
         <p>Number of Lifts: {{ vm.destination.lifts }}</p>
         <p>Altitude: {{ vm.destination.altitude }}</p>
         <p>Weather</p>
+        </ul>
+    </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6">
+
+      </div>
+
+      <div class="col-md-6">
+
       </div>
     </div>
 
@@ -45,7 +67,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <google-map center="{lat:  vm.destination.lat , lng:  vm.destination.lng }" content-string="{{ vm.destination.town }}"></google-map>
+
     </div>
   </div>
 </div>
