@@ -87,33 +87,33 @@ a, button {
 }
 
 // Styling for login and register
-
-div.img-fluid {
-  max-width: 100%;
-  height: auto;
-  margin:0;
-  padding:0;
-}
-
-.background-image {
-  background-image: $image;
-  background-position: center;
-  background-size: cover;
-  background-repeat: repeat-y;
-  height: calc(100vh - 56px);
-  margin-top: -20px;
-}
-
-.form {
-  // background-color: $background-color;
-  background-color: rgba(255,255,255,0.95);
-  padding: 30px;
-  margin-top: 30px;
-}
-
-.form-box {
-  margin-top: 200px;
-}
+//
+// div.img-fluid {
+//   max-width: 100%;
+//   height: auto;
+//   margin:0;
+//   padding:0;
+// }
+//
+// .background-image {
+//   background-image: $image;
+//   background-position: center;
+//   background-size: cover;
+//   background-repeat: repeat-y;
+//   height: calc(100vh - 56px);
+//   margin-top: -20px;
+// }
+//
+// .form {
+//   // background-color: $background-color;
+//   background-color: rgba(255,255,255,0.95);
+//   padding: 30px;
+//   margin-top: 30px;
+// }
+//
+// .form-box {
+//   margin-top: 200px;
+// }
 
 .pageEnd {
   font-size: 10px;
