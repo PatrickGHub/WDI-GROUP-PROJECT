@@ -23,3 +23,23 @@ div.img-fluid {
 .landing-page-box {
   margin-top: 200px;
 }
+
+.appres-row {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+button {
+  &.landing-buttons {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid $primary-color;
+    font-family: $header-font;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100px;
+  }
+  &:hover {
+    background-color: $primary-color;
+    color: rgb(255, 255, 255);
+  }
+}
