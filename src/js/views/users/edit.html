@@ -1,4 +1,10 @@
 <h2>  Edit your profile</h2>
+
+{{ vm.user.username }}
+{{ vm.user.email }}
+{{ vm.user.sport }}
+{{ vm.user.abilityLevel }}
+
   <form ng-submit="vm.update()">
     <div class="container">
         <div class="row">
@@ -48,15 +54,15 @@
               <legend class="col-form-label col-sm-3 pt-0">Sport</legend>
               <div class="col-sm-9">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="sportRadios" id="ski" value="ski" ng-model="vm.user.sport">
+                  <input class="form-check-input" type="radio" name="sportRadios" id="ski" ng-value="ski" ng-model="vm.user.sport" ng-checked="(vm.user.sport == ski)">
                   <label class="form-check-label" for="ski">Ski</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="sportRadios" id="snowboard" value="snowboard" ng-model="vm.user.sport">
+                  <input class="form-check-input" type="radio" name="sportRadios" id="snowboard" ng-value="snowboard" ng-model="vm.user.sport" ng-checked="(vm.user.sport == snowboard)">
                   <label class="form-check-label" for="snowboard">Snowboard</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="sportRadios" id="both" value="both" ng-model="vm.user.sport">
+                  <input class="form-check-input" type="radio" name="sportRadios" id="both" ng-value="both" ng-model="vm.user.sport" ng-checked="(vm.user.sport == both)">
                   <label class="form-check-label" for="both">Both</label>
                 </div>
               </div>
@@ -68,15 +74,15 @@
               <legend class="col-form-label col-sm-3 pt-0">Ability Level</legend>
               <div class="col-sm-9">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="abilityRadios" id="beginner" value="1" ng-model="vm.user.abilityLevel">
+                  <input class="form-check-input" type="radio" name="abilityRadios" id="beginner" ng-value="1" ng-model="vm.user.abilityLevel" ng-checked="(vm.user.abilityLevel == 1)">
                   <label class="form-check-label" for="beginner">Beginnner</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="abilityRadios" id="intermediate" value="2" ng-model="vm.user.abilityLevel">
+                  <input class="form-check-input" type="radio" name="abilityRadios" id="intermediate" ng-value="2" ng-model="vm.user.abilityLevel" ng-checked="(vm.user.abilityLevel == 2)">
                   <label class="form-check-label" for="intermediate">Intermediate</label>
                 </div>
                 <div class="form-check">
-                <input class="form-check-input" type="radio" name="abilityRadios" id="advanced" value="3" ng-model="vm.user.abilityLevel">
+                <input class="form-check-input" type="radio" name="abilityRadios" id="advanced" ng-value="3" ng-model="vm.user.abilityLevel" ng-checked="(vm.user.abilityLevel == 3)">
                 <label class="form-check-label" for="advanced">Advanced</label>
               </div>
             </div>
@@ -86,8 +92,9 @@
       <div class="control">
       <button class="btn btn-primary" ng-click="vm.update()">Update profile</button>
       <button class="btn btn-primary" ui-sref="destinationsIndex">Cancel</button>
-      <!-- ADD MESSAGE DO YOU REALLY WANT TO DELETE PROFILE -->
-      <button class="btn btn-primary"  ng-click="vm.delete()" ui-sref="/">Delete profile</button>
+      <!-- ADD MODAL TO MESSAGE DO YOU REALLY WANT TO DELETE PROFILE -->
+      <!-- WHEN CLICKED ALSO RUN FUNCTION LOGOUT -->
+      <button class="btn btn-primary" ng-click="vm.delete()" ui-sref="/">Delete profile</button>
     </div>
   </div>
 </form>

@@ -8,6 +8,8 @@ function UsersEditCtrl(UserFactory, $state) {
 
   vm.user   = UserFactory.get($state.params);
   vm.update = update;
+  // vm.delete = destroy;
+
 
   function update(){
     UserFactory
@@ -15,4 +17,14 @@ function UsersEditCtrl(UserFactory, $state) {
       .$promise
       .then(() => $state.go('userEdit'));
   }
+
+  // function destroy() {
+  //   console.log('clicked');
+  //   // send request to api containing id for user that i want to delete
+  //   UserFactory
+  //     .delete($state.params, vm.user)
+  //     .$promise
+  //     // .logout()
+  //     .then(() => $state.go('landing'));
+  // }
 }

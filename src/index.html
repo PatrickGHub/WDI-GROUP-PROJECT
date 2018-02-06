@@ -24,6 +24,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li><a class="nav-item" ui-sref="login" ng-if="!main.isAuthenticated()">LOGIN</a></li>
       <li><a class="nav-item" ui-sref="register" ng-if="!main.isAuthenticated()">REGISTER</a></li>
+      <li><a class="nav-item" ui-sref="userEdit({ id: main.currentUserId })" ng-if="main.isAuthenticated()">EDIT PROFILE</a></li>
       <li><a class="nav-item nav-link" ng-click="main.logout()" ng-if="main.isAuthenticated()">LOGOUT</a></li>
     </ul>
   </div>

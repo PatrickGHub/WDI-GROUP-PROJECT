@@ -1,52 +1,45 @@
-<h2>Create Holiday</h2>
+<h2 class="text-center">Create Holiday</h2>
 
-<form ng-submit="vm.submit()">
-
+<form ng-submit="vm.create()">
   <div class="container">
-
     <div class="row">
-
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="holidayName">Holiday Name</label>
-          <input class="form-control" type="text" name="holidayName" placeholder="Holiday Name" id="holidayName" ng-model="vm.newHoliday.holidayName" required unique>
+          <input class="form-control" type="text" name="holidayName" placeholder="Holiday Name" id="holidayName" ng-model="vm.newHoliday.holidayName" required>
         </div>
       </div>
 
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="destination">Destination</label>
-          <input class="form-control" type="text" name="destination" placeholder="Destination" id="destination" ng-model="vm.newHoliday.destination" required unique>
+          <input class="form-control" type="text" name="destination" placeholder="Destination" id="destination" ng-model="vm.newHoliday.destination" required>
           <p>Needs to be a dropdown from the internal API</p>
         </div>
       </div>
-
     </div>
 
     <div class="row">
-
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="dateArrive">Arrival Date</label>
-          <input class="form-control" type="date" name="dateArrive" placeholder="Arrival Date" id="dateArrive" ng-model="vm.newHoliday.dateArrive" required unique>
+          <input class="form-control" type="date" name="dateArrive" placeholder="Arrival Date" id="dateArrive" ng-model="vm.newHoliday.dateArrive" required>
         </div>
       </div>
 
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="dateDepart">Departure Date</label>
-          <input class="form-control" type="date" name="dateDepart" placeholder="Arrival Date" id="dateDepart" ng-model="vm.newHoliday.dateDepart" required unique>
+          <input class="form-control" type="date" name="dateDepart" placeholder="Arrival Date" id="dateDepart" ng-model="vm.newHoliday.dateDepart" required>
         </div>
       </div>
-
     </div>
 
     <div class="row">
-
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="attendees">Attendees</label>
-          <input class="form-control" type="text" name="attendees" placeholder="Attendees" id="attendees" ng-model="vm.newHoliday.attendees" required unique>
+          <input class="form-control" type="text" name="attendees" placeholder="Attendees" id="attendees" ng-model="vm.newHoliday.attendees" required>
         </div>
       </div>
 
@@ -57,10 +50,9 @@
           <p>{{ vm.newHoliday.attendees }}</p>
         </div>
       </div>
-
     </div>
 
     <button class="btn btn-primary">Create Holiday</button>
-
+    <button class="btn btn-danger" ui-sref="destinationsIndex">Cancel</button>
   </div>
 </form>

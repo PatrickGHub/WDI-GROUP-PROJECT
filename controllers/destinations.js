@@ -16,7 +16,7 @@ function destinationShow(req, res) {
       if(!destination) return res.status(401).json({ message: 'No destination found'});
       res.json(destination);
     })
-    .catch(() => res.status(500).json({ message: 'Something went wrong'}));
+    .catch((err) => res.status(500).json(err));
 }
 
 module.exports = {

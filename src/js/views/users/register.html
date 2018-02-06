@@ -66,15 +66,15 @@
                         <legend class="col-form-label col-sm-3 pt-0">Sport</legend>
                         <div class="col-sm-9">
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="sportRadios" id="ski" value="ski" ng-model="vm.newUser.sport">
+                            <input class="form-check-input" type="radio" name="sportRadios" id="ski" ng-value="ski" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == ski)">
                             <label class="form-check-label" for="ski">Ski</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="sportRadios" id="snowboard" value="snowboard" ng-model="vm.newUser.sport">
+                            <input class="form-check-input" type="radio" name="sportRadios" id="snowboard" ng-value="snowboard" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == snowboard)">
                             <label class="form-check-label" for="snowboard">Snowboard</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="sportRadios" id="both" value="both" ng-model="vm.newUser.sport">
+                            <input class="form-check-input" type="radio" name="sportRadios" id="both" ng-value="both" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == both)">
                             <label class="form-check-label" for="both">Both</label>
                           </div>
                         </div>
@@ -85,15 +85,15 @@
                         <legend class="col-form-label col-sm-3 pt-0">Ability Level</legend>
                       <div class="col-sm-9">
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="abilityRadios" id="beginner" value="1" ng-model="vm.newUser.abilityLevel">
+                          <input class="form-check-input" type="radio" name="abilityRadios" id="beginner" ng-value="1" ng-model="vm.newUser.abilityLevel" ng-checked="(vm.newUser.abilityLevel == 1)">
                           <label class="form-check-label" for="beginner">Beginnner</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="abilityRadios" id="intermediate" value="2" ng-model="vm.newUser.abilityLevel">
+                            <input class="form-check-input" type="radio" name="abilityRadios" id="intermediate" ng-value="2" ng-model="vm.newUser.abilityLevel" ng-checked="(vm.newUser.abilityLevel == 2)">
                             <label class="form-check-label" for="intermediate">Intermediate</label>
                         </div>
                         <div class="form-check">
-                        <input class="form-check-input" type="radio" name="abilityRadios" id="advanced" value="3" ng-model="vm.newUser.abilityLevel">
+                        <input class="form-check-input" type="radio" name="abilityRadios" id="advanced" ng-value="3" ng-model="vm.newUser.abilityLevel" ng-checked="(vm.newUser.abilityLevel == 3)">
                         <label class="form-check-label" for="advanced">Advanced</label>
                       </div>
                     </div>
