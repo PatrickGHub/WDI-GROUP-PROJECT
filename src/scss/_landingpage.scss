@@ -6,7 +6,7 @@ div.img-fluid {
 }
 
 .landing-page-image {
-  background-image: url('../images/snowboarder.jpg');
+  background-image: $image;
   background-position: center;
   background-size: cover;
   height: calc(100vh - 56px);

@@ -2,8 +2,8 @@ angular
   .module('appres')
   .controller('HolidaysIndexCtrl', HolidaysIndexCtrl);
 
-HolidaysIndexCtrl.$inject = [ 'Holiday'];
-function HolidaysIndexCtrl(Holiday) {
+HolidaysIndexCtrl.$inject = [ 'HolidayFactory'];
+function HolidaysIndexCtrl(HolidayFactory) {
   const vm = this;
-  vm.all = Holiday.query();
+  vm.all = HolidayFactory.get();
 }
