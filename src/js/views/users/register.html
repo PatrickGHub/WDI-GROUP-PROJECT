@@ -1,42 +1,35 @@
 <div class="background-image">
-  <div class="container">
+  <div class="container edit-profile">
     <div class="row form-box">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-10 col-md-offset-1">
         <div class="form">
-          <h2>Register</h2>
+          <div class="row text-center">
+            <h2>Register</h2>
+          </div>
             <form ng-submit="vm.submit()">
-            <div class="container">
               <div class="row">
+                <!-- USERNAME,EMAIL,PASSWORD -->
                 <div class="col-lg-6 col-xs-12">
                   <div class="form-group">
                     <label for="lastName">Username</label>
                     <input class="form-control" type="text" name="newUsername" placeholder="Username" id="newUsername" ng-model="vm.newUser.username" required>
                   </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-6 col-xs-12">
                   <div class="form-group">
                     <label for="email">Email</label>
                     <input class="form-control" type="email" name="email" placeholder="Email" id="email" ng-model="vm.newUser.email" required>
                   </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-6 col-xs-12">
                   <div class="form-group">
                     <label for="password">Password</label>
                     <input class="form-control" type="password" name="password" placeholder="Password" id="password" ng-model="vm.newUser.password" required>
                   </div>
-                </div>
-                  <div class="col-lg-6 col-xs-12">
-                    <div class="form-group">
-                      <label for="passwordConfirmation">Password confirmation</label>
-                      <input class="form-control" type="password" name="passwordConfirmation" placeholder="Password confirmation" id="passwordConfirmation" ng-model="vm.newUser.passwordConfirmation" required>
-                    </div>
+                  <div class="form-group">
+                    <label for="passwordConfirmation">Password confirmation</label>
+                    <input class="form-control" type="password" name="passwordConfirmation" placeholder="Password confirmation" id="passwordConfirmation" ng-model="vm.newUser.passwordConfirmation" required>
                   </div>
                 </div>
-                <div class="row">
+
+                <!-- IMAGE -->
+                <div class="col-lg-5 col-lg-offset-1 col-xs-12">
                   <div class="col-lg-4 col-xs-12">
                     <div class="form-group">
                       <label>Upload Your Profile Picture</label>
@@ -62,47 +55,55 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-4 col-xs-12">
-                      <div class="form-group">
-                        <legend class="col-form-label col-sm-3 pt-0">Sport</legend>
-                        <div class="col-sm-9">
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="sportRadios" id="ski" value="ski" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == 'ski')">
-                            <label class="form-check-label" for="ski">Ski</label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="sportRadios" id="snowboard" value="snowboard" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == 'snowboard')">
-                            <label class="form-check-label" for="snowboard">Snowboard</label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="sportRadios" id="both" value="both" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == 'both')">
-                            <label class="form-check-label" for="both">Both</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  <div class="col-lg-4 col-xs-12">
-                    <div class="form-group">
-                        <legend class="col-form-label col-sm-3 pt-0">Ability Level</legend>
-                      <div class="col-sm-9">
-                        <div class="form-check">
-                          <input class="form-check-input" value="beginner" type="radio" name="abilityRadios" id="beginner" ng-model="vm.newUser.abilityLevel">
-                          <label class="form-check-label" for="beginner">Beginnner</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="abilityRadios" id="intermediate" value="intermediate" ng-model="vm.newUser.abilityLevel">
-                            <label class="form-check-label" for="intermediate">Intermediate</label>
-                        </div>
-                        <div class="form-check">
-                        <input class="form-check-input" type="radio" name="abilityRadios" id="advanced" value="advanced" ng-model="vm.newUser.abilityLevel">
-                        <label class="form-check-label" for="advanced">Advanced</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
-            <button class="btn btn-primary" ng-click="vm.submit()">Register</button>
             </div>
+            <!-- ROW WITH SPORT AND ABILITY -->
+            <div class="row">
+              <div class="col-lg-6 col-xs-12">
+                <div class="form-group">
+                          <legend class="col-form-label col-sm-3 pt-0">Sport</legend>
+
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="sportRadios" id="ski" value="ski" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == 'ski')">
+                              <label class="form-check-label" for="ski">Ski</label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="sportRadios" id="snowboard" value="snowboard" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == 'snowboard')">
+                              <label class="form-check-label" for="snowboard">Snowboard</label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="sportRadios" id="both" value="both" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == 'both')">
+                              <label class="form-check-label" for="both">Both</label>
+                            </div>
+                          </div>
+              </div>
+
+
+<div class="col-lg-6 col-xs-12">
+                          <div class="form-group">
+                              <legend class="col-form-label col-sm-3 pt-0">Ability Level</legend>
+                            <div class="col-sm-9">
+                              <div class="form-check">
+                                <input class="form-check-input" value="beginner" type="radio" name="abilityRadios" id="beginner" ng-model="vm.newUser.abilityLevel">
+                                <label class="form-check-label" for="beginner">Beginner</label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="abilityRadios" id="intermediate" value="intermediate" ng-model="vm.newUser.abilityLevel">
+                                  <label class="form-check-label" for="intermediate">Intermediate</label>
+                              </div>
+                              <div class="form-check">
+                              <input class="form-check-input" type="radio" name="abilityRadios" id="advanced" value="advanced" ng-model="vm.newUser.abilityLevel">
+                              <label class="form-check-label" for="advanced">Advanced</label>
+                            </div>
+                          </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="row text-center">
+                        <button class="landing-buttons" ng-click="vm.submit()">Register</button>
+</div>
           </form>
         </div>
       </div>
