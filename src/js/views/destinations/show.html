@@ -1,32 +1,60 @@
-<h2 class="text-center">{{ vm.destination.town }}</h2>
-<h4 class="text-center">{{ vm.destination.country }}</h4>
-
-
-<div class="jumbotron">
-  <div class="dest-show-jumbotron" style="background:url("{{vm.destination.image}})">
-    <!-- <img class="" ng-src="{{ vm.destination.image }}"> -->
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="destinations">{{ vm.destination.town }}, {{ vm.destination.country }}</h1>
   </div>
+</div>
+
+<div class="destinationShow">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{{vm.destination.image}}" alt="{{ vm.destination.town}}">
+      </div>
+      <div class="col-md-6">
+        <p>{{ vm.destination.overview }}</p>
+        <br>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <ul>
+          <h3>Runs</h3>
+          <p class="run-levels">Beginner - <span class="bold-beginner">{{ vm.destination.green }}%</span></p>
+          <p class="run-levels">Intermediate - <span class="bold-intermediate">{{ vm.destination.blue }}%</span></p>
+          <p class="run-levels">Advanced - <span class="bold-advanced">{{ vm.destination.red }}%</span></p>
+          <p class="run-levels">Expert - <span class="bold-expert">{{ vm.destination.black }}%</span></p>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <br>
+        <p>Great For: {{ vm.destination.greatFor }}</p>
+        <p>Number of Lifts: {{ vm.destination.lifts }}</p>
+        <p>Altitude: {{ vm.destination.altitude }}</p>
+        <p>Weather</p>
+      </div>
+    </div>
+
+  </div>
+</div>
 </div>
 
 
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <h3>Great for: {{ vm.destination.greatFor }}</h3>
-      <ul>
-        <h3>Runs</h3>
-        <p class="run-levels">Beginner - <span class="bold-beginner">{{ vm.destination.green }}%</span></p>
-        <p class="run-levels">Intermediate - <span class="bold-intermediate">{{ vm.destination.blue }}%</span></p>
-        <p class="run-levels">Advanced - <span class="bold-advanced">{{ vm.destination.red }}%</span></p>
-        <p class="run-levels">Expert - <span class="bold-expert">{{ vm.destination.black }}%</span></p>
-      </ul>
+      <google-map center="{lat:  vm.destination.lat , lng:  vm.destination.lng }" content-string="{{ vm.destination.town }}"></google-map>
     </div>
-
-    <div class="col-md-6">
-      <google-map center="{ lat: 39.8, lng: -5.3}" content-string="{{ vm.destination.town }}"></google-map>
-    </div>
-  </div>
-  <div class="row">
-    <p>{{ vm.destination.overview }}</p>
   </div>
 </div>
+
+<!-- <div class="col-md-6">
+<google-map center="{ lat: 39.8, lng: -5.3}" content-string="{{ vm.destination.town }}"></google-map>
+</div>
+</div>
+<div class="row">
+<p>{{ vm.destination.overview }}</p>
+</div>
+</div> --> -->

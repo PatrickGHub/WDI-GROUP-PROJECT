@@ -1,36 +1,54 @@
-.destination-show-image {
-  width: 300px;
-  height: 300px;
-}
-
-.destination-show-jumbotron {
-  height: 20px;
-}
+// .destination-show-image {
+//   width: 300px;
+//   height: 300px;
+// }
+//
+// .destination-show-jumbotron {
+//   height: 20px;
+// }
 
 .jumbotron {
   height: 200px;
+   .container {
+     border: none;
+   }
 }
 
-.bold-beginner {
-  color: #1C9400;
-  font-weight: 900;
+.destinationShow{
+  justify-content: center;
+
+.container {
+  border: solid $grey 3px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+
+img {
+  margin: 30px 0px;
 }
 
-.bold-intermediate {
-  color: #0079C2;
-  font-weight: 900;
-}
+  p {
+    font-size: 15px;
 
-.bold-advanced {
-  color: #FF0909;
-  font-weight: 900;
-}
+    .bold-beginner {
+      color: #1C9400;
+      font-weight: 900;
+    }
 
-.bold-expert {
-  color: #000;
-  font-weight: 900;
-}
+    .bold-intermediate {
+      color: #0079C2;
+      font-weight: 900;
+    }
 
-.run-levels {
-  font-size: 18px;
+    .bold-advanced {
+      color: #FF0909;
+      font-weight: 900;
+    }
+
+    .bold-expert {
+      color: #000;
+      font-weight: 900;
+    }
+  }
+}
 }
