@@ -5,6 +5,7 @@
         <div class="form">
           <h2>Register</h2>
             <form ng-submit="vm.submit()">
+            <div class="container">
               <div class="row">
                 <div class="col-lg-6 col-xs-12">
                   <div class="form-group">
@@ -56,7 +57,7 @@
                       <label for="label">Profile Picture Preview</label>
                       <div class="control">
                         <figure class="image is-128x128">
-                          <img src="{{ vm.newUser.image }}" alt="">
+                          <img src="{{ vm.newUser.image }}" alt="user-profile-picture">
                         </figure>
                       </div>
                     </div>
@@ -66,15 +67,15 @@
                         <legend class="col-form-label col-sm-3 pt-0">Sport</legend>
                         <div class="col-sm-9">
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="sportRadios" id="ski" ng-value="ski" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == ski)">
+                            <input class="form-check-input" type="radio" name="sportRadios" id="ski" ng-value="ski" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == 'ski')">
                             <label class="form-check-label" for="ski">Ski</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="sportRadios" id="snowboard" ng-value="snowboard" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == snowboard)">
+                            <input class="form-check-input" type="radio" name="sportRadios" id="snowboard" ng-value="snowboard" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == 'snowboard')">
                             <label class="form-check-label" for="snowboard">Snowboard</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="sportRadios" id="both" ng-value="both" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == both)">
+                            <input class="form-check-input" type="radio" name="sportRadios" id="both" ng-value="both" ng-model="vm.newUser.sport" ng-checked="(vm.newUser.sport == 'both')">
                             <label class="form-check-label" for="both">Both</label>
                           </div>
                         </div>
@@ -100,7 +101,7 @@
                   </div>
                 </div>
               </div>
-            <button class="btn btn-primary">Register</button>
+            <button class="btn btn-primary" ui-sref="destinationsIndex">Register</button>
           </form>
         </div>
       </div>
