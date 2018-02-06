@@ -13,7 +13,7 @@ function HolidaysEditCtrl(HolidayFactory, $state) {
     HolidayFactory
       .update($state.params.id, vm.holiday)
       .$promise
-      .then(() => $state.go('holidaysShow'));
+      .then(() => $state.go('holidayShow', $state.params));
   }
 
   vm.delete = holidaysDelete;
@@ -22,7 +22,7 @@ function HolidaysEditCtrl(HolidayFactory, $state) {
     HolidayFactory.delete($state.params)
       .$promise
       .then(() => {
-        $state.go('holidaysIndex');
+        $state.go('holidayIndex');
       });
   }
 }
