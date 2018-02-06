@@ -16,7 +16,7 @@ function UsersEditCtrl(UserFactory, $state) {
     UserFactory
       .update($state.params, vm.user)
       .$promise
-      .then(() => $state.go('userEdit'));
+      .then(() => $state.go('destinationsIndex'));
   }
 
   // function destroy() {
