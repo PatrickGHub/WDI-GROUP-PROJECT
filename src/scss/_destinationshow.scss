@@ -14,11 +14,9 @@
    }
 }
 
-.destinationShow{
-  justify-content: center;
 
 .container {
-  border: solid $grey 3px;
+  // border: solid $grey 3px;
   justify-content: center;
   margin: 0 auto;
   padding: 20px;
@@ -27,28 +25,59 @@ img {
   margin: 30px 0px;
 }
 
+p {
+  font-size: 20px;
+  margin: 10px;
+  text-align: justify;
+}
+
+.stats {
+    // border: solid $grey 1px;
+    // margin: 5px;
+    padding: 5px;
+    background-color: $grey;
+
+p {
+  color: white;
+  font-weight: 900;
+  font-size: 15px;
+}
+}
+
   p {
-    font-size: 15px;
+    margin: 10px;
 
     .bold-beginner {
       color: #1C9400;
-      font-weight: 900;
+
     }
 
     .bold-intermediate {
       color: #0079C2;
       font-weight: 900;
+      font-size: 15px;
     }
 
     .bold-advanced {
       color: #FF0909;
       font-weight: 900;
+      font-size: 15px;
     }
 
     .bold-expert {
       color: #000;
       font-weight: 900;
+      font-size: 15px;
     }
   }
+
+  h3 {
+    text-decoration: underline;
+    text-align: center;
+  }
 }
+
+.google-map {
+  margin: 30px;
+
 }
