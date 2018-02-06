@@ -1,9 +1,9 @@
 angular
   .module('appres')
-  .controller('HolidaysNewCtrl', HolidaysNewCtrl);
+  .controller('HolidaysCreateCtrl', HolidaysCreateCtrl);
 
-HolidaysNewCtrl.$inject = ['HolidayFactory', '$state'];
-function HolidaysNewCtrl(HolidayFactory, $state) {
+HolidaysCreateCtrl.$inject = ['HolidayFactory', '$state'];
+function HolidaysCreateCtrl(HolidayFactory, $state) {
   const vm = this;
 
   vm.newHoliday = {};

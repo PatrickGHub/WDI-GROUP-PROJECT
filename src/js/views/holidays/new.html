@@ -1,48 +1,66 @@
 <h2>Create Holiday</h2>
 
 <form ng-submit="vm.submit()">
+
   <div class="container">
+
     <div class="row">
-      <div class="col">
+
+      <div class="col-lg-6 col-xs-12">
+        <div class="form-group">
+          <label for="holidayName">Holiday Name</label>
+          <input class="form-control" type="text" name="holidayName" placeholder="Holiday Name" id="holidayName" ng-model="vm.newHoliday.holidayName" required unique>
+        </div>
       </div>
-      <div class="col-10 col-xl-6">
-        <form method="POST" action="/register">
-          <div class="form-group">
-            <label for="holidayName">Holiday Name</label>
-            <input class="form-control" type="text" name="holidayName" placeholder="Holiday Name" id="holidayName" ng-model="vm.holiday.holidayname" required>
-          </div>
 
-          <div class="form-group">
-            <label for="destination">Destination</label>
-            <input class="form-control" type="destination" name="destination" placeholder="Destination" id="destination" ng-model="vm.user.destination" required>
-          </div>
-
-          <div class="field">
-            <label for="date">Arrival Date</label>
-            <p class="control">
-              <input class="form-control" type="date" name="date" ng-model="vm.holiday.dateArrive">
-            </p>
-          </div>
-
-          <div class="field">
-            <label for="date">Departure Date</label>
-            <p class="control">
-              <input class="form-control" type="date" name="date" ng-model="vm.holiday.dateDepart">
-            </p>
-          </div>
-
-          <h3>Dropdown linked with user Model</h3>
-          <div class="form-group">
-            <label for="attendees">Attendees</label>
-            <input class="form-control" type="attendees" name="attendees" placeholder="Attendees" id="attendees" ng-model="vm.user.attendees" required>
-          </div>
-
-          <button class="btn btn-primary">Create Holiday</button>
-        </form>
+      <div class="col-lg-6 col-xs-12">
+        <div class="form-group">
+          <label for="destination">Destination</label>
+          <input class="form-control" type="text" name="destination" placeholder="Destination" id="destination" ng-model="vm.newHoliday.destination" required unique>
+          <p>Needs to be a dropdown from the internal API</p>
+        </div>
       </div>
-      <div class="col">
-      </div>
+
     </div>
-  </div>
 
+    <div class="row">
+
+      <div class="col-lg-6 col-xs-12">
+        <div class="form-group">
+          <label for="dateArrive">Arrival Date</label>
+          <input class="form-control" type="date" name="dateArrive" placeholder="Arrival Date" id="dateArrive" ng-model="vm.newHoliday.dateArrive" required unique>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-xs-12">
+        <div class="form-group">
+          <label for="dateDepart">Departure Date</label>
+          <input class="form-control" type="date" name="dateDepart" placeholder="Arrival Date" id="dateDepart" ng-model="vm.newHoliday.dateDepart" required unique>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-6 col-xs-12">
+        <div class="form-group">
+          <label for="attendees">Attendees</label>
+          <input class="form-control" type="text" name="attendees" placeholder="Attendees" id="attendees" ng-model="vm.newHoliday.attendees" required unique>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-xs-12">
+        <div class="form-group">
+          <label for="attendees">Attendees</label>
+          <p>This needs to be a dropdown with all users that is searchable and a box to show who has already been added</p>
+          <p>{{ vm.newHoliday.attendees }}</p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="btn btn-primary">Create Holiday</button>
+
+  </div>
 </form>
