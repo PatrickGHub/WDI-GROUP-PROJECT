@@ -6,9 +6,11 @@ MainCtrl.$inject = ['$transitions', '$rootScope', '$state', '$auth'];
 function MainCtrl($transitions, $rootScope, $state, $auth) {
   const vm = this;
 
-  vm.isAuthenticated = $auth.isAuthenticated;
+  vm.isAuthenticated = $auth.isAuthenticated();
   vm.logout = logout;
-  vm.currentUserId = $auth.getPayload().userId;
+  if(vm.isAuthenticated) {
+    vm.currentUserId = $auth.getPayload().userId;
+  }
 
   function logout() {
     $auth.logout();
