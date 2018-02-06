@@ -19,7 +19,8 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="nav navbar-nav mr-auto">
       <li class="nav-item"><a class="nav-link" ui-sref="destinationsIndex">DESTINATIONS</a></li>
-      <li class="nav-item"><a class="nav-link" ui-sref="holidayIndex">MY HOLIDAYS</a></li>
+      <li class="nav-item"><a class="nav-link" ng-if="main.isAuthenticated()" ui-sref="holidayIndex">HOLIDAYS</a></li>
+      <li class="nav-item"><a class="nav-link" ng-if="main.isAuthenticated()" ui-sref="holidayCreate">CREATE HOLIDAY</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a class="nav-item" ui-sref="login" ng-if="!main.isAuthenticated()">LOGIN</a></li>
@@ -30,5 +31,17 @@
   </div>
 </nav>
 <main ui-view></main>
+
+<div class="pageEnd">
+  <p>Coded by Evelina 👩🏼‍💻, Charlotte 👩🏻‍💻 and Patrick 👨🏻‍💻 for WDI Project 3, General Assembly London</p>
+
+  <a href="#">Contact Evelina</a><a href="#">Evelina's LinkedIn</a><a href="#">Evelina's Github   ❄️ </a>
+
+  <a href="mailto:charlottemarydavies@gmail.com">Contact Charlotte</a><a href="https://www.linkedin.com/in/charlottemdavies/">Charlotte's LinkedIn</a><a href="https://github.com/CharlotteMD">Charlotte's Github   ❄️ </a>
+
+  <a href="#">Contact Patrick</a><a href="#">Patrick's LinkedIn</a><a href="#">Patrick's Github</a>
+</div>
+
 </body>
+
 </html>
