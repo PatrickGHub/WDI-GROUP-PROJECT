@@ -26,7 +26,7 @@ function holidayShow(req, res) {
       if(!holiday) return res.status(401).json({ message: 'No holiday found'});
       res.json(holiday);
     })
-    .catch(() => res.status(500).json({ message: 'Something went wrong'}));
+    .catch((err) => res.status(500).json(err));
 }
 
 function holidayUpdate(req, res) {
@@ -42,7 +42,7 @@ function holidayUpdate(req, res) {
       return holiday.save();
     })
     .then(holiday => res.json(holiday))
-    .catch(() => res.status(500).json({ message: 'Something went wrong'}));
+    .catch((err) => res.status(500).json(err));
 }
 
 function holidayDelete(req, res) {
@@ -53,7 +53,7 @@ function holidayDelete(req, res) {
       return holiday.remove();
     })
     .then(() => res.status(204).end())
-    .catch(() => res.status(500).json({ message: 'Something went wrong'}));
+    .catch((err) => res.status(500).json(err));
 }
 
 function addComment(req, res, next) {
