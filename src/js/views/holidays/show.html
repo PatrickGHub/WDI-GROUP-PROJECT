@@ -1,56 +1,50 @@
-<h2 class="text-center">{{ vm.holiday.holidayName }}</h2>
-<!-- <img ng-src="{{ vm.holiday.image }}"> -->
-
-<div class="jumbotron">
-  <div class="dest-show-jumbotron" style="background:url({{vm.destination.image}})">
-    <!-- <img class="" ng-src="{{ vm.destination.image }}"> -->
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="destinations">{{ vm.holiday.holidayName }}</h1>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <a ui-sref="usersShow({id:vm.holiday.createdBy.id})"><h3>{{ vm.holiday.createdBy.username }}</h3></a>
-      <p>{{ vm.holiday.holidayname }}</p>
-      <p class="run-levels">Going to {{ vm.holiday.destination }}</p>
-      <p class="run-levels">Arriving {{ vm.holiday.dateArrive | date}}</p>
-      <p class="run-levels">Leaving {{ vm.holiday.dateDepart | date}}</p>
+      <!-- <a ui-sref="usersShow({id:vm.holiday.createdBy.id})"><h3>{{ vm.holiday.createdBy.username }}</h3></a> -->
+      <h2 class="run-levels">Going to {{ vm.holiday.destination }}</h2><a href="/holidays/{{ vm.holiday.id }}/edit" class="btn btn-primary">Edit Holiday</a>
+      <hr>
+      <p class="run-levels">Arriving - {{ vm.holiday.dateArrive | date}}</p>
+      <p class="run-levels">Leaving - {{ vm.holiday.dateDepart | date}}</p>
     </div>
-      <div class="col-md-6">
-        <google-map center="{ lat: 39.8, lng: -5.3}" content-string="{{ vm.destination.town }}"></google-map>
-      </div>
+    <div class="col-md-6">
+      <google-map center="{ lat: 39.8, lng: -5.3}" content-string="{{ vm.destination.town }}"></google-map>
+    </div>
     <div class="row">
-      <h3>Who is going:</h3>
+      <h2>Going with</h2>
+      <hr>
       <p>{{ vm.holiday.attendees }}</p>
     </div>
-      <a href="/holidays/{{ vm.holiday.id }}/edit" class="btn btn-primary">Edit Holiday</a>
-      <button ng-click="vm.delete()" class="button" ng-if="main.isAuthenticated() && main.currentUserId === vm.holiday.createdBy.id">Delete Holiday</button>
+    <button ng-click="vm.delete()" class="button" ng-if="main.isAuthenticated() && main.currentUserId === vm.holiday.createdBy.id">Delete Holiday</button>
+  </div>
+
+  <hr>
+  <div class="row">
+    <div class="comments">
+      <h2>Comments</h2>
+      <p ng-if="!vm.holiday.comments.length">0 comments</p>
+      <ul class="comments__created">
+        <li ng-repeat="comment in vm.holiday.comments track by $index">
+          <a ui-sref="usersShow({ id: comment.createdBy.id })"><strong>{{ comment.createdBy.username }}</strong></a> - {{ comment.text }} <button class="button" ng-click="vm.deleteComment(comment)" ng-if="main.isAuthenticated() && main.currentUserId === comment.createdBy.id">Delete</button>
+        </li>
+      </ul>
+
     </div>
-
-    <div class="row">
-      <div class="comments">
-        <h2>Comments</h2>
-        <p ng-if="!vm.holiday.comments.length">0 comments</p>
-        <ul class="comments__created">
-          <li ng-repeat="comment in vm.holiday.comments track by $index">
-            <a ui-sref="usersShow({ id: comment.createdBy.id })"><strong>{{ comment.createdBy.username }}</strong></a> - {{ comment.text }} <button class="button" ng-click="vm.deleteComment(comment)" ng-if="main.isAuthenticated() && main.currentUserId === comment.createdBy.id">Delete</button>
-          </li>
-        </ul>
-
+  </div>
+  <div class="row">
+    <form ng-submit="vm.addComment()" ng-if="main.isAuthenticated()">
+      <div class="row">
+        <textarea class="form-control" ng-model="vm.newComment.text" placeholder="Add a comment"></textarea>
       </div>
-    </div>
-    <div class="row">
-      <form ng-submit="vm.addComment()" ng-if="main.isAuthenticated()">
-        <div class="row">
-          <label>Add comment</label>
-        </div>
-        <div class="row">
-          <textarea ng-model="vm.newComment.text"></textarea>
-        </div>
-        <div class="row">
-          <button class="btn btn-primary">Comment</button>
-        </div>
-      </form>
-    </div>
+      <div class="row">
+        <button class="btn btn-primary">Comment</button>
+      </div>
+    </form>
   </div>
 </div>
