@@ -8,6 +8,7 @@ function UsersEditCtrl(UserFactory, $state) {
 
   vm.user   = UserFactory.get($state.params);
   vm.update = update;
+  console.log(vm.user);
   // vm.delete = destroy;
 
 

@@ -162,7 +162,7 @@ const userSeeds = [{
   email: 'shaun@ga.co',
   password: 'shaun',
   passwordConfirmation: 'shaun',
-  sport: 2,
+  sport: 'snowboard',
   abilityLevel: 3,
   image: 'https://cdn-s3.si.com/s3fs-public/sikids/pages/images/cms/imce/users/dantec/2014/01/shaun-white-2014-olympics-header.jpg'
 }, {
@@ -170,7 +170,7 @@ const userSeeds = [{
   email: 'vreni@ga.co',
   password: 'vreni',
   passwordConfirmation: 'vreni',
-  sport: 1,
+  sport: 'ski',
   abilityLevel: 3,
   image: 'http://cdn.welove2ski.com/wp-content/uploads/vreni1-1.jpg'
 }, {
@@ -178,7 +178,7 @@ const userSeeds = [{
   email: 'tracis@ga.co',
   password: 'tracis',
   passwordConfirmation: 'tracis',
-  sport: 2,
+  sport: 'both',
   abilityLevel: 3,
   image: 'https://assets.saatchiart.com/saatchi/84381/art/1617509/819762-7.jpg'
 },{
@@ -186,7 +186,7 @@ const userSeeds = [{
   email: 'hannah@ga.co',
   password: 'hannah',
   passwordConfirmation: 'hannah',
-  sport: 2,
+  sport: 'ski',
   abilityLevel: 3,
   image: 'https://www.sierrasun.com/wp-content/uploads/2017/12/hannahteter-tdt-120917-1-4.jpg'
 },{
@@ -194,7 +194,7 @@ const userSeeds = [{
   email: 'charlotte@ga.co',
   password: 'charlotte',
   passwordConfirmation: 'charlotte',
-  sport: 1,
+  sport: 'both',
   abilityLevel: 2,
   image: 'http://www.oogazone.com/wp-content/uploads/top-little-girl-skiing-stock-vector-skier-cartoon-ski-image.jpg'
 },{
@@ -202,7 +202,7 @@ const userSeeds = [{
   email: 'evelina@ga.co',
   password: 'evelina',
   passwordConfirmation: 'evelina',
-  sport: 1,
+  sport: 'ski',
   abilityLevel: 2,
   image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXf30fSEExqSEGeCRv9gMYTlR1CLP3pybH0chBM77ACjUqsbRm'
 },{
@@ -210,7 +210,7 @@ const userSeeds = [{
   email: 'patrick@ga.co',
   password: 'patrick',
   passwordConfirmation: 'patrick',
-  sport: 1,
+  sport: 'both',
   abilityLevel: 1,
   image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvvdYy2pa7Es35cKnm_MhPGLDH1rzlPu0C3Dybe8AeNVYKsdw'
 }];
