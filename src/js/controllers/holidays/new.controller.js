@@ -15,4 +15,6 @@ function HolidaysCreateCtrl(HolidayFactory, $state) {
       .$promise
       .then(() => $state.go('holidayIndex'));
   }
+
+
 }

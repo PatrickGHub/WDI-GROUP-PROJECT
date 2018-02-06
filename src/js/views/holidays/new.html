@@ -13,8 +13,16 @@
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="destination">Destination</label>
-          <input class="form-control" type="text" name="destination" placeholder="Destination" id="destination" ng-model="vm.newHoliday.destination" required>
-          <p>Needs to be a dropdown from the internal API</p>
+          {{ vm.destination.all }}
+          <input
+          type="text"
+          ng-model="vm.newHoliday.destination"
+          uib-typeahead="destination as destination.town for destination in vm.all | filter:{ town: $viewValue }"
+          class="form-control"
+          typeahead-on-select="vm.pickDestination()" name="destination" id="destination" required>
+
+          <!-- <input class="form-control" type="text" name="destination" placeholder="Destination" id="destination" ng-model="vm.newHoliday.destination" required> -->
+
         </div>
       </div>
     </div>
@@ -36,20 +44,26 @@
     </div>
 
     <div class="row">
+
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="attendees">Attendees</label>
-          <input class="form-control" type="text" name="attendees" placeholder="Attendees" id="attendees" ng-model="vm.newHoliday.attendees" required>
+          <input
+          type="text"
+          ng-model="vm.selectedAttendees"
+          uib-typeahead="user as user.username for user in vm.all | filter:{ username: $viewValue }"
+          class="form-control"
+          typeahead-on-select="vm.invite()" name="user" id="user" required>
         </div>
       </div>
 
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
-          <label for="attendees">Attendees</label>
-          <p>This needs to be a dropdown with all users that is searchable and a box to show who has already been added</p>
+          <label>Selected Attendees</label>
           <p>{{ vm.newHoliday.attendees }}</p>
         </div>
       </div>
+
     </div>
 
     <button class="btn btn-primary">Create Holiday</button>
