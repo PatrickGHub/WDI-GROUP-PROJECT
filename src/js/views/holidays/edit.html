@@ -1,11 +1,8 @@
-<h2>Edit Holiday</h2>
+<h2 class="text-center">Edit Holiday</h2>
 
 <form ng-submit="vm.update()">
-
   <div class="container">
-
     <div class="row">
-
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="holidayName">Holiday Name</label>
@@ -19,11 +16,9 @@
           <input class="form-control" type="text" name="destination" placeholder="Destination" id="destination" ng-model="vm.holiday.destination" required unique>
         </div>
       </div>
-
     </div>
 
     <div class="row">
-
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="dateArrive">Arrival Date</label>
@@ -37,11 +32,9 @@
           <input class="form-control" type="date" name="dateDepart" placeholder="Arrival Date" id="dateDepart" ng-model="vm.holiday.dateDepart" required unique>
         </div>
       </div>
-
     </div>
 
     <div class="row">
-
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="attendees">Attendees</label>
@@ -56,18 +49,14 @@
           <p>{{ vm.holiday.attendees }}</p>
         </div>
       </div>
-
     </div>
-
     <button class="btn btn-primary">Edit Holiday</button>
-
+    <button class="btn btn-danger" ui-sref="destinationsIndex">Cancel</button>
   </div>
 </form>
 
 <form ng-submit="vm.delete()">
   <div class="container">
-
-    <button class="btn btn-primary">Delete</button>
-
+    <button class="btn btn-danger">Delete Holiday</button>
   </div>
 </form>
