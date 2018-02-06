@@ -2,8 +2,8 @@ angular
   .module('appres')
   .controller('DestinationsIndexCtrl', DestinationsIndexCtrl);
 
-DestinationsIndexCtrl.$inject = [ 'Destination'];
-function DestinationsIndexCtrl(Destination) {
+DestinationsIndexCtrl.$inject = [ 'DestinationFactory'];
+function DestinationsIndexCtrl(DestinationFactory) {
   const vm = this;
-  vm.all = Destination.query();
+  vm.all = DestinationFactory.query();
 }

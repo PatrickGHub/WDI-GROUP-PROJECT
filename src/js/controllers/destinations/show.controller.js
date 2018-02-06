@@ -7,15 +7,7 @@ DestinationShowCtrl.$inject = ['DestinationFactory', '$state'];
 function DestinationShowCtrl(DestinationFactory, $state) {
   const vm = this;
 
-  vm.holiday = {};
-  vm.delete    = remove;
+  vm.destination = {};
 
-  vm.holiday = DestinationFactory.get($state.params);
-
-  function remove(){
-    DestinationFactory
-      .remove($state.params)
-      .$promise
-      .then(() => $state.go('/'));
-  }
+  vm.destination = DestinationFactory.get($state.params);
 }

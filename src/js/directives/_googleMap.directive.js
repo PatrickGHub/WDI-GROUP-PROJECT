@@ -15,7 +15,7 @@ function googleMap($window) {
     link(scope, element) {
       var map = new $window.google.maps.Map(element[0], {
         zoom: 8,
-        mapTypeId: 'hybrid',
+        mapTypeId: 'roadmap',
         center: scope.center
       });
       var marker = new $window.google.maps.Marker({

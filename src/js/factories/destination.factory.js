@@ -1,9 +1,9 @@
 angular
   .module('appres')
-  .factory('Destination', Destination);
+  .factory('DestinationFactory', DestinationFactory);
 
-Destination.$inject = ['$resource', 'API'];
-function Destination($resource, API){
+DestinationFactory.$inject = ['$resource', 'API'];
+function DestinationFactory($resource, API){
   return $resource(`${API}/destinations/:id`, { id: '@_id'}, {
     'update': { method: 'PUT' }
   });
