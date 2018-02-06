@@ -163,7 +163,7 @@ const userSeeds = [{
   password: 'shaun',
   passwordConfirmation: 'shaun',
   sport: 'snowboard',
-  abilityLevel: 3,
+  abilityLevel: 'beginner',
   image: 'https://cdn-s3.si.com/s3fs-public/sikids/pages/images/cms/imce/users/dantec/2014/01/shaun-white-2014-olympics-header.jpg'
 }, {
   username: 'Vreni Schneider',
@@ -171,7 +171,7 @@ const userSeeds = [{
   password: 'vreni',
   passwordConfirmation: 'vreni',
   sport: 'ski',
-  abilityLevel: 3,
+  abilityLevel: 'advanced',
   image: 'http://cdn.welove2ski.com/wp-content/uploads/vreni1-1.jpg'
 }, {
   username: 'Tracis Rice',
@@ -179,7 +179,7 @@ const userSeeds = [{
   password: 'tracis',
   passwordConfirmation: 'tracis',
   sport: 'both',
-  abilityLevel: 3,
+  abilityLevel: 'advanced',
   image: 'https://assets.saatchiart.com/saatchi/84381/art/1617509/819762-7.jpg'
 },{
   username: 'Hannah Teter',
@@ -187,7 +187,7 @@ const userSeeds = [{
   password: 'hannah',
   passwordConfirmation: 'hannah',
   sport: 'ski',
-  abilityLevel: 3,
+  abilityLevel: 'beginner',
   image: 'https://www.sierrasun.com/wp-content/uploads/2017/12/hannahteter-tdt-120917-1-4.jpg'
 },{
   username: 'Charlotte',
@@ -195,7 +195,7 @@ const userSeeds = [{
   password: 'charlotte',
   passwordConfirmation: 'charlotte',
   sport: 'both',
-  abilityLevel: 2,
+  abilityLevel: 'advanced',
   image: 'http://www.oogazone.com/wp-content/uploads/top-little-girl-skiing-stock-vector-skier-cartoon-ski-image.jpg'
 },{
   username: 'Evelina',
@@ -203,7 +203,7 @@ const userSeeds = [{
   password: 'evelina',
   passwordConfirmation: 'evelina',
   sport: 'ski',
-  abilityLevel: 2,
+  abilityLevel: 'intermediate',
   image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXf30fSEExqSEGeCRv9gMYTlR1CLP3pybH0chBM77ACjUqsbRm'
 },{
   username: 'Patrick',
@@ -211,7 +211,7 @@ const userSeeds = [{
   password: 'patrick',
   passwordConfirmation: 'patrick',
   sport: 'both',
-  abilityLevel: 1,
+  abilityLevel: 'intermediate',
   image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvvdYy2pa7Es35cKnm_MhPGLDH1rzlPu0C3Dybe8AeNVYKsdw'
 }];
 
