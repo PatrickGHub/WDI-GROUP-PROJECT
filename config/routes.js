@@ -23,6 +23,7 @@ router.route('/destinations/:id')
   .get(destinations.show);
 
 router.route('/holidays')
+  .get(holidays.index)
   .post(secureRoute, holidays.create);
 
 router.route('/holidays/:id')

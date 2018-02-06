@@ -2,13 +2,13 @@ const Holiday = require('../models/holiday');
 
 // No Holiday Index page
 
-// function holidayIndex(req, res) {
-//   Holiday
-//     .find()
-//     .exec()
-//     .then(holiday => res.status(200).json(holiday))
-//     .catch(() => res.status(500).json({ message: 'Something went wrong'}));
-// }
+function holidayIndex(req, res, next) {
+  Holiday
+    .find()
+    .exec()
+    .then((holidays) => res.json(holidays))
+    .catch(next);
+}
 
 function holidayCreate(req, res) {
   req.body.createdBy = req.user.id;
@@ -92,6 +92,7 @@ function deleteComment(req, res, next) {
 }
 
 module.exports = {
+  index: holidayIndex,
   create: holidayCreate,
   show: holidayShow,
   update: holidayUpdate,

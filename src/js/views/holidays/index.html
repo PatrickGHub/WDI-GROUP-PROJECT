@@ -1,5 +1,6 @@
 <h1>Holiday Index</h1>
 
 <div ng-repeat="holiday in vm.all" class="col-sm-6 col-md-4 col-lg-3">
-  <p>{{ holiday.holidayname }}</p>
+  <a href="/holidays/{{ holiday.id }}"><p>{{ holiday.holidayName }}</p></a>
+  {{ holiday.destination }}
 </div>
