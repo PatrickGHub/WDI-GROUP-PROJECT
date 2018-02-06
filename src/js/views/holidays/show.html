@@ -13,8 +13,8 @@
       <a ui-sref="usersShow({id:vm.holiday.createdBy.id})"><h3>{{ vm.holiday.createdBy.username }}</h3></a>
       <p>{{ vm.holiday.holidayname }}</p>
       <p class="run-levels">Going to {{ vm.holiday.destination }}</p>
-      <p class="run-levels">Arriving {{ vm.holiday.dateArrive }}</p>
-      <p class="run-levels">Leaving {{ vm.holiday.dateDepart }}</p>
+      <p class="run-levels">Arriving {{ vm.holiday.dateArrive | date}}</p>
+      <p class="run-levels">Leaving {{ vm.holiday.dateDepart | date}}</p>
     </div>
       <div class="col-md-6">
         <google-map center="{ lat: 39.8, lng: -5.3}" content-string="{{ vm.destination.town }}"></google-map>
