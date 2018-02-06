@@ -1,4 +1,10 @@
 <h2>  Edit your profile</h2>
+
+{{ vm.user.username }}
+{{ vm.user.email }}
+{{ vm.user.sport }}
+{{ vm.user.abilityLevel }}
+
   <form ng-submit="vm.update()">
     <div class="container">
         <div class="row">
@@ -86,7 +92,8 @@
       <div class="control">
       <button class="btn btn-primary" ng-click="vm.update()">Update profile</button>
       <button class="btn btn-primary" ui-sref="destinationsIndex">Cancel</button>
-      <!-- ADD MESSAGE DO YOU REALLY WANT TO DELETE PROFILE -->
+      <!-- ADD MODAL TO MESSAGE DO YOU REALLY WANT TO DELETE PROFILE -->
+      <!-- WHEN CLICKED ALSO RUN FUNCTION LOGOUT -->
       <button class="btn btn-primary" ng-click="vm.delete()" ui-sref="/">Delete profile</button>
     </div>
   </div>
