@@ -22,14 +22,14 @@
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="dateArrive">Arrival Date</label>
-          <input class="form-control" type="date" name="dateArrive" placeholder="{{ vm.holiday.dateArrive }}" id="dateArrive" ng-model="vm.holiday.dateArrive" required>
+          <input class="form-control" type="date" name="dateArrive" placeholder="{{ vm.holiday.dateArrive }}" id="dateArrive" ng-model="vm.holiday.dateArrive" required format-date>
         </div>
       </div>
 
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="dateDepart">Departure Date</label>
-          <input class="form-control" type="date" name="dateDepart" placeholder="{{ vm.holiday.dateDepart }}" id="dateDepart" ng-model="vm.holiday.dateDepart" required>
+          <input class="form-control" type="date" name="dateDepart" placeholder="{{ vm.holiday.dateDepart }}" id="dateDepart" ng-model="vm.holiday.dateDepart" required format-date>
         </div>
       </div>
     </div>
@@ -60,3 +60,5 @@
     <button class="btn btn-danger">Delete Holiday</button>
   </div>
 </form>
+
+<!-- | date:'yyyy-MM-dd' -->
