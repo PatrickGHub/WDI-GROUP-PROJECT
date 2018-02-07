@@ -29,7 +29,7 @@ function googleMap($window, $rootScope) {
       });
 
       var map = new $window.google.maps.Map(element[0], {
-        zoom: 12,
+        zoom: 15,
         mapTypeId: 'roadmap'
       });
 
@@ -67,7 +67,7 @@ function googleMap($window, $rootScope) {
           position: latLng,
           icon: {
             url: result.icon, // url
-            scaledSize: new $window.google.maps.Size(20, 20)
+            scaledSize: new $window.google.maps.Size(15, 15)
           }
         });
 
