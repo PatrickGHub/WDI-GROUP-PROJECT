@@ -8,7 +8,7 @@
   <div class="row">
     <div class="col-md-6">
       <!-- <a ui-sref="usersShow({id:vm.holiday.createdBy.id})"><h3>{{ vm.holiday.createdBy.username }}</h3></a> -->
-      <h2 class="run-levels">Going to {{ vm.holiday.destination }}</h2><a href="/holidays/{{ vm.holiday.id }}/edit" class="btn btn-primary">Edit Holiday</a>
+      <h2 class="run-levels">Going to {{ vm.holiday.destination.town }}</h2><a href="/holidays/{{ vm.holiday.id }}/edit" class="btn btn-primary">Edit Holiday</a>
       <hr>
       <p class="run-levels">Arriving - {{ vm.holiday.dateArrive | date}}</p>
       <p class="run-levels">Leaving - {{ vm.holiday.dateDepart | date}}</p>

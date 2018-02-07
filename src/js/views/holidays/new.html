@@ -1,5 +1,4 @@
 <h2 class="text-center">Create Holiday</h2>
-
 <form ng-submit="vm.create()">
   <div class="container">
     <div class="row">
@@ -13,16 +12,14 @@
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="destination">Destination</label>
-          {{ vm.destination.all }}
           <input
-          type="text"
           ng-model="vm.newHoliday.destination"
-          uib-typeahead="destination as destination.town for destination in vm.all | filter:{ town: $viewValue }"
+          type="text"
+          ng-model="vm.selectedDestination"
+          uib-typeahead="destination as destination.town for destination in vm.destinations | filter:{ town: $viewValue }"
           class="form-control"
-          typeahead-on-select="vm.pickDestination()" name="destination" id="destination" required>
-
-          <!-- <input class="form-control" type="text" name="destination" placeholder="Destination" id="destination" ng-model="vm.newHoliday.destination" required> -->
-
+          typeahead-on-select="vm.pickDestination()"
+          placeholder="Type to pick a destination">
         </div>
       </div>
     </div>
@@ -47,13 +44,15 @@
 
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
-          <label for="attendees">Attendees</label>
+          <label for="attendee">Attendees</label>
           <input
+          ng-model="vm.newHoliday.attendees"
           type="text"
           ng-model="vm.selectedAttendees"
-          uib-typeahead="user as user.username for user in vm.all | filter:{ username: $viewValue }"
+          uib-typeahead="attendee as user.username for user in vm.users | filter:{ username: $viewValue }"
           class="form-control"
-          typeahead-on-select="vm.invite()" name="user" id="user" required>
+          typeahead-on-select="vm.pickAttendee()"
+          placeholder="Type to pick an attendee">
         </div>
       </div>
 
