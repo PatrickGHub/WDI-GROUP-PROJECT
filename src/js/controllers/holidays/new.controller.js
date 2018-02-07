@@ -6,7 +6,7 @@ HolidaysCreateCtrl.$inject = ['HolidayFactory', 'DestinationFactory', 'UserFacto
 function HolidaysCreateCtrl(HolidayFactory, DestinationFactory, UserFactory, $state) {
   const vm = this;
 
-  vm.newHoliday = {};
+  vm.newHoliday = { attendees: []};
   vm.create     = create;
   vm.noResults = false;
   vm.destinations = DestinationFactory.query();
@@ -18,7 +18,9 @@ function HolidaysCreateCtrl(HolidayFactory, DestinationFactory, UserFactory, $st
   }
 
   function pickAttendee() {
-    vm.holiday.attendees.push();
+    vm.newHoliday.attendees.push(vm.selectedUser);
+    vm.users = vm.users.filter(user => user.id !== vm.selectedUser.id);
+    vm.selectedUser = '';
   }
 
   function create(){
