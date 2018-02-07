@@ -11,9 +11,9 @@ function HolidayFactory(API, $resource) {
   );
 }
 
-HolidayComment.$inject = ['$resource'];
-function HolidayComment($resource) {
-  return new $resource('/api/holidays/:holidayId/comments/:id', { id: '@id' }, {
+HolidayComment.$inject = ['API', '$resource'];
+function HolidayComment(API, $resource) {
+  return new $resource(`${API}/holidays/:holidayId/comments/:id`, { id: '@id', holidayId: '@holidayId' }, {
     update: { method: 'PUT' }
   });
 }

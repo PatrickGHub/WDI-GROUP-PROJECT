@@ -33,8 +33,9 @@ function HolidaysShowCtrl(HolidayFactory, HolidayComment, $state) {
 
 
   function deleteComment(comment) {
+    console.log(comment);
     HolidayComment
-      .delete({ holidayId: vm.holiday.id, id: comment.id })
+      .delete({ holidayId: vm.holiday.id, id: comment._id })
       .$promise
       .then(() => {
         const index = vm.holiday.comments.indexOf(comment);
