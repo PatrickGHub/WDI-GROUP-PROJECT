@@ -31,7 +31,7 @@
       <p ng-if="!vm.holiday.comments.length">0 comments</p>
       <ul class="comments__created">
         <li ng-repeat="comment in vm.holiday.comments track by $index">
-          <a ui-sref="usersShow({ id: comment.createdBy.id })"><strong>{{ comment.createdBy.username }}</strong></a> - {{ comment.text }} <button class="button" ng-click="vm.deleteComment(comment)" ng-if="main.isAuthenticated() && main.currentUserId === comment.createdBy.id">Delete</button>
+          <a ui-sref="usersShow({ id: comment.createdBy.id })"><strong>{{ comment.createdBy.username }}</strong></a> - <p>{{ comment.text }}</p><button class="button" ng-click="vm.deleteComment(comment)" ng-if="main.isAuthenticated() && main.currentUserId === comment.createdBy.id">Delete</button>
         </li>
       </ul>
 
