@@ -21,6 +21,8 @@ function holidayCreate(req, res) {
 function holidayShow(req, res) {
   Holiday
     .findById(req.params.id)
+    .populate('comments.createdBy')
+    .populate('destination')
     .exec()
     .then(holiday => {
       if(!holiday) return res.status(401).json({ message: 'No holiday found'});

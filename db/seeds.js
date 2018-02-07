@@ -232,10 +232,10 @@ Destination
       destination: 'Chamonix',
 
       comments: [{
-        comment: 'This is going to be epic!',
+        text: 'This is going to be epic!',
         createdBy: users[1]
       },{
-        comment: 'Cannot wait to start planning!',
+        text: 'Cannot wait to start planning!',
         createdBy: users[0]
       }]
     },{
@@ -245,10 +245,10 @@ Destination
       destination: 'Chamonix',
 
       comments: [{
-        comment: ' Where do we want to eat the first night?!',
+        text: ' Where do we want to eat the first night?!',
         createdBy: users[5]
       },{
-        comment: 'I shoud get new skies, to rent or buy? 🧐',
+        text: 'I shoud get new skies, to rent or buy? 🧐',
         createdBy: users[4]
       }]
     }]);
