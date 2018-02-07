@@ -18,12 +18,15 @@ function googleMap($window) {
         mapTypeId: 'roadmap',
         center: scope.center
       });
+      scope.$watch('center', () => map.setCenter(scope.center));
+
       var marker = new $window.google.maps.Marker({
         position: scope.center,
         animation: google.maps.Animation.DROP,
         map: map
       });
-      var infowindow = new google.maps.InfoWindow({
+
+      var infowindow = new $window.google.maps.InfoWindow({
         content: scope.contentString
       });
       marker.addListener('click', function() {

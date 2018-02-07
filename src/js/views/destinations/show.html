@@ -12,7 +12,10 @@
         <img src="{{vm.destination.image}}" alt="{{ vm.destination.town}}">
       </div>
       <div class="col-md-6">
-        <google-map center="{lat:  vm.destination.lat , lng:  vm.destination.lng }" content-string="{{ vm.destination.town }}"></google-map>
+        <p>Lat: {{ vm.destination.lat }}</p>
+        <p>Lng: {{ vm.destination.lng }}</p>
+        <!-- <google-map center="latLng:  {{ vm.destination.lat }},  {{ vm.destination.lng }}" content-string="{{ vm.destination.town }}"></google-map> -->
+        <google-map center="{lat: vm.destination.lat, lng: vm.destination.lng}" content-string="{{ vm.destination.town }}"></google-map>
       </div>
     </div>
 
