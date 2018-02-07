@@ -13,16 +13,14 @@
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label for="destination">Destination</label>
-          {{ vm.destination.all }}
           <input
-          type="text"
           ng-model="vm.newHoliday.destination"
-          uib-typeahead="destination as destination.town for destination in vm.all | filter:{ town: $viewValue }"
+          type="text"
+          ng-model="vm.selectedDestination"
+          uib-typeahead="destination as destination.town for destination in vm.destinations | filter:{ town: $viewValue }"
           class="form-control"
-          typeahead-on-select="vm.pickDestination()" name="destination" id="destination" required>
-
-          <!-- <input class="form-control" type="text" name="destination" placeholder="Destination" id="destination" ng-model="vm.newHoliday.destination" required> -->
-
+          typeahead-on-select="vm.pickDestination()"
+          placeholder="Type to pick a destination">
         </div>
       </div>
     </div>

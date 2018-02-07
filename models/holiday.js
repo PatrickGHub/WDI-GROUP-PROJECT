@@ -13,7 +13,7 @@ const holidaySchema = new mongoose.Schema({
   attendees: String, // later needs to be changed into dropdown menu from user schema - Rane was going to show us
   dateArrive: String,
   dateDepart: String,
-  destination: String, // later will link to the API in a dropdown menu
+  destination: { type: mongoose.Schema.ObjectId, ref: 'Destination', required: true }, // later will link to the API in a dropdown menu
   // favourites: null,
   comments: [ commentSchema]
 });
