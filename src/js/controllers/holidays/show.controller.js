@@ -2,13 +2,15 @@ angular
   .module('appres')
   .controller('HolidaysShowCtrl', HolidaysShowCtrl);
 
-HolidaysShowCtrl.$inject = ['HolidayFactory', '$state'];
+HolidaysShowCtrl.$inject = ['HolidayFactory', 'HolidayComment', '$state'];
 
-function HolidaysShowCtrl(HolidayFactory, $state) {
+function HolidaysShowCtrl(HolidayFactory, HolidayComment, $state) {
   const vm = this;
 
   vm.holiday = {};
-  vm.delete    = remove;
+  vm.delete = remove;
+  vm.addComment = addComment;
+  vm.deleteComment = deleteComment;
 
   vm.holiday = HolidayFactory.get($state.params);
 
@@ -18,4 +20,27 @@ function HolidaysShowCtrl(HolidayFactory, $state) {
       .$promise
       .then(() => $state.go('/'));
   }
+
+  function addComment() {
+    HolidayComment
+      .save({ holidayId: vm.holiday.id }, vm.newComment)
+      .$promise
+      .then((comment) => {
+        vm.holiday.comments.push(comment);
+        vm.newComment = {};
+      });
+  }
+
+
+  function deleteComment(comment) {
+    console.log(comment);
+    HolidayComment
+      .delete({ holidayId: vm.holiday.id, id: comment._id })
+      .$promise
+      .then(() => {
+        const index = vm.holiday.comments.indexOf(comment);
+        vm.holiday.comments.splice(index, 1);
+      });
+  }
+
 }
