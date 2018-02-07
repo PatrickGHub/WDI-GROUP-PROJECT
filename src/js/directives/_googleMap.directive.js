@@ -20,15 +20,17 @@ function googleMap($window) {
       });
       scope.$watch('center', () => map.setCenter(scope.center));
 
-      var marker = new $window.google.maps.Marker({
-        position: scope.center,
-        animation: google.maps.Animation.DROP,
-        map: map
-      });
-
       var infowindow = new $window.google.maps.InfoWindow({
         content: scope.contentString
       });
+
+      var marker = new $window.google.maps.Marker({
+        position: scope.center,
+        // animation: google.maps.Animation.DROP,
+        map: map
+      });
+
+
       marker.addListener('click', function() {
         infowindow.open(map, marker);
       });
