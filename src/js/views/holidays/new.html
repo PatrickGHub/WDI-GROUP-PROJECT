@@ -46,20 +46,21 @@
         <div class="form-group">
           <label for="attendee">Attendees</label>
           <input
-          ng-model="vm.newHoliday.attendees"
           type="text"
-          ng-model="vm.selectedAttendees"
-          uib-typeahead="attendee as user.username for user in vm.users | filter:{ username: $viewValue }"
+          ng-model="vm.selectedUser"
+          uib-typeahead="user as user.username for user in vm.users | filter:{ username: $viewValue }"
           class="form-control"
           typeahead-on-select="vm.pickAttendee()"
           placeholder="Type to pick an attendee">
         </div>
       </div>
 
+      {{ vm.newHoliday }}
+
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label>Selected Attendees</label>
-          <p>{{ vm.newHoliday.attendees }}</p>
+          <p>{{ [vm.newHoliday.attendees] }}</p>
         </div>
       </div>
 
