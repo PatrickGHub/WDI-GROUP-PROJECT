@@ -18,6 +18,7 @@ function HolidaysCreateCtrl(HolidayFactory, DestinationFactory, UserFactory, $st
   }
 
   function pickAttendee() {
+    vm.holiday.attendees.push();
   }
 
   function create(){

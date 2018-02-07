@@ -15,6 +15,8 @@ Destination.collection.drop();
 User.collection.drop();
 Holiday.collection.drop();
 
+let globalDestinations = null;
+
 const destinationSeeds = [{
   town: 'Val Thorens',
   country: 'France',
@@ -220,6 +222,7 @@ const userSeeds = [{
 Destination
   .create(destinationSeeds)
   .then((destinations) => {
+    globalDestinations = destinations;
     console.log(`${destinations.length} destinations created!`);
     return User.create(userSeeds);
   })
@@ -228,8 +231,8 @@ Destination
     return Holiday.create([{
       holidayName: 'Patrick turns 25 ski trip',
       createdBy: users[6],
-      attendees: ['Charlotte', 'Evelina', 'Hannah Teter', 'Shaun White', 'Vreni Schneider', 'Tracis Rice'],
-      destination: 'Chamonix',
+      attendees: [users[4], users[5], users[3], users[0], users[1], users[2]],
+      destination: globalDestinations[2],
 
       comments: [{
         text: 'This is going to be epic!',
@@ -241,8 +244,8 @@ Destination
     },{
       holidayName: 'Shaun & girls go ',
       createdBy: users[0],
-      attendees: ['Charlotte', 'Evelina', 'Hannah Teter', 'Shaun White', 'Vreni Schneider', 'Tracis Rice'],
-      destination: 'Chamonix',
+      attendees: [users[4], users[5], users[3], users[0], users[1], users[2]],
+      destination: globalDestinations[2],
 
       comments: [{
         text: ' Where do we want to eat the first night?!',
