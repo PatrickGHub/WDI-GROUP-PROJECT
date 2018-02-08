@@ -21,7 +21,8 @@ router.route('/users/:id/favourite')
   .post(secureRoute, users.addFavourite);
 
 router.route('/destinations')
-  .get(destinations.index);
+  .get(destinations.index)
+  .post(secureRoute, destinations.create);
 
 router.route('/destinations/:id')
   .get(destinations.show);
