@@ -85,8 +85,9 @@ a, button {
 
 .google-map {
   height: 300px;
-  width: 500px;
+  max-width: 900px;
   display: inline-block;
+  margin: 10px;
 }
 
 .pageEnd {

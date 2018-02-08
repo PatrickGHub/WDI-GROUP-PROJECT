@@ -48,11 +48,12 @@
             <h2>Après Suggestions</h2>
 
             <li ng-repeat="attendee in vm.holiday.attendees">
-              <p>{{ attendee.username }}</p>
+              <p><strong>{{ attendee.username }}</strong></p>
 
               <ul>
                 <li ng-show="favorite.town === vm.holiday.destination.town" ng-repeat="favorite in attendee.favorites">
-                  <p>{{ favorite.name }}</p>
+                  <p>{{ favorite.name }}, {{ favorite.town }}</p>
+                  <p>Rating: {{ favorite.rating }}</p>
                 </li>
               </ul>
 
