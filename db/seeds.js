@@ -166,7 +166,8 @@ const userSeeds = [{
   passwordConfirmation: 'shaun',
   sport: 'snowboard',
   abilityLevel: 'beginner',
-  image: 'https://cdn-s3.si.com/s3fs-public/sikids/pages/images/cms/imce/users/dantec/2014/01/shaun-white-2014-olympics-header.jpg'
+  image: 'https://cdn-s3.si.com/s3fs-public/sikids/pages/images/cms/imce/users/dantec/2014/01/shaun-white-2014-olympics-header.jpg',
+  favorites: []
 }, {
   username: 'Vreni Schneider',
   email: 'vreni@ga.co',
@@ -174,7 +175,8 @@ const userSeeds = [{
   passwordConfirmation: 'vreni',
   sport: 'ski',
   abilityLevel: 'advanced',
-  image: 'http://cdn.welove2ski.com/wp-content/uploads/vreni1-1.jpg'
+  image: 'http://cdn.welove2ski.com/wp-content/uploads/vreni1-1.jpg',
+  favorites: []
 }, {
   username: 'Tracis Rice',
   email: 'tracis@ga.co',
@@ -182,7 +184,8 @@ const userSeeds = [{
   passwordConfirmation: 'tracis',
   sport: 'both',
   abilityLevel: 'advanced',
-  image: 'https://assets.saatchiart.com/saatchi/84381/art/1617509/819762-7.jpg'
+  image: 'https://assets.saatchiart.com/saatchi/84381/art/1617509/819762-7.jpg',
+  favorites: []
 },{
   username: 'Hannah Teter',
   email: 'hannah@ga.co',
@@ -190,7 +193,8 @@ const userSeeds = [{
   passwordConfirmation: 'hannah',
   sport: 'ski',
   abilityLevel: 'beginner',
-  image: 'https://www.sierrasun.com/wp-content/uploads/2017/12/hannahteter-tdt-120917-1-4.jpg'
+  image: 'https://www.sierrasun.com/wp-content/uploads/2017/12/hannahteter-tdt-120917-1-4.jpg',
+  favorites: []
 },{
   username: 'Charlotte',
   email: 'charlotte@ga.co',
@@ -198,7 +202,8 @@ const userSeeds = [{
   passwordConfirmation: 'charlotte',
   sport: 'both',
   abilityLevel: 'advanced',
-  image: 'http://www.oogazone.com/wp-content/uploads/top-little-girl-skiing-stock-vector-skier-cartoon-ski-image.jpg'
+  image: 'http://www.oogazone.com/wp-content/uploads/top-little-girl-skiing-stock-vector-skier-cartoon-ski-image.jpg',
+  favorites: []
 },{
   username: 'Evelina',
   email: 'evelina@ga.co',
@@ -206,7 +211,8 @@ const userSeeds = [{
   passwordConfirmation: 'evelina',
   sport: 'ski',
   abilityLevel: 'intermediate',
-  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXf30fSEExqSEGeCRv9gMYTlR1CLP3pybH0chBM77ACjUqsbRm'
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXf30fSEExqSEGeCRv9gMYTlR1CLP3pybH0chBM77ACjUqsbRm',
+  favorites: []
 },{
   username: 'Patrick',
   email: 'patrick@ga.co',
@@ -214,7 +220,8 @@ const userSeeds = [{
   passwordConfirmation: 'patrick',
   sport: 'both',
   abilityLevel: 'intermediate',
-  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvvdYy2pa7Es35cKnm_MhPGLDH1rzlPu0C3Dybe8AeNVYKsdw'
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvvdYy2pa7Es35cKnm_MhPGLDH1rzlPu0C3Dybe8AeNVYKsdw',
+  favorites: []
 }];
 
 // const holidaySeeds = ;
@@ -223,11 +230,11 @@ Destination
   .create(destinationSeeds)
   .then((destinations) => {
     globalDestinations = destinations;
-    console.log(`${destinations.length} destinations created!`);
+    console.log(`${destinations.length} destinations created! 🗻`);
     return User.create(userSeeds);
   })
   .then(users => {
-    console.log(`${users.length} users created!`);
+    console.log(`${users.length} users created! ⛷`);
     return Holiday.create([{
       holidayName: 'Patrick turns 25 ski trip',
       createdBy: users[6],
@@ -257,7 +264,7 @@ Destination
     }]);
   })
   .then(holidays => {
-    console.log(`${holidays.length} holidays created!`);
+    console.log(`${holidays.length} holidays created! ❄️`);
   })
   .finally(() => mongoose.connection.close())
   .catch(err => console.log(err));
