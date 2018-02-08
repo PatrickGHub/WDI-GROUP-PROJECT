@@ -14,7 +14,7 @@
       <p class="run-levels">Leaving - {{ vm.holiday.dateDepart | date}}</p>
     </div>
     <div class="col-md-6">
-      
+
     </div>
     <div class="row">
       <h2>Going with</h2>
@@ -54,4 +54,16 @@
       </div>
     </form>
   </div>
+</div>
+
+<div class="container">
+  <h2>Après Suggestions</h2>
+{{ vm.holiday.attendees }}
+{{ vm.user.favourites.name }}
+
+<li ng-repeat="attendee in vm.holiday.attendees">
+  <p>{{ attendee.favorites }}</p>
+
+</li>
+
 </div>

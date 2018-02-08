@@ -21,7 +21,6 @@ function googleMap($window, $rootScope) {
     link(scope, element) {
       scope.$watch('center', () => {
         if (!scope.center.lat || !scope.center.lng) return false;
-        console.log(scope.center);
 
         map.setCenter(scope.center);
         marker.setPosition(scope.center);
