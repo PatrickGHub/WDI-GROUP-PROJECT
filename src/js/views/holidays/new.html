@@ -45,10 +45,8 @@
                   placeholder="Type to pick an attendee">
                 </div>
                 <div class="col-lg-6 col-xs-12">
-                  <div class="form-group">
-                    <label>Selected Attendees</label>
-                    <p>{{ [vm.newHoliday.attendees] }}</p>
-                    {{ vm.newHoliday }}
+                  <div class="form-group" ng-repeat="attendee in vm.newHoliday.attendees">
+                    <p>{{attendee.username }}</p>
                   </div>
                 </div>
               </div>

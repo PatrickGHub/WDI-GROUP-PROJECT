@@ -42,9 +42,15 @@ div.img-fluid {
   padding:0;
 }
 
-.profile-image {
-  width: 20%;
+img.profile-image {
+  width: 10%;
   height: auto;
+  margin: 10px 0;
+}
+
+.upload-button-container {
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -62,8 +68,8 @@ span.label-text {
   color: $primary-color;
 }
 
-input.form-control {
-  font-family: $text-font;
-  font-size: 14px;
-  color: $primary-color;
-}
+// input.form-control {
+//   font-family: $text-font;
+//   font-size: 14px;
+//   color: $primary-color;
+// }

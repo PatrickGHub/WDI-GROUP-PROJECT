@@ -14,7 +14,6 @@ const holidaySchema = new mongoose.Schema({
   dateArrive: String,
   dateDepart: String,
   destination: { type: mongoose.Schema.ObjectId, ref: 'Destination', required: true }, // later will link to the API in a dropdown menu
-  // favourites: null,
   comments: [ commentSchema]
 });
 

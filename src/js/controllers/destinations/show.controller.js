@@ -17,6 +17,7 @@ function DestinationShowCtrl(DestinationFactory, UserFactory, $state, $auth) {
 
   function addFavourite(place) {
     const currentUserId = $auth.getPayload().userId;
+    place.town = vm.destination.town;
 
     UserFactory
       .addFavourite({ id: currentUserId }, place)
