@@ -1,88 +1,63 @@
-
-
 .jumbotron {
   height: 200px;
-   .container {
-     border: none;
-   }
+
+  .container {
+    border: none;
+  }
 }
 
 
 .container {
-  // border: solid $grey 3px;
   justify-content: center;
   margin: 0 auto;
   padding: 20px;
-
-img {
-  margin: 30px 0px;
-}
-
-p {
-  font-size: 20px;
-  margin: 10px;
-  text-align: justify;
-}
-
-.stats {
-    margin-top: 30px;
-    padding: 5px;
-    background-color: $grey;
-
-p {
-  color: white;
-  font-weight: 900;
-<<<<<<< HEAD
-  font-size: 20px;
-=======
-  font-size: 25px;
-
->>>>>>> development
-}
-}
-
-  p {
-    margin: 10px;
-    text-align: justify;
-
-    .bold-beginner {
-      color: #1C9400;
-
-    }
-
-    .bold-intermediate {
-      color: #0079C2;
-
-
-    }
-
-    .bold-advanced {
-      color: #FF0909;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> development
-    }
-
-    .bold-expert {
-      color: #000;
-
-
-    }
-  }
 
   h3 {
     text-decoration: underline;
     text-align: center;
   }
+
+  img {
+    margin: 30px 0px;
+  }
+
+  p {
+    font-size: 20px;
+    margin: 10px;
+    text-align: justify;
+
+    .bold-beginner {
+      color: #1C9400;
+    }
+
+    .bold-intermediate {
+      color: #0079C2;
+    }
+
+    .bold-advanced {
+      color: #FF0909;
+    }
+
+    .bold-expert {
+      color: #000;
+    }
+  }
+
+  .stats {
+    margin-top: 30px;
+    padding: 5px;
+    background-color: $grey;
+
+    p {
+      color: white;
+      font-weight: 900;
+      font-size: 25px;
+    }
+  }
 }
-
-
 
 .google-map {
   margin: 30px;
-
 }
 
 .cardshow {
@@ -93,13 +68,11 @@ p {
   height: 150px;
   background-color: $grey;
 
-
   h4 {
     font-weight: bold;
     text-decoration: underline;
     font-size: 18px;
     margin: 0px;
-
   }
 
   p {

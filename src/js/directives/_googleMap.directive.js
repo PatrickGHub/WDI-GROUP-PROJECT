@@ -45,7 +45,7 @@ function googleMap($window, $rootScope) {
           radius: '50000',
           type: ['restaurant']
 
-          // add bars too 
+          // add bars too
         };
 
         service = new $window.google.maps.places.PlacesService(map);
@@ -65,14 +65,6 @@ function googleMap($window, $rootScope) {
           }
         });
 
-<<<<<<< HEAD
-=======
-        infowindow = new $window.google.maps.InfoWindow({
-          content: `<p>${result.name}</p>`
-          // why is it only showing Le Vieux Chalet
-        });
-
->>>>>>> development
         marker.addListener('click', function() {
           if(infoWindow) infoWindow.close();
 
