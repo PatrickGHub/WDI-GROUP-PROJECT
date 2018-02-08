@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
   sport: { type: String, required: true },
   abilityLevel: { type: String, required: true },
   image: { type: String },
-  favorites: [{ type: String }]
+  favorites: [{}]
 });
 
 userSchema

@@ -50,17 +50,18 @@ function usersDelete(req, res, next) {
 
 // Add favorite place to user schema
 
-function newFavorite(req, res, next) {
-  const currentUserId = req.user.id;
+function addFavourite(req, res, next) {
+  User
+    .findById(req.params.id)
+    .then(user => {
+      if(!user) return res.notFound();
 
-  // the place that they have clicked on
-  // they can click on multiple places
-  button.addListener('click', function() {
-    let place       = req.body.ref;
-    // take info from the button when it is clicked
-  }
+      user.favorites.push(req.body);
+      return user.save({ validateBeforeSave: false });
+    })
+    .then(user => res.json(user))
+    .catch(next);
 
-  
 }
 
 //   User
@@ -85,7 +86,7 @@ module.exports = {
   show: usersShow,
   update: usersUpdate,
   delete: usersDelete,
-  newFavorite: usersFavorite
+  addFavourite: addFavourite
 
   // add this to router
 };

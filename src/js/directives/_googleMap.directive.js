@@ -84,10 +84,8 @@ function googleMap($window, $rootScope) {
         if (status === $window.google.maps.places.PlacesServiceStatus.OK) {
           scope.foundPlaces = results;
           $rootScope.$apply(); // force angular to update the view
-          console.log(scope.foundPlaces);
           for (var i = 0; i < results.length; i++) {
             var place = results[i];
-            console.log(place);
             createMarker(results[i]);
           }
         }

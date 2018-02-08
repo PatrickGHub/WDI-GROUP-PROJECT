@@ -30,7 +30,7 @@
       <img src="{{vm.destination.image}}" alt="{{ vm.destination.town}}">
     </div>
   </div>
-  
+
   <div class="row">
     <div class="col-md-6">
       <google-map center="{lat: vm.destination.lat, lng: vm.destination.lng}" content-string="{{ place.name }}" found-places="vm.foundPlaces"></google-map>
@@ -42,7 +42,7 @@
           <div class="cardshow">
             <h4>{{ place.name }}</h4>
             <p>Rating: {{ place.rating }} stars</p>
-            <button>⭐️</button>
+            <button ng-show="vm.currentUser && vm.checkUserFavourites(place)" ng-click="vm.addFavourite(place)">⭐️</button>
             <!-- when you click here, it takes the info from the google places api and adds it to the users id? -->
             <!-- on the holiday show page it then shows any places that users of that holiday have favourited, checks they link to that destination and shows them on the holiday show page -->
           </div>
