@@ -23,6 +23,10 @@ function holidayShow(req, res) {
     .findById(req.params.id)
     .populate('comments.createdBy')
     .populate('destination')
+    .populate({
+      path: 'attendees'
+      // select: 'username'
+    })
     .exec()
     .then(holiday => {
       if(!holiday) return res.status(401).json({ message: 'No holiday found'});

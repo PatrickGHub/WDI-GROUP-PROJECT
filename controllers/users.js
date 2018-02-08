@@ -1,5 +1,13 @@
 const User = require('../models/user');
 
+function usersIndex(req, res, next) {
+  User
+    .find()
+    .exec()
+    .then((users) => res.json(users))
+    .catch(next);
+}
+
 function usersCreate(req, res, next) {
   console.log(req.body);
   User
@@ -41,6 +49,7 @@ function usersDelete(req, res, next) {
 }
 
 module.exports = {
+  index: usersIndex,
   create: usersCreate,
   show: usersShow,
   update: usersUpdate,

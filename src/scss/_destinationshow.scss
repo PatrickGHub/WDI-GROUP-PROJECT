@@ -32,12 +32,18 @@ p {
 p {
   color: white;
   font-weight: 900;
+<<<<<<< HEAD
   font-size: 20px;
+=======
+  font-size: 25px;
+
+>>>>>>> development
 }
 }
 
   p {
     margin: 10px;
+    text-align: justify;
 
     .bold-beginner {
       color: #1C9400;
@@ -53,7 +59,10 @@ p {
     .bold-advanced {
       color: #FF0909;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> development
     }
 
     .bold-expert {
