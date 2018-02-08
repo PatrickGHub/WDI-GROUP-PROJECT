@@ -6,6 +6,10 @@
 @import "destinationsindex";
 @import "forms";
 
+body {
+  min-height: 100vh;
+}
+
 main {
   margin-bottom: 5%;
 }
@@ -91,10 +95,14 @@ a, button {
   margin: 10px;
 }
 
-.pageEnd {
-  font-size: 10px;
-  text-align: center;
-  font-family: $text-font;
+
+
+footer {
+  p, a {
+    font-size: 12px;
+    text-align: center;
+    font-family: $text-font;
+  }
 }
 
 .navbar-collapse.in {
