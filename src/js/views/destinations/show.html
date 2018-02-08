@@ -5,16 +5,12 @@
 </div>
 
 <div class="container">
-
   <div class="row">
-
     <div class="col-md-12">
       <p>{{ vm.destination.overview }}</p>
     </div>
   </div>
-
   <div class="row">
-
     <div class="col-md-6">
       <div class="stats">
         <ul>
@@ -23,37 +19,35 @@
           <p class="run-levels">Advanced Runs- <span class="bold-advanced">{{ vm.destination.red }}%</span></p>
           <p class="run-levels">Expert Runs - <span class="bold-expert">{{ vm.destination.black }}%</span></p>
           <br>
-
-          <p>Number of Lifts - {{ vm.destination.lifts }}</p>
-          <p>Altitude - {{ vm.destination.altitude }}</p>
-          <p>Great For - {{ vm.destination.greatFor }}</p>
-          <!-- could add weather here -->
+          <p>Great For: {{ vm.destination.greatFor }}</p>
+          <p>Number of Lifts: {{ vm.destination.lifts }}</p>
+          <p>Altitude: {{ vm.destination.altitude }}</p>
+          <!-- <p>Weather</p> -->
         </ul>
       </div>
-
+    </div>
     <div class="col-md-6">
       <img src="{{vm.destination.image}}" alt="{{ vm.destination.town}}">
     </div>
-
   </div>
-
-
-  <div class="col-md-6">
-    <google-map center="{lat: vm.destination.lat, lng: vm.destination.lng}" content-string="{{ place.name }}" found-places="vm.foundPlaces"></google-map>
-  </div>
-
-  <h3>Après Ski Destinations</h3>
-  <div ng-repeat="place in vm.foundPlaces" class="col-lg-3 col-sm-4 col-xs-6" >
-
-    <div class="cardshow">
-      <h4>{{ place.name }}</h4>
-      <p>Rating: {{ place.rating }} stars</p>
-      <button>⭐️</button>
-      <!-- when you click here, it takes the info from the google places api and adds it to the users id? -->
-      <!-- on the holiday show page it then shows any places that users of that holiday have favourited, checks they link to that destination and shows them on the holiday show page -->
+  
+  <div class="row">
+    <div class="col-md-6">
+      <google-map center="{lat: vm.destination.lat, lng: vm.destination.lng}" content-string="{{ place.name }}" found-places="vm.foundPlaces"></google-map>
     </div>
-
+    <div class="col-md-6">
+      <h3>Après Ski Destinations</h3>
+      <div class="row">
+        <div ng-repeat="place in vm.foundPlaces" class="col-lg-3 col-sm-4 col-xs-6" >
+          <div class="cardshow">
+            <h4>{{ place.name }}</h4>
+            <p>Rating: {{ place.rating }} stars</p>
+            <button>⭐️</button>
+            <!-- when you click here, it takes the info from the google places api and adds it to the users id? -->
+            <!-- on the holiday show page it then shows any places that users of that holiday have favourited, checks they link to that destination and shows them on the holiday show page -->
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </div>
