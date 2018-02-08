@@ -20,7 +20,14 @@
                 <div class="col-lg-6 col-xs-12">
                   <div class="form-group">
                     <label for="destination">Destination</label>
-                    <input class="form-control" type="text" name="destination" placeholder="{{ vm.holiday.destination }}" id="destination" ng-model="vm.holiday.destination" required>
+                    <input
+                    ng-model="vm.holiday.destination"
+                    type="text"
+                    ng-model="vm.selectedDestination"
+                    uib-typeahead="destination as destination.town for destination in vm.destinations | filter:{ town: $viewValue }"
+                    class="form-control"
+                    typeahead-on-select="vm.pickDestination()"
+                    placeholder="Type to pick a destination">
                   </div>
                 </div>
               </div>
@@ -44,8 +51,14 @@
               <div class="row">
                 <div class="col-lg-6 col-xs-12">
                   <div class="form-group">
-                    <label for="attendees">Attendees</label>
-                    <input class="form-control" type="text" name="attendees" id="attendees"  ng-model="vm.holiday.attendees" required>
+                    <label for="attendee">Attendees</label>
+                    <input
+                    type="text"
+                    ng-model="vm.selectedUser"
+                    uib-typeahead="user as user.username for user in vm.users | filter:{ username: $viewValue }"
+                    class="form-control"
+                    typeahead-on-select="vm.pickAttendee()"
+                    placeholder="Type to pick an attendee">
                   </div>
                 </div>
 
