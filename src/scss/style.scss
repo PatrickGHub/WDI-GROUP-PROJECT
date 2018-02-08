@@ -113,3 +113,21 @@ a, button {
 
   }
 }
+
+// DELETE BUTTON ON HOLIDAY EDIT
+button {
+  &.delete-holiday {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid red;
+    font-family: $header-font;
+    font-size: 16px;
+    color: red;
+    margin-top: 20px;
+    width: 100px;
+
+    &:hover {
+      background-color: red;
+      color: rgb(255, 255, 255);
+    }
+  }
+}
