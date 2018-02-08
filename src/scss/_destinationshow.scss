@@ -25,20 +25,25 @@ p {
 }
 
 .stats {
-    // border: solid $grey 1px;
-    // margin: 5px;
+    margin-top: 30px;
     padding: 5px;
     background-color: $grey;
 
 p {
   color: white;
   font-weight: 900;
-  font-size: 15px;
+<<<<<<< HEAD
+  font-size: 20px;
+=======
+  font-size: 25px;
+
+>>>>>>> development
 }
 }
 
   p {
     margin: 10px;
+    text-align: justify;
 
     .bold-beginner {
       color: #1C9400;
@@ -47,20 +52,23 @@ p {
 
     .bold-intermediate {
       color: #0079C2;
-      font-weight: 900;
-      font-size: 15px;
+
+
     }
 
     .bold-advanced {
       color: #FF0909;
-      font-weight: 900;
-      font-size: 15px;
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> development
     }
 
     .bold-expert {
       color: #000;
-      font-weight: 900;
-      font-size: 15px;
+
+
     }
   }
 
@@ -69,6 +77,8 @@ p {
     text-align: center;
   }
 }
+
+
 
 .google-map {
   margin: 30px;
