@@ -2,19 +2,25 @@ angular
   .module('appres')
   .controller('HolidaysCreateCtrl', HolidaysCreateCtrl);
 
-HolidaysCreateCtrl.$inject = ['HolidayFactory', 'DestinationFactory', '$state'];
-function HolidaysCreateCtrl(HolidayFactory, DestinationFactory, $state) {
+HolidaysCreateCtrl.$inject = ['HolidayFactory', 'DestinationFactory', 'UserFactory', '$state'];
+function HolidaysCreateCtrl(HolidayFactory, DestinationFactory, UserFactory, $state) {
   const vm = this;
 
-  vm.newHoliday = {};
+  vm.newHoliday = { attendees: []};
   vm.create     = create;
   vm.noResults = false;
   vm.destinations = DestinationFactory.query();
-
   vm.pickDestination = pickDestination;
+  vm.users = UserFactory.query();
+  vm.pickAttendee = pickAttendee;
 
   function pickDestination() {
-    console.log('picked');
+  }
+
+  function pickAttendee() {
+    vm.newHoliday.attendees.push(vm.selectedUser);
+    vm.users = vm.users.filter(user => user.id !== vm.selectedUser.id);
+    vm.selectedUser = '';
   }
 
   function create(){

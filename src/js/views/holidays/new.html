@@ -1,5 +1,4 @@
 <h2 class="text-center">Create Holiday</h2>
-
 <form ng-submit="vm.create()">
   <div class="container">
     <div class="row">
@@ -45,20 +44,23 @@
 
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
-          <label for="attendees">Attendees</label>
+          <label for="attendee">Attendees</label>
           <input
           type="text"
-          ng-model="vm.selectedAttendees"
-          uib-typeahead="user as user.username for user in vm.all | filter:{ username: $viewValue }"
+          ng-model="vm.selectedUser"
+          uib-typeahead="user as user.username for user in vm.users | filter:{ username: $viewValue }"
           class="form-control"
-          typeahead-on-select="vm.invite()" name="user" id="user" required>
+          typeahead-on-select="vm.pickAttendee()"
+          placeholder="Type to pick an attendee">
         </div>
       </div>
+
+      {{ vm.newHoliday }}
 
       <div class="col-lg-6 col-xs-12">
         <div class="form-group">
           <label>Selected Attendees</label>
-          <p>{{ vm.newHoliday.attendees }}</p>
+          <p>{{ [vm.newHoliday.attendees] }}</p>
         </div>
       </div>
 
