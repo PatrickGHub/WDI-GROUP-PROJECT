@@ -14,12 +14,18 @@
       <p class="run-levels">Leaving - {{ vm.holiday.dateDepart | date}}</p>
     </div>
     <div class="col-md-6">
-      <google-map center="{ lat: 39.8, lng: -5.3}" content-string="{{ vm.destination.town }}"></google-map>
+      
     </div>
     <div class="row">
       <h2>Going with</h2>
       <hr>
-      <p>{{ vm.holiday.attendees }}</p>
+      <ul>
+        <li ng-repeat="attendee in vm.holiday.attendees">
+          <p ng-if="attendee.sport == 'ski'">{{ attendee.username }} ⛷</p>
+          <p ng-if="attendee.sport == 'snowboard'">{{ attendee.username }} 🏂</p>
+          <p ng-if="attendee.sport == 'both'">{{ attendee.username }} ⛷🏂</p>
+        </li>
+      </ul>
     </div>
     <button ng-click="vm.delete()" class="button" ng-if="main.isAuthenticated() && main.currentUserId === vm.holiday.createdBy.id">Delete Holiday</button>
   </div>

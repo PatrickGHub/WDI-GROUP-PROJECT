@@ -33,25 +33,19 @@ function googleMap($window, $rootScope) {
         mapTypeId: 'roadmap'
       });
 
-      var infowindow = new $window.google.maps.InfoWindow({
-        content: scope.contentString
-      });
-
       var marker = new $window.google.maps.Marker({
-        // animation: google.maps.Animation.DROP,
         map: map
       });
 
-
-      marker.addListener('click', function() {
-        infowindow.open(map, marker);
-      });
+      let infoWindow = null;
 
       function getRestaurants() {
         var request = {
           location: scope.center,
-          radius: '5000',
+          radius: '50000',
           type: ['restaurant']
+
+          // add bars too
         };
 
         service = new $window.google.maps.places.PlacesService(map);
@@ -71,14 +65,17 @@ function googleMap($window, $rootScope) {
           }
         });
 
-        infowindow = new $window.google.maps.InfoWindow({
-          content: `<p>${result.name}</p>`
+        marker.addListener('click', function() {
+          if(infoWindow) infoWindow.close();
+
+          infoWindow = new $window.google.maps.InfoWindow({
+            content: `<h1>${result.name}</h1>`
+          });
+
+          infoWindow.open(map, marker);
         });
 
-        marker.addListener('click', function() {
-          if (infowindow) infowindow.close();
-          infowindow.open(map, marker);
-        });
+
 
         // here you would add infowindow code
       }

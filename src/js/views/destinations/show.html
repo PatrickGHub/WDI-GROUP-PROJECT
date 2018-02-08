@@ -5,80 +5,48 @@
 </div>
 
 <div class="container">
-
   <div class="row">
-
     <div class="col-md-12">
       <p>{{ vm.destination.overview }}</p>
     </div>
   </div>
-
   <div class="row">
-
     <div class="col-md-6">
-      <div class="col-md-6">
-        <div class="stats">
-          <ul>
-            <p class="run-levels">Beginner Runs - <span class="bold-beginner">{{ vm.destination.green }}%</span></p>
-            <p class="run-levels">Intermediate Runs - <span class="bold-intermediate">{{ vm.destination.blue }}%</span></p>
-            <p class="run-levels">Advanced Runs- <span class="bold-advanced">{{ vm.destination.red }}%</span></p>
-            <p class="run-levels">Expert Runs - <span class="bold-expert">{{ vm.destination.black }}%</span></p>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="stats">
-          <ul>
-            <p>Great For: {{ vm.destination.greatFor }}</p>
-            <p>Number of Lifts: {{ vm.destination.lifts }}</p>
-            <p>Altitude: {{ vm.destination.altitude }}</p>
-            <p>Weather</p>
-          </ul>
-        </div>
+      <div class="stats">
+        <ul>
+          <p class="run-levels">Beginner Runs - <span class="bold-beginner">{{ vm.destination.green }}%</span></p>
+          <p class="run-levels">Intermediate Runs - <span class="bold-intermediate">{{ vm.destination.blue }}%</span></p>
+          <p class="run-levels">Advanced Runs- <span class="bold-advanced">{{ vm.destination.red }}%</span></p>
+          <p class="run-levels">Expert Runs - <span class="bold-expert">{{ vm.destination.black }}%</span></p>
+          <br>
+          <p>Great For: {{ vm.destination.greatFor }}</p>
+          <p>Number of Lifts: {{ vm.destination.lifts }}</p>
+          <p>Altitude: {{ vm.destination.altitude }}</p>
+          <!-- <p>Weather</p> -->
+        </ul>
       </div>
     </div>
-
     <div class="col-md-6">
       <img src="{{vm.destination.image}}" alt="{{ vm.destination.town}}">
     </div>
-
   </div>
 
-
+  <div class="row">
     <div class="col-md-6">
-      <google-map center="{lat: vm.destination.lat, lng: vm.destination.lng}" content-string="{{ vm.destination.town }}" found-places="vm.foundPlaces"></google-map>
+      <google-map center="{lat: vm.destination.lat, lng: vm.destination.lng}" content-string="{{ place.name }}" found-places="vm.foundPlaces"></google-map>
     </div>
-
+    <div class="col-md-6">
       <h3>Après Ski Destinations</h3>
-      <div ng-repeat="place in vm.foundPlaces" class="col-lg-3 col-sm-4 col-xs-6" >
-
-        <div class="cardshow">
-          <h4>{{ place.name }}</h4>
-          <p>Rating: {{ place.rating }} stars</p>
-          <button>⭐️</button>
-          <h4>{{ places.types }}</h4>
+      <div class="row">
+        <div ng-repeat="place in vm.foundPlaces" class="col-lg-3 col-sm-4 col-xs-6" >
+          <div class="cardshow">
+            <h4>{{ place.name }}</h4>
+            <p>Rating: {{ place.rating }} stars</p>
+            <button>⭐️</button>
+            <!-- add what type of location it is -->
+          </div>
         </div>
-
       </div>
     </div>
   </div>
 </div>
-
-
-
-<!-- <ul>
-<li ng-repeat="place in vm.foundPlaces">
-
-</ul>
-</div>
-
-</div>
-
-</div>
-
-<a href="/destinations/{{destination.id}}"><img class="card-img-top" src="{{ destination.image }}" alt="{{ destination.town }}"></a>
-<div class="card-body">
-<a href="/destinations/{{destination.id}}"><h5 class="card-title">{{ destination.town }}, {{ destination.country }}</h5></a>
-<h6>Great For: {{ destination.greatFor }}</h6>
-<h6>Current Weather: </h6>
-<!-- could add weather later  --> -->
