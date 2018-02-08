@@ -16,21 +16,6 @@
   <div class="row">
 
     <div class="col-md-6">
-<<<<<<< HEAD
-        <div class="stats">
-          <ul>
-            <p class="run-levels">Beginner Runs - <span class="bold-beginner">{{ vm.destination.green }}%</span></p>
-            <p class="run-levels">Intermediate Runs - <span class="bold-intermediate">{{ vm.destination.blue }}%</span></p>
-            <p class="run-levels">Advanced Runs- <span class="bold-advanced">{{ vm.destination.red }}%</span></p>
-            <p class="run-levels">Expert Runs - <span class="bold-expert">{{ vm.destination.black }}%</span></p>
-            <br>
-            <p>Great For: {{ vm.destination.greatFor }}</p>
-            <p>Number of Lifts: {{ vm.destination.lifts }}</p>
-            <p>Altitude: {{ vm.destination.altitude }}</p>
-            <!-- <p>Weather</p> -->
-          </ul>
-        </div>
-=======
       <div class="stats">
         <ul>
           <p class="run-levels">Beginner Runs - <span class="bold-beginner">{{ vm.destination.green }}%</span></p>
@@ -44,7 +29,6 @@
           <p>Great For - {{ vm.destination.greatFor }}</p>
           <!-- could add weather here -->
         </ul>
->>>>>>> development
       </div>
 
     <div class="col-md-6">
@@ -54,30 +38,6 @@
   </div>
 
 
-<<<<<<< HEAD
-
-    <div class="col-md-6">
-
-
-
-      <google-map center="{lat: vm.destination.lat, lng: vm.destination.lng}" content-string="{{ vm.destination.town }}" found-places="vm.foundPlaces"></google-map>
-    </div>
-
-
-      <h3>Après Ski Destinations</h3>
-      <div ng-repeat="place in vm.foundPlaces" class="col-lg-3 col-sm-4 col-xs-6" >
-
-        <div class="cardshow">
-          <h4>{{ place.name }}</h4>
-          <p>Rating: {{ place.rating }} stars</p>
-          <button>⭐️</button>
-          <h4>{{ places.types }}</h4>
-        </div>
-
-      </div>
-    </div>
-  </div>
-=======
   <div class="col-md-6">
     <google-map center="{lat: vm.destination.lat, lng: vm.destination.lng}" content-string="{{ place.name }}" found-places="vm.foundPlaces"></google-map>
   </div>
@@ -89,11 +49,11 @@
       <h4>{{ place.name }}</h4>
       <p>Rating: {{ place.rating }} stars</p>
       <button>⭐️</button>
-      <!-- add what type of location it is -->
+      <!-- when you click here, it takes the info from the google places api and adds it to the users id? -->
+      <!-- on the holiday show page it then shows any places that users of that holiday have favourited, checks they link to that destination and shows them on the holiday show page -->
     </div>
 
   </div>
 </div>
 </div>
->>>>>>> development
 </div>

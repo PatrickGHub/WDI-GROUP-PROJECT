@@ -48,10 +48,44 @@ function usersDelete(req, res, next) {
     .catch(next);
 }
 
+// Add favorite place to user schema
+
+function newFavorite(req, res, next) {
+  const currentUserId = req.user.id;
+
+  // the place that they have clicked on
+  // they can click on multiple places
+  button.addListener('click', function() {
+    let place       = req.body.ref;
+    // take info from the button when it is clicked
+  }
+
+  
+}
+
+//   User
+//     .findById(req.params.id)
+//     .then(wedding => {
+//       if (wedding.ref === userRef) {
+//         user.favorites.push(currentUserId);
+//         return wedding.save();
+//       } else {
+//         console.log('incorrect code');
+//       }
+//     })
+//     .then(wedding => {
+//       console.log(wedding);
+//       res.redirect(`/weddings/${wedding.id}`);
+//     });
+// }
+
 module.exports = {
   index: usersIndex,
   create: usersCreate,
   show: usersShow,
   update: usersUpdate,
-  delete: usersDelete
+  delete: usersDelete,
+  newFavorite: usersFavorite
+
+  // add this to router
 };
