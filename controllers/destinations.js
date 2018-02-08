@@ -19,7 +19,16 @@ function destinationShow(req, res) {
     .catch((err) => res.status(500).json(err));
 }
 
+function destinationCreate(req, res) {
+  req.body.createdBy = req.user.id;
+  Destination
+    .create(req.body)
+    .then(destination => res.status(201).json(destination))
+    .catch((err) => res.status(500).json(err));
+}
+
 module.exports = {
   index: indexRoute,
-  show: destinationShow
+  show: destinationShow,
+  create: destinationCreate
 };

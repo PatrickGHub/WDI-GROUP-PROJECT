@@ -18,7 +18,8 @@ router.route('/users/:id')
   .delete(users.delete);
 
 router.route('/destinations')
-  .get(destinations.index);
+  .get(destinations.index)
+  .post(secureRoute, destinations.create);
 
 router.route('/destinations/:id')
   .get(destinations.show);
