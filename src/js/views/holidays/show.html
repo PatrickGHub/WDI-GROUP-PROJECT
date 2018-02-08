@@ -14,9 +14,9 @@
   </ul>
   <h2> are going to {{ vm.holiday.destination.town }}!</h2>
   <h3 class="run-levels">Arriving - {{ vm.holiday.dateArrive | date}} Leaving - {{ vm.holiday.dateDepart | date}}</h3>
-  <a href="/holidays/{{ vm.holiday.id }}/edit" class="btn btn-primary"><h4>Edit Holiday<h4></a>
+  <a href="/holidays/{{ vm.holiday.id }}/edit"><button class="landing-buttons">Edit Holiday</button></a>
     <!-- need this button to be styled as landing-buttons -->
-    <button ng-click="vm.delete()" class="landing-buttons" ng-if="main.isAuthenticated() && main.currentUserId === vm.holiday.createdBy.id"><h4>Delete Holiday<h4></button>
+    <!-- <button ng-click="vm.delete()" class="landing-buttons" ng-if="main.isAuthenticated() && main.currentUserId === vm.holiday.createdBy.id"><h4>Delete Holiday<h4></button> -->
     </div>
 
     <div class="container">
