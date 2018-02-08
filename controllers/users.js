@@ -48,10 +48,45 @@ function usersDelete(req, res, next) {
     .catch(next);
 }
 
+// Add favorite place to user schema
+
+function addFavourite(req, res, next) {
+  User
+    .findById(req.params.id)
+    .then(user => {
+      if(!user) return res.notFound();
+
+      user.favorites.push(req.body);
+      return user.save({ validateBeforeSave: false });
+    })
+    .then(user => res.json(user))
+    .catch(next);
+
+}
+
+//   User
+//     .findById(req.params.id)
+//     .then(wedding => {
+//       if (wedding.ref === userRef) {
+//         user.favorites.push(currentUserId);
+//         return wedding.save();
+//       } else {
+//         console.log('incorrect code');
+//       }
+//     })
+//     .then(wedding => {
+//       console.log(wedding);
+//       res.redirect(`/weddings/${wedding.id}`);
+//     });
+// }
+
 module.exports = {
   index: usersIndex,
   create: usersCreate,
   show: usersShow,
   update: usersUpdate,
-  delete: usersDelete
+  delete: usersDelete,
+  addFavourite: addFavourite
+
+  // add this to router
 };

@@ -42,8 +42,9 @@
           <div class="cardshow">
             <h4>{{ place.name }}</h4>
             <p>Rating: {{ place.rating }} stars</p>
-            <button>⭐️</button>
-            <!-- add what type of location it is -->
+            <button ng-show="vm.currentUser && vm.checkUserFavourites(place)" ng-click="vm.addFavourite(place)">⭐️</button>
+            <!-- when you click here, it takes the info from the google places api and adds it to the users id? -->
+            <!-- on the holiday show page it then shows any places that users of that holiday have favourited, checks they link to that destination and shows them on the holiday show page -->
           </div>
         </div>
       </div>

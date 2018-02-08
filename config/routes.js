@@ -17,6 +17,9 @@ router.route('/users/:id')
   .put(users.update)
   .delete(users.delete);
 
+router.route('/users/:id/favourite')
+  .post(secureRoute, users.addFavourite);
+
 router.route('/destinations')
   .get(destinations.index);
 
