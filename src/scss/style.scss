@@ -6,6 +6,10 @@
 @import "destinationsindex";
 @import "forms";
 
+main {
+  margin-bottom: 5%;
+}
+
 h1 {
   font-family: $header-font;
   color: $primary-color;

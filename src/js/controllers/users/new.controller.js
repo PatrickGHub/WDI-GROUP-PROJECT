@@ -7,9 +7,10 @@ function UsersNewCtrl(UserFactory, $state) {
   const vm = this;
 
   vm.newUser    = {};
-  vm.create     = create;
+  vm.submit     = create;
 
   function create(){
+    console.log('click');
     UserFactory
       .save(vm.newUser)
       .$promise
