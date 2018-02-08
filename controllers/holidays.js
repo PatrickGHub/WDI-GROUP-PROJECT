@@ -24,8 +24,8 @@ function holidayShow(req, res) {
     .populate('comments.createdBy')
     .populate('destination')
     .populate({
-      path: 'attendees'
-      // select: 'username'
+      path: 'attendees',
+      select: ['username', 'sport']
     })
     .exec()
     .then(holiday => {
