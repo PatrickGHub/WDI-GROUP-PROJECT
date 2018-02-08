@@ -22,23 +22,28 @@
           <p>Great For: {{ vm.destination.greatFor }}</p>
           <p>Number of Lifts: {{ vm.destination.lifts }}</p>
           <p>Altitude: {{ vm.destination.altitude }}</p>
-          <!-- <p>Weather</p> -->
         </ul>
       </div>
     </div>
     <div class="col-md-6">
+      <div class="image">
       <img src="{{vm.destination.image}}" alt="{{ vm.destination.town}}">
+        </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
+      <div class="image">
       <google-map center="{lat: vm.destination.lat, lng: vm.destination.lng}" content-string="{{ place.name }}" found-places="vm.foundPlaces"></google-map>
+      </div>
     </div>
-    <div class="col-md-6">
+    </div>
+    <div class="row">
+    <div class="col-md-12">
       <h3>Après Ski Destinations</h3>
       <div class="row">
-        <div ng-repeat="place in vm.foundPlaces" class="col-lg-6 col-sm-6 col-xs-12" >
+        <div ng-repeat="place in vm.foundPlaces" class="col-lg-3 col-sm-4 col-xs-12" >
           <div class="cardshow">
             <h4>{{ place.name }}</h4>
             <p>Rating: {{ place.rating }} stars</p>
@@ -47,5 +52,6 @@
         </div>
       </div>
     </div>
+      </div>
   </div>
 </div>

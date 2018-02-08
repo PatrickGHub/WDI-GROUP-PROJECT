@@ -15,6 +15,8 @@
   h3 {
     text-decoration: underline;
     text-align: center;
+    font-size: 30px;
+    font-weight: bold;
   }
 
   img {
@@ -58,6 +60,7 @@
 
 .google-map {
   margin: 30px;
+  width: 100%;
 }
 
 .cardshow {
@@ -65,7 +68,7 @@
   padding: 7px;
   margin: 10px;
   text-align: center;
-  height: 150px;
+  height: 160px;
   background-color: $grey;
 
   h4 {
@@ -88,6 +91,8 @@
   }
 }
 
-h3 {
-  font-size: 40px;
+.image {
+  text-align: center;
+
+
 }

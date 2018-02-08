@@ -24,10 +24,10 @@ h3 {
   font-weight: normal;
 }
 
-// h5 {
-//   font-size: 15px;
-// }
-
+button {
+  text-align: center;
+  justify-content: center;
+}
 
 .attendees {
   justify-content: center;
@@ -42,13 +42,19 @@ h3 {
   margin: 3px;
   padding: 3px;
 
-  li {
-    background-color: $primary-color;
-
-    p {
-      color: white;
-    }
+  strong {
+    text-decoration: underline;
   }
+  li {
+    list-style: none;
+    padding: 3px;
+
+  }
+
+  form {
+    margin: 5px;
+  }
+
 }
 
 .attendees {

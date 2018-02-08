@@ -4,7 +4,7 @@
       <div class="col-md-10 col-md-offset-1 col-lg-12">
         <div class="form">
           <div class="row text-center">
-            <h2 class="form-header-row">Register</h2>
+            <h2 class="form-header-row">Create a holiday</h2>
           </div>
           <form ng-submit="vm.create()">
             <div class="container">
@@ -46,11 +46,14 @@
                     typeahead-on-select="vm.pickAttendee()"
                     placeholder="Type to pick an attendee">
                   </div>
+                <div class="col-lg-6 col-xs-12">
+                  <div class="form-group" ng-repeat="attendee in vm.newHoliday.attendees">
+                    <p>{{attendee.username }}</p>
+                  </div>
 
                     <div class="form-group">
-                      <label>Selected Attendees</label>
-                      <p>{{ [vm.newHoliday.attendees] }}</p>
-                      {{ vm.newHoliday }}
+                      <li ng-repeat="attendee in vm.holiday.attendees">
+                        <p>{{ attendee.username }}</p>
                     </div>
 
                 </div>
