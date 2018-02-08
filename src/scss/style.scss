@@ -94,3 +94,20 @@ a, button {
   text-align: center;
   font-family: $text-font;
 }
+
+.navbar-collapse.in {
+    overflow-y: hidden;
+}
+
+.burger {
+  background-color: $primary-color;
+  &:hover {
+  }
+}
+
+.burger-background {
+  &:hover {
+    background-color: #FFF;
+    
+  }
+}
