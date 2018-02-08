@@ -23,9 +23,10 @@
     "angular-bootstrap": "^2.5.0",
     "bootstrap-css-only": "3.3.7",
     "angular-animate": "^1.6.9",
-    "angular-filepicker": "^1.1.4"
+    "angular-filepicker": "^1.1.4",
+    "angular-flash-alert": "^2.4.0"
   },
   "resolutions": {
-    "angular": "^1.6.8"
+    "angular": ">= 1.2.0"
   }
 }

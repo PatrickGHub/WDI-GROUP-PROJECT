@@ -3,9 +3,11 @@
     <div class="row form-box">
       <div class="col-md-10 col-md-offset-1">
         <div class="form">
+
           <div class="row text-center">
             <h2>Edit your profile</h2>
           </div>
+          <flash-message></flash-message>
           <form ng-submit="vm.update()">
             <div class="row">
               <div class="col-xs-12 col-lg-6">
@@ -93,7 +95,7 @@
             <!-- BUTTONS -->
             <div class="row text-center">
               <div class="control">
-                <button class="landing-buttons" ng-click="vm.update()">Update</button>
+                <button class="landing-buttons">Update</button>
                 <button class="landing-buttons" ui-sref="destinationsIndex">Cancel</button>
               </div>
             </div>
