@@ -1,65 +1,69 @@
 <div class="background-image">
   <div class="container edit-profile">
-    <div class=" row form-box">
-      <div class="form">
-        <h2 class="text-center">Create Holiday</h2>
-        <form ng-submit="vm.create()">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6 col-xs-12">
-                <div class="form-group">
-                  <label for="holidayName">Holiday Name</label>
-                  <input class="form-control" type="text" name="holidayName" placeholder="Holiday Name" id="holidayName" ng-model="vm.newHoliday.holidayName" required>
-                </div>
-
-                <!-- <div class="col-lg-6 col-xs-12"> -->
-                <div class="form-group">
-                  <label for="destination">Destination</label>
-                  <input
-                  ng-model="vm.newHoliday.destination"
-                  type="text"
-                  ng-model="vm.selectedDestination"
-                  uib-typeahead="destination as destination.town for destination in vm.destinations | filter:{ town: $viewValue }"
-                  class="form-control"
-                  typeahead-on-select="vm.pickDestination()"
-                  placeholder="Type to pick a destination">
-                </div>
-                <div class="form-group">
-                  <label for="dateArrive">Arrival Date</label>
-                  <input class="form-control" type="date" name="dateArrive" placeholder="Arrival Date" id="dateArrive" ng-model="vm.newHoliday.dateArrive" required>
-                </div>
-                <div class="form-group">
-                  <label for="dateDepart">Departure Date</label>
-                  <input class="form-control" type="date" name="dateDepart" placeholder="Arrival Date" id="dateDepart" ng-model="vm.newHoliday.dateDepart" required>
-                </div>
-              </div>
-              <div class="col-lg-6 col-xs-12">
-                <div class="form-group">
-                  <label for="attendee">Attendees</label>
-                  <input
-                  type="text"
-                  ng-model="vm.selectedUser"
-                  uib-typeahead="user as user.username for user in vm.users | filter:{ username: $viewValue }"
-                  class="form-control"
-                  typeahead-on-select="vm.pickAttendee()"
-                  placeholder="Type to pick an attendee">
-                </div>
-                <div class="col-lg-6 col-xs-12">
+    <div class="row form-box">
+      <div class="col-md-10 col-md-offset-1 col-lg-12">
+        <div class="form">
+          <div class="row text-center">
+            <h2 class="form-header-row">Register</h2>
+          </div>
+          <form ng-submit="vm.create()">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 col-lg-6">
                   <div class="form-group">
-                    <label>Selected Attendees</label>
-                    <p>{{ [vm.newHoliday.attendees] }}</p>
-                    {{ vm.newHoliday }}
+                    <label for="holidayName">Holiday Name</label>
+                    <input class="form-control" type="text" name="holidayName" placeholder="Holiday Name" id="holidayName" ng-model="vm.newHoliday.holidayName" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <input
+                    ng-model="vm.newHoliday.destination"
+                    type="text"
+                    ng-model="vm.selectedDestination"
+                    uib-typeahead="destination as destination.town for destination in vm.destinations | filter:{ town: $viewValue }"
+                    class="form-control"
+                    typeahead-on-select="vm.pickDestination()"
+                    placeholder="Type to pick a destination">
+                  </div>
+                  <div class="form-group">
+                    <label for="dateArrive">Arrival Date</label>
+                    <input class="form-control" type="date" name="dateArrive" placeholder="Arrival Date" id="dateArrive" ng-model="vm.newHoliday.dateArrive" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="dateDepart">Departure Date</label>
+                    <input class="form-control" type="date" name="dateDepart" placeholder="Arrival Date" id="dateDepart" ng-model="vm.newHoliday.dateDepart" required>
                   </div>
                 </div>
+                <div class="col-xs-12 col-lg-6">
+                  <div class="form-group">
+                    <label for="attendee">Attendees</label>
+                    <input
+                    type="text"
+                    ng-model="vm.selectedUser"
+                    uib-typeahead="user as user.username for user in vm.users | filter:{ username: $viewValue }"
+                    class="form-control"
+                    typeahead-on-select="vm.pickAttendee()"
+                    placeholder="Type to pick an attendee">
+                  </div>
+
+                    <div class="form-group">
+                      <label>Selected Attendees</label>
+                      <p>{{ [vm.newHoliday.attendees] }}</p>
+                      {{ vm.newHoliday }}
+                    </div>
+
+                </div>
+              </div>
+              <div class="row text-center">
+                <button class="landing-buttons">Let's go!</button>
+                <button class="landing-buttons" ui-sref="destinationsIndex">Cancel</button>
               </div>
             </div>
-            <div class="row text-center">
-              <button class="landing-buttons">Let's go!</button>
-              <button class="landing-buttons" ui-sref="destinationsIndex">Cancel</button>
-            </div>
-          </div>
-    </form>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 </div>
 </div>
