@@ -15,8 +15,7 @@ function UsersEditCtrl(UserFactory, $state, Flash) {
       .update($state.params, vm.user)
       .$promise
       .then(() => {
-        console.log('Flash');
-        Flash.create('success', 'Update has been saved');
+        Flash.create('success', 'Your updates has been saved');
       });
   }
 }

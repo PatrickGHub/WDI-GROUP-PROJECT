@@ -2,8 +2,8 @@ angular
   .module('appres')
   .controller('HolidaysEditCtrl', HolidaysEditCtrl);
 
-HolidaysEditCtrl.$inject = ['HolidayFactory', '$state'];
-function HolidaysEditCtrl(HolidayFactory, $state) {
+HolidaysEditCtrl.$inject = ['HolidayFactory', '$state', 'Flash'];
+function HolidaysEditCtrl(HolidayFactory, $state, Flash) {
   const vm = this;
 
   vm.holiday = HolidayFactory.get($state.params);
@@ -13,7 +13,9 @@ function HolidaysEditCtrl(HolidayFactory, $state) {
     HolidayFactory
       .update($state.params.id, vm.holiday)
       .$promise
-      .then(() => $state.go('holidayShow', $state.params));
+      .then(() => {
+        Flash.create('success', 'Your update has been saved');
+      });
   }
 
   vm.delete = holidaysDelete;
