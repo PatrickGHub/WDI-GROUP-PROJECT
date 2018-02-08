@@ -27,7 +27,7 @@ function MainCtrl($transitions, $rootScope, $state, $auth) {
 
     if (err.status === 401 && vm.pageName !== 'login') {
       vm.stateHasChanged = false;
-      $state.go('landing');
+      $state.go('login');
     }
   });
 
