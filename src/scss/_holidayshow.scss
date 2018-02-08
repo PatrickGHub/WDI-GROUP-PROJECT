@@ -1,0 +1,58 @@
+ul {
+  list-style: none;
+ justify-content: center;
+  // display: flex;
+
+  // make list appear on one line
+
+  li {
+    flex-wrap: wrap;
+
+  }
+}
+
+h2, h3, h4 {
+  text-align: center;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+// h5 {
+//   font-size: 15px;
+// }
+
+
+.attendees {
+  justify-content: center;
+
+  h2 {
+    text-decoration: none;
+  }
+}
+
+.comments, .suggestions {
+  background-color: $grey;
+  margin: 3px;
+  padding: 3px;
+
+  li {
+    background-color: $primary-color;
+
+    p {
+      color: white;
+    }
+  }
+}
+
+.attendees {
+  ul {
+  display: flex;
+}
+}

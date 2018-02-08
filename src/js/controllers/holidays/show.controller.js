@@ -31,7 +31,6 @@ function HolidaysShowCtrl(HolidayFactory, HolidayComment, $state) {
       });
   }
 
-
   function deleteComment(comment) {
     HolidayComment
       .delete({ holidayId: vm.holiday.id, id: comment._id })
@@ -41,5 +40,4 @@ function HolidaysShowCtrl(HolidayFactory, HolidayComment, $state) {
         vm.holiday.comments.splice(index, 1);
       });
   }
-
 }

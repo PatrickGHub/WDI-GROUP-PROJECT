@@ -31,6 +31,12 @@ const testUser = {
   image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvvdYy2pa7Es35cKnm_MhPGLDH1rzlPu0C3Dybe8AeNVYKsdw'
 };
 
+const testHoliday = {
+  holidayName: 'Test Holiday',
+  dateArrive: '10 Feb',
+  dateDepart: '20 Feb'
+};
+
 describe('Holidays Controller Test', () => {
 
   afterEach(done => {
@@ -42,6 +48,26 @@ describe('Holidays Controller Test', () => {
 
   //INDEX ROUTE
   describe('GET /api/holidays', () => {
+    it('should return a 200 response', done => {
+      api
+        .get('/api/holidays')
+        .set('Accept', 'application/json')
+        .expect(200, done);
+    });
+
+    it('should return an array of holidays', done => {
+      api
+        .get('/api/holidays')
+        .set('Accept', 'application/json')
+        .end((err, res) => {
+          expect(res.body).to.be.an('array');
+          done();
+        });
+    });
+  });
+
+  // POST ROUTE
+  describe('POST /api/holidays', () => {
     let destinationCreated = null;
     let userCreated = null;
     let token = null;
@@ -89,10 +115,243 @@ describe('Holidays Controller Test', () => {
           done();
         });
     });
+
+    it('should return created holiday data in response body', done => {
+      api
+        .post('/api/holidays')
+        .set('Accept', 'application/json')
+        .set('Authorization', `Bearer ${token}`)
+        .send({
+          holidayName: 'Test Holiday',
+          createdBy: userCreated._id,
+          attendees: [userCreated._id],
+          dateArrive: '10 Feb',
+          dateDepart: '20 Feb',
+          destination: destinationCreated._id
+        })
+        .end((err, res) => {
+          expect(res.body)
+            .to.be.an('object')
+            .and.have.all.keys([
+              '__v',
+              '_id',
+              'id',
+              'holidayName',
+              'createdBy',
+              'attendees',
+              'dateArrive',
+              'dateDepart',
+              'destination',
+              'comments'
+            ]);
+
+          done();
+        });
+    });
   });
 
-  // POST ROUTE
-  describe('POST /api/holidays', () => {
+  // SHOW ROUTE
+  describe('GET /api/holidays/:id', () => {
+    let destinationCreated = null;
+    let userCreated = null;
+    let holidayCreated = null;
+    let token = null;
 
+    beforeEach(done => {
+      Destination
+        .create(testDestination)
+        .then(destination => {
+          destinationCreated = destination;
+
+          return User.create(testUser);
+        })
+        .then(user => {
+          userCreated = user;
+
+          testHoliday.createdBy = user;
+          testHoliday.attendees = [user];
+          testHoliday.destination = destinationCreated;
+
+          return Holiday.create(testHoliday);
+        })
+        .then(holiday => {
+          holidayCreated = holiday;
+
+          api
+            .post('/api/login')
+            .set('Accept', 'application/json')
+            .send({
+              email: 'patrick@ga.co',
+              password: 'patrick'
+            })
+            .end((err, res) => {
+              token = res.body.token;
+              done();
+            });
+        });
+
+    });
+
+    it('should return a 200 response', done => {
+      api
+        .get(`/api/holidays/${holidayCreated.id}`)
+        .set('Accept', 'application/json')
+        .set('Authorization', `Bearer ${token}`)
+        .expect(200, done);
+    });
+
+    it('should return holiday data in response body', done => {
+      api
+        .get(`/api/holidays/${holidayCreated.id}`)
+        .set('Accept', 'application/json')
+        .set('Authorization', `Bearer ${token}`)
+        .end((err, res) => {
+          expect(res.body)
+            .to.be.an('object')
+            .and.have.all.keys([
+              '__v',
+              '_id',
+              'id',
+              'holidayName',
+              'createdBy',
+              'attendees',
+              'dateArrive',
+              'dateDepart',
+              'destination',
+              'comments'
+            ]);
+
+          done();
+        });
+    });
+  });
+
+  // UPDATE ROUTE
+  describe('PUT /api/holidays/:id', () => {
+    let destinationCreated = null;
+    let userCreated = null;
+    let holidayCreated = null;
+    let token = null;
+
+    beforeEach(done => {
+      Destination
+        .create(testDestination)
+        .then(destination => {
+          destinationCreated = destination;
+
+          return User.create(testUser);
+        })
+        .then(user => {
+          userCreated = user;
+
+          testHoliday.createdBy = user;
+          testHoliday.attendees = [user];
+          testHoliday.destination = destinationCreated;
+
+          return Holiday.create(testHoliday);
+        })
+        .then(holiday => {
+          holidayCreated = holiday;
+
+          api
+            .post('/api/login')
+            .set('Accept', 'application/json')
+            .send({
+              email: 'patrick@ga.co',
+              password: 'patrick'
+            })
+            .end((err, res) => {
+              token = res.body.token;
+              done();
+            });
+        });
+
+    });
+
+    it('should return a 200 response', done => {
+      var updatedHoliday = {
+        holidayName: 'Updated',
+        dateArrive: '99 Feb',
+        dateDepart: '99 Feb'
+      };
+
+      api
+        .put(`/api/holidays/${holidayCreated.id}`)
+        .set('Accept', 'application/json')
+        .set('Authorization', `Bearer ${token}`)
+        .send(updatedHoliday)
+        .expect(200, done);
+    });
+
+    it('should return updated data in body', done => {
+      var updatedHoliday = {
+        holidayName: 'Updated',
+        dateArrive: '99 Feb',
+        dateDepart: '99 Feb'
+      };
+
+      api
+        .put(`/api/holidays/${holidayCreated.id}`)
+        .set('Accept', 'application/json')
+        .set('Authorization', `Bearer ${token}`)
+        .send(updatedHoliday)
+        .end((err, res) => {
+          expect(res.body)
+            .to.be.an('object')
+            .and.to.have.property('holidayName', 'Updated');
+          done();
+        });
+    });
+  });
+
+  // DELETE ROUTE
+  describe('DELETE /api/holidays/:id', () => {
+    let destinationCreated = null;
+    let userCreated = null;
+    let holidayCreated = null;
+    let token = null;
+
+    beforeEach(done => {
+      Destination
+        .create(testDestination)
+        .then(destination => {
+          destinationCreated = destination;
+
+          return User.create(testUser);
+        })
+        .then(user => {
+          userCreated = user;
+
+          testHoliday.createdBy = user;
+          testHoliday.attendees = [user];
+          testHoliday.destination = destinationCreated;
+
+          return Holiday.create(testHoliday);
+        })
+        .then(holiday => {
+          holidayCreated = holiday;
+
+          api
+            .post('/api/login')
+            .set('Accept', 'application/json')
+            .send({
+              email: 'patrick@ga.co',
+              password: 'patrick'
+            })
+            .end((err, res) => {
+              token = res.body.token;
+              done();
+            });
+        });
+
+    });
+
+    it('should return a 204 response', done => {
+      api
+        .delete(`/api/holidays/${holidayCreated.id}`)
+        .set('Accept', 'application/json')
+        .set('Authorization', `Bearer ${token}`)
+        .expect(204, done);
+    });
   });
 });
