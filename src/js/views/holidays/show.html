@@ -14,53 +14,52 @@
   </ul>
   <h2> are going to {{ vm.holiday.destination.town }}!</h2>
   <h3 class="run-levels">Arriving - {{ vm.holiday.dateArrive | date}} Leaving - {{ vm.holiday.dateDepart | date}}</h3>
-  <a href="/holidays/{{ vm.holiday.id }}/edit"><button class="landing-buttons">Edit Holiday</button></a>
-    <!-- need this button to be styled as landing-buttons -->
-    <!-- <button ng-click="vm.delete()" class="landing-buttons" ng-if="main.isAuthenticated() && main.currentUserId === vm.holiday.createdBy.id"><h4>Delete Holiday<h4></button> -->
-    </div>
+  <!-- need this button to be styled as landing-buttons -->
+  <!-- <button ng-click="vm.delete()" class="landing-buttons" ng-if="main.isAuthenticated() && main.currentUserId === vm.holiday.createdBy.id"><h4>Delete Holiday<h4></button> -->
+</div>
 
-    <div class="container">
-      <div class="functions">
+<div class="container">
+  <div class="functions">
 
-        <div class="row">
+    <div class="row">
 
-            <div class="col-lg-6">
+      <div class="col-lg-6">
 
-          <div class="comments">
-            <h2>Comments</h2>
-            <p ng-if="!vm.holiday.comments.length">0 comments</p>
-            <ul class="comments__created">
-              <li ng-repeat="comment in vm.holiday.comments track by $index">
-                <p ui-sref="usersShow({ id: comment.createdBy.id })"><strong>{{ comment.createdBy.username }}:</strong></p> <p>{{ comment.text }}</p>
-                <button class="button" ng-click="vm.deleteComment(comment)" ng-if="main.isAuthenticated() && main.currentUserId === comment.createdBy.id">Delete</button>
-              </li>
-            </ul>
-            <form ng-submit="vm.addComment()" ng-if="main.isAuthenticated()">
-              <textarea class="form-control" ng-model="vm.newComment.text" placeholder="Add a comment"></textarea>
-              <button class="landing-buttons">Comment</button>
-            </form>
-          </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="suggestions">
-
-            <h2>Après Suggestions</h2>
-
-            <li ng-repeat="attendee in vm.holiday.attendees">
-              <p><strong>{{ attendee.username }}</strong></p>
-
-              <ul>
-                <li ng-show="favorite.town === vm.holiday.destination.town" ng-repeat="favorite in attendee.favorites">
-                  <p>{{ favorite.name }}, {{ favorite.town }}</p>
-                  <p>Rating: {{ favorite.rating }}</p>
-                </li>
-              </ul>
-
+        <div class="comments">
+          <h2>Comments</h2>
+          <p ng-if="!vm.holiday.comments.length">0 comments</p>
+          <ul class="comments__created">
+            <li ng-repeat="comment in vm.holiday.comments track by $index">
+              <p ui-sref="usersShow({ id: comment.createdBy.id })"><strong>{{ comment.createdBy.username }}:</strong></p> <p>{{ comment.text }}</p>
             </li>
-            </div>
-          </div>
-
+          </ul>
+          <form ng-submit="vm.addComment()" ng-if="main.isAuthenticated()">
+            <textarea class="form-control" ng-model="vm.newComment.text" placeholder="Add a comment"></textarea>
+            <button class="landing-buttons">Comment</button>
+          </form>
         </div>
       </div>
+
+      <div class="col-lg-6">
+        <div class="suggestions">
+
+          <h2>Après Suggestions</h2>
+
+          <li ng-repeat="attendee in vm.holiday.attendees">
+            <p><strong>{{ attendee.username }}</strong></p>
+
+            <ul>
+              <li ng-show="favorite.town === vm.holiday.destination.town" ng-repeat="favorite in attendee.favorites">
+                <p>{{ favorite.name }}, {{ favorite.town }}</p>
+                <p>Rating: {{ favorite.rating }}</p>
+              </li>
+            </ul>
+
+          </li>
+        </div>
+      </div>
+      <a href="/holidays/{{ vm.holiday.id }}/edit"><button class="landing-buttons">Edit Holiday</button></a>
+      <button class="button" ng-click="vm.deleteComment(comment)" ng-if="main.isAuthenticated() && main.currentUserId === comment.createdBy.id">Delete</button>
     </div>
+  </div>
+</div>
