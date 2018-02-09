@@ -3,17 +3,17 @@ angular
   .factory('HolidayComment', HolidayComment)
   .factory('HolidayFactory', HolidayFactory);
 
-HolidayFactory.$inject = ['API', '$resource'];
-function HolidayFactory(API, $resource) {
-  return $resource(`${API}/holidays/:id`,
+HolidayFactory.$inject = ['$resource'];
+function HolidayFactory($resource) {
+  return $resource('/api/holidays/:id',
     { id: '@_id' },
     { 'update': { method: 'PUT' }}
   );
 }
 
-HolidayComment.$inject = ['API', '$resource'];
-function HolidayComment(API, $resource) {
-  return new $resource(`${API}/holidays/:holidayId/comments/:id`, { id: '@id', holidayId: '@holidayId' }, {
+HolidayComment.$inject = ['$resource'];
+function HolidayComment($resource) {
+  return new $resource('/api/holidays/:holidayId/comments/:id', { id: '@id', holidayId: '@holidayId' }, {
     update: { method: 'PUT' }
   });
 }
