@@ -71,14 +71,19 @@
                   </div>
                 </div>
               </div>
-              <button class="landing-buttons">Save changes</button>
-              <button class="landing-buttons" ui-sref="destinationsIndex">Cancel</button>
-            </div>
-          </form>
-
-          <form ng-submit="vm.delete()">
-            <div class="container">
-              <button class="delete-holiday">Delete Holiday</button>
+              <div class="row text-center">
+                <div class="col-lg-3 col-md-offset-1">
+                  <button class="landing-buttons">Save</button>
+                </div>
+                <div class="col-lg-3">
+                  <button class="landing-buttons" ui-sref="destinationsIndex">Cancel</button>
+                </div>
+                <div class="col-lg-3">
+                  <form ng-submit="vm.delete()">
+                    <button class="delete-holiday">Delete</button>
+                  </form>
+                </div>
+              </form>
             </div>
           </form>
         </div>
@@ -86,4 +91,4 @@
     </div>
   </div>
 </div>
-<!-- | date:'yyyy-MM-dd' -->
+</div>
