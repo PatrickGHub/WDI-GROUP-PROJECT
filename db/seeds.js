@@ -249,7 +249,7 @@ Destination
         createdBy: users[0]
       }]
     },{
-      holidayName: 'Shaun & girls go ',
+      holidayName: 'Shaun & girls go Chamonix',
       createdBy: users[0],
       attendees: [users[4], users[5], users[3], users[0], users[1], users[2]],
       destination: globalDestinations[2],
@@ -258,7 +258,7 @@ Destination
         text: ' Where do we want to eat the first night?!',
         createdBy: users[5]
       },{
-        text: 'I shoud get new skies, to rent or buy? 🧐',
+        text: 'I should get new skis, to rent or buy? 🧐',
         createdBy: users[4]
       }]
     }]);
