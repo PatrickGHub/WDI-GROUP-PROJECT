@@ -28,7 +28,7 @@ function HolidaysEditCtrl(HolidayFactory, UserFactory, DestinationFactory, $stat
 
   function pickAttendee() {
     vm.holiday.attendees.push(vm.selectedUser);
-    vm.users = vm.users.filter(user => user.id !== vm.selectedUser.id);
+    vm.users = vm.users.filter(user => user.id !== vm.attendees.id);
     vm.selectedUser = '';
   }
 
