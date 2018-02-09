@@ -28,7 +28,7 @@ router.route('/destinations/:id')
   .get(destinations.show);
 
 router.route('/holidays')
-  .get(holidays.index)
+  .get(secureRoute, holidays.index)
   .post(secureRoute, holidays.create);
 
 router.route('/holidays/:id')
