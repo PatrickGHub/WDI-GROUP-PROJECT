@@ -6,7 +6,7 @@ The Big Chill present APPrès Ski! ❄️
 🎿 Charlotte
 🏂 Evelina
 
-Friday
+# Friday
 
 🚡 We spent a lot of time planning, on trello, on the whiteboard, collaboratively and individually.  We wanted to ensure that we didnt miss anything and all aspects of our project would be covered by someone.
 
@@ -19,7 +19,7 @@ Friday
 🚡 We did some pair programming to get the more complicated tasks done quicker and also worked well individually. Our team worked well because we communicated well and had a mutual respect of each other's abilities and value within the team.
 
 
-The weekend
+# The weekend
 
 🗻 By Monday morning we had an almost working basic app. The big bug of the weekend was that, in testing we had an extra instruction to the port which was blocking the app being able to open in gulp.
 
@@ -30,7 +30,7 @@ The weekend
 🗻 Evelina did the user tests.
 
 
-Monday
+# Monday
 
 ❄️ Our main API was the big blocker - we couldn’t use the one we had planned because was only in XML and we could only use it on one IP address. Patrick built the API from scratch.
 
@@ -39,7 +39,7 @@ Monday
 ❄️ Our detailed planning really helped us to prioritise MVP and communicate on what was going on and to help avoid conflicts on git - really helped that we had 3 models and 3 people
 
 
-Tuesday
+# Tuesday
 
 🏂 We reached MVP!
 
@@ -50,7 +50,7 @@ Tuesday
 🏂 We fixed lots of smaller problems, mainly styling.  We decided to change our main hero image from a snowboarder to a gondola as we felt the snowboarder was too distracting on the page.
 
 
-Wednesday
+# Wednesday
 
 🎿 Patrick fixed yesterdays bug relating to drop down menus and embedding and referencing schemas.
 
@@ -68,7 +68,7 @@ Extra features that we have added since MVP:
 🎿 Designed and added favicon logo
 
 
-Thursday
+# Thursday
 
 ⛷ Patrick completed the testing phase and is delighted that everything works!
 
@@ -83,131 +83,137 @@ Thursday
 ⛷ We worked on our group presentation collaboratively.
 
 
-Friday
+# Friday
 
 ☃️ Today was mostly tidying up small details and having to resist the urge to work on big changes.
 
 ☃️ We worked on our presentation and readme.
 
 
-The Team
+# The Team
 
 We made decisions quickly
 We divided work up evenly - testing, styling and functionality
 
 
-Our Idea
+# Our Idea
 An app to plan ski holidays
 Focusing particular on Après Ski activities
+
 On our app you can:
-Browse popular European ski destinations
-Create a forum to:
- Discuss and plan your holiday with your friends
- Discuss après opportunities at your resort
-Get to know your travel companions
+- Browse popular European ski destinations
+- Create a forum to:
+    - Discuss and plan your holiday with your friends
+    - Discuss après opportunities at your resort
+    - Get to know your travel companions
 
-How we came up with it
-RIP grocery planning app
-Discussed ideas on Wednesday then all went away to think of ideas
-Pitched each other our ideas on Thursday morning
-Decided on ski planning as we found many APIs that we wanted to use
+# How we came up with it
+- Discussed ideas on Wednesday then all went away to think of ideas
+- Pitched each other our ideas on Thursday morning
+- Decided on ski planning as we found many APIs that we wanted to use
 
 
-Planning
+# Planning
 
 Our thorough planning was key to the success of our team
-On our first night we all made a list of what we needed to do to complete our project
+On our first night we all made a list of what we needed to do to complete our project.
+
 On Friday we merged this list to make sure we hadn’t forgotten anything
+
 We divided tasks up into:
-Front end
-Back end
-Styling
-Testing
-We made sure everyone took a turn at each element of the project
-We divided up the basic tasks for weekend homework and communicated regularly over the weekend
+- Front end
+- Back end
+- Styling
+- Testing
+
+We made sure everyone took a turn at each element of the project.
+
+We divided up the basic tasks for weekend homework and communicated regularly over the weekend.
+
 We worked out what was still left to do through models - we had three to start with and there were conveniently three of us!
-User
-Holiday
-Destination
+  - User
+  - Holiday
+  - Destination
+
 Each model needed functionality, styling and testing so it was easy to divide up tasks between the three of us
 Throughout the week we communicated regularly, mostly through slack as despite us sitting in the same booth for most of the time, we all had our headphones on!
 We did some pair programming on the harder parts and had a ‘blockers’ section on our trello board so our team could pick up the slack if we found things difficult
 
 
-Wire Frames
+# Wire Frames
 
-We drew them on the whiteboard first and then as a group made a presentation of them
-We experimented with a few formats but mutually decided on a minimalist design
-Originally our hero image was a ski jumper but in practise we didn’t like how the snowboarder took over from our content, so we changed to a gondola
-We each took an element of styling, background image, font, colour scheme
-We set these up in variables and set up a basic style sheet for headings, paragraphs, buttons and anchor tags
-
-
-Technologies Used
-Babel
-Bcrypt
-Bluebird
-Body-Parser
-Bower
-Browser-Sync
-Canva
-Chai
-Event Stream
-Express
-Google Maps API
-Google Places API
-Gulp
-Istanbul
-JSON Web Token
-Mocha
-Mongoose
-Morgan
-NYC
-Supertest
+- We drew them on the whiteboard first and then as a group made a presentation of them
+- We experimented with a few formats but mutually decided on a minimalist design
+- Originally our hero image was a ski jumper but in practise we didn’t like how the snowboarder took over from our content, so we changed to a gondola
+- We each took an element of styling, background image, font, colour scheme
+- We set these up in variables and set up a basic style sheet for headings, paragraphs, buttons and anchor tags
 
 
-Wins
+# Technologies Used
+1. Babel
+2. Bcrypt
+3. Bluebird
+4. Body-Parser
+5. Bower
+6. Browser-Sync
+7. Canva
+8. Chai
+9. Event Stream
+10. Express
+11. Google Maps API
+12. Google Places API
+13. Gulp
+14. Istanbul
+15. JSON Web Token
+16. Mocha
+17. Mongoose
+18. Morgan
+19. NYC
+20. Supertest
+
+
+# Wins
 
 Charlotte’s Wins:
 
-Practising the google map and google places API -  I’d never really had a chance to experiment with either before so I enjoyed the opportunity and can see lots of scope to use it in the future.
-Practising testing - this consumed all of my first weekend on the project and I found it complex to get my head around to start with but I am glad I have worked it out now as I can definitely see the value of good testing for future projects.
-Great teamwork - Patrick and Evelina were so easy to work with. We made decisions quickly and collaboratively and everyone was supportive with bug fixing.
+1. Practising the google map and google places API -  I’d never really had a chance to experiment with either before so I enjoyed the opportunity and can see lots of scope to use it in the future.
+2. Practising testing - this consumed all of my first weekend on the project and I found it complex to get my head around to start with but I am glad I have worked it out now as I can definitely see the value of good testing for future projects.
+3. Great teamwork - Patrick and Evelina were so easy to work with. We made decisions quickly and collaboratively and everyone was supportive with bug fixing.
 
 Patrick’s Wins:
 
-I like the site - the styling looks great and I’m pleased with the functionality that we have been able to create.
-Dropdown menu functionality is a win for me! It took a while to work out but I am really happy we took the time to include it in our app.
-Date formatting was a pain but it was worth the struggle because it’s an important element of our event planning app.
+1. I like the site - the styling looks great and I’m pleased with the functionality that we have been able to create.
+2. Dropdown menu functionality is a win for me! It took a while to work out but I am really happy we took the time to include it in our app.
+3. Date formatting was a pain but it was worth the struggle because it’s an important element of our event planning app.
 
 Evelina’s Wins:
 
-Great team - we were very decisive, we shared the tasks equally, there was a lot of respect for each other’s work and we communicated well on this. Our project relied on trusting our team.
-The grid - I got a lot of practise in styling forms. I really had to wrap my head around the individual components of the html and scss.
-I think our idea is great and I think I would actually use this app! It fixes the pain point that group holidays often aren’t that well planned because no-one takes responsibility for it.  With our app you can share the load.
+1. Great team - we were very decisive, we shared the tasks equally, there was a lot of respect for each other’s work and we communicated well on this. Our project relied on trusting our team.
+2. The grid - I got a lot of practise in styling forms. I really had to wrap my head around the individual components of the HTML and SCSS.
+3. I think our idea is great and I think I would actually use this app! It fixes the pain point that group holidays often aren’t that well planned because no-one takes responsibility for it.  With our app you can share the load.
 
 
-Blockers
+# Blockers
 
 Charlotte’s Blockers:
 
-Our schemas got quite complex in referencing each other
-We couldn’t use our original API - the Google Places API wasn’t so good.
+1. Our schemas got quite complex in referencing each other
+2. We couldn’t use our original API - the Google Places API wasn’t so good.
 
 Patrick’s Blockers:
 
-Testing - it was difficult and time consuming but a good learning opportunity
-Authentication - I found it complicated to get my head around
+1. Testing - it was difficult and time consuming but a good learning opportunity
+2. Authentication - I found it complicated to get my head around
 
 Evelina’s Blockers:
 
-I found it difficult to style other people’s HTML. I think in future projects we should style our own HTML as it is easier to follow if you wrote it yourself.
-I learnt that it’s often better to pull apart the whole code and go through it bit by bit, focusing on one section at a time.
+1. I found it difficult to style other people’s HTML. I think in future projects we should style our own HTML as it is easier to follow if you wrote it yourself.
+2. I learnt that it’s often better to pull apart the whole code and go through it bit by bit, focusing on one section at a time.
 
 
-Future Functionality
+# Future Functionality
 
-Build a more detailed API
-Add weather and ski conditions
-Add a youtube playlist so groups can plan their party music, pre trip
-Add filters to destination index and favourites on destination and holiday show - we ran out of time for this. We would have filtered by country for the destinations and type of place (bar, restaurant etc) for favourites.
+- Build a more detailed API
+- Add weather and ski conditions
+- Add a youtube playlist so groups can plan their party music, pre trip
+- Add filters to destination index and favourites on destination and holiday show - we ran out of time for this. We would have filtered by country for the destinations and type of place (bar, restaurant etc) for favourites.
