@@ -6,12 +6,27 @@ HolidaysEditCtrl.$inject = ['HolidayFactory', 'UserFactory', 'DestinationFactory
 function HolidaysEditCtrl(HolidayFactory, UserFactory, DestinationFactory, $state, Flash) {
   const vm = this;
 
-  vm.holiday = HolidayFactory.get($state.params);
+  HolidayFactory
+    .get($state.params)
+    .$promise
+    .then((holiday) => {
+      vm.holiday = holiday;
+      UserFactory
+        .query()
+        .$promise
+        .then((users) => {
+          vm.users = users;
+          const attendeeIds = holiday.attendees.map((attendee) => attendee.id);
+          vm.users = vm.users.filter((user) => {
+            return (attendeeIds.indexOf(user.id) === -1);
+          });
+        });
+    });
   vm.update  = update;
   vm.noResults = false;
   vm.destinations = DestinationFactory.query();
   vm.pickDestination = pickDestination;
-  vm.users = UserFactory.query();
+
   vm.pickAttendee = pickAttendee;
 
   function update(){
@@ -28,7 +43,7 @@ function HolidaysEditCtrl(HolidayFactory, UserFactory, DestinationFactory, $stat
 
   function pickAttendee() {
     vm.holiday.attendees.push(vm.selectedUser);
-    vm.users = vm.users.filter(user => user.id !== vm.attendees.id);
+    // vm.users = vm.users.filter(user => user.id !== vm.holiday.attendees.id);
     vm.selectedUser = '';
   }
 
